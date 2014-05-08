@@ -11,7 +11,14 @@ body {
   padding: 0.2em 0;
 }
 
+.shareabouts-map,
+.shareabouts-streetview,
 .shareabouts-streetview-map {
   height: 600px;
   width: 900px;
+}
+
+.shareabouts-streetview {
+  width: 100%;
+  height: 100%;
 }

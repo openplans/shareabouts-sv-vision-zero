@@ -13,6 +13,7 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+    <link href="bower_components/shareabouts-js/src/styles/shareabouts.css" rel="stylesheet" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -33,10 +34,84 @@
     </div>
 
 
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.marionette/1.8.0/backbone.marionette.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+
+    <script src="http://rawgit.com/openplans/gatekeeper/gh-pages/gatekeeper.js"></script>
+    <script src="bower_components/shareabouts-js/src/utils.js"></script>
+    <script src="bower_components/shareabouts-js/src/models.js"></script>
+    <script src="bower_components/shareabouts-js/src/streetview.js"></script>
+    <script>
+      var sa = new Shareabouts.StreetView({
+        el: '.shareabouts-streetview',
+        map: {
+          center: [39.952780, -75.163136]
+        },
+        placeStyles: [
+          {
+            condition: 'true',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-jaywalking.png'
+            },
+            focusIcon: {}
+          },
+        ],
+
+        datasetUrl: 'http://data.shareabouts.org/api/v2/demo-user/datasets/demo-data/places',
+        addButtonLabel: 'Add a Place',
+
+        // These are template functions that expect geojson.
+        templates: {
+          // This is only an example. You should use Mustache, Handlebars, etc in real life.
+          'place-detail': function(data) {
+            return '<h2>' + data.name + '</h2>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>' +
+              '<p>' + data.description + '</p>';
+          },
+          'place-form': function(data) {
+            return '<p class="form-instructions">Drag the map to the place you want to share.</p>' +
+              '<h2>Add a Place</h2>' +
+              '<form novalidate>' +
+              '<p><label>Your Name<input type="text" name="submitter_name" required /></label></p>' +
+              '<p><label>Your Email<input type="text" name="private-email" /></label></p>' +
+              '<p><label>Title<input type="text" name="name" required /></label></p>' +
+              '<p><label>Description<textarea name="description" required></textarea></label></p>' +
+              '<p><input type="submit" value="Add to Map"></p>'
+              '</form>'
+          }
+        }
+      });
+
+    </script>
     <!-- endbower -->
     <!-- endbuild -->
 
