@@ -34,8 +34,6 @@
       <div class="shareabouts-streetview"></div>
     </div>
 
-
-
     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -49,13 +47,39 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/Handlebars/handlebars.js"></script>
     <script src="bower_components/shareabouts-js/src/utils.js"></script>
     <script src="bower_components/shareabouts-js/src/models.js"></script>
     <script src="bower_components/shareabouts-js/src/streetview.js"></script>
+
+    <script src="scripts/handlebars-helpers.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
+    <script id="place-summary" type="text/x-handlebars-template">
+      <h1>{{ place_type_label location_type }}</h1>
+      <p>{{ description }}</p>
+    </script>
+
+
     <script>
+      Shareabouts = Shareabouts || {};
+      Shareabouts.Config = {
+        placeTypes: {
+          'notime': { label: 'Not Enough Time to Cross' },
+          'doublepark': { label: 'Double Parking' },
+          'longwait': { label: 'Long Wait to Cross' },
+          'redlight': { label: 'Red Light Running' },
+          'jaywalking': { label: 'Jaywalking' },
+          'visibility': { label: 'Poor Visibility' },
+          'speeding': { label: 'Speeding' },
+          'longcross': { label: 'Long Distance to Cross' },
+          'yield': { label: 'Failure to Yield' },
+          'bike': { label: 'Cyclist Behavior' },
+          'other': { label: 'Other' }
+        }
+      }
+
       function loadStreetView(lat, lng) {
         var sa = new Shareabouts.StreetView({
           el: '.shareabouts-streetview',
@@ -174,6 +198,7 @@
                 '<p>' + data.description + '</p>' +
                 '<p>' + data.description + '</p>';
             },
+            'place-summary': Handlebars.compile($('#place-summary').html()),
             'place-form': function(data) {
               return '<p class="form-instructions">Drag the map to the place you want to share.</p>' +
                 '<h2>Add a Place</h2>' +
