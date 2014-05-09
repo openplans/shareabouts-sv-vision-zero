@@ -30,3 +30,18 @@ body {
 .shareabouts-streetview-map {
   display: none;
 }
+
+.place-summary-popup {
+	width: 200px;
+}
+
+.place-summary-popup h1 {
+  font-size: 1em;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.place-summary-popup .submitter-avatar {
+  float: left;
+  width: 50px;
+}

@@ -48,6 +48,7 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
+    <script src="bower_components/swag/lib/swag.js"></script>
     <script src="bower_components/shareabouts-js/src/utils.js"></script>
     <script src="bower_components/shareabouts-js/src/models.js"></script>
     <script src="bower_components/shareabouts-js/src/streetview.js"></script>
@@ -57,12 +58,17 @@
     <!-- endbuild -->
 
     <script id="place-summary" type="text/x-handlebars-template">
-      <h1>{{ place_type_label location_type }}</h1>
-      <p>{{ description }}</p>
+      <div class="place-summary-popup">
+        {{# if submitter }}<img class="submitter-avatar" src="{{ submitter.avatar_url }}">{{/ if }}
+        <h1>{{ place_type_label location_type }}</h1>
+        <p>{{ truncate description 140 '...' }}</p>
+      </div>
     </script>
 
 
     <script>
+      Swag.registerHelpers();
+
       Shareabouts = Shareabouts || {};
       Shareabouts.Config = {
         placeTypes: {
