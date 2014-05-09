@@ -64,9 +64,79 @@
         },
         placeStyles: [
           {
-            condition: 'true',
+            condition: '"{{location_type}}" == "doublepark"',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-doublepark.png'
+            },
+            focusIcon: {}
+          },
+          {
+            condition: '"{{location_type}}" == "jaywalking"',
             icon: {
               url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-jaywalking.png'
+            },
+            focusIcon: {}
+          },
+          {
+            condition: '"{{location_type}}" == "longcross"',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-longcross.png'
+            },
+            focusIcon: {}
+          },
+          {
+            condition: '"{{location_type}}" == "longwait"',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-longwait.png'
+            },
+            focusIcon: {}
+          },
+          {
+            condition: '"{{location_type}}" == "notime"',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-notime.png'
+            },
+            focusIcon: {}
+          },
+          {
+            condition: '"{{location_type}}" == "redlight"',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-redlight.png'
+            },
+            focusIcon: {}
+          },
+          {
+            condition: '"{{location_type}}" == "speeding"',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-speeding.png'
+            },
+            focusIcon: {}
+          },
+          {
+            condition: '"{{location_type}}" == "visibility"',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-visibility.png'
+            },
+            focusIcon: {}
+          },
+          {
+            condition: '"{{location_type}}" == "yield"',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-yield.png'
+            },
+            focusIcon: {}
+          },
+          {
+            condition: '"{{location_type}}" == "bike"',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-bike.png'
+            },
+            focusIcon: {}
+          },
+          {
+            condition: '"{{location_type}}" == "other"',
+            icon: {
+              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-other.png'
             },
             focusIcon: {}
           },
