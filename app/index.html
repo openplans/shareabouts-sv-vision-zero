@@ -9,10 +9,11 @@
     <title>shareabouts sv vision zero</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
     <link href="bower_components/shareabouts-js/src/styles/shareabouts.css" rel="stylesheet" />
     <!-- endbower -->
     <!-- endbuild -->
@@ -35,9 +36,6 @@
 
 
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -47,9 +45,16 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
 
     <script src="http://rawgit.com/openplans/gatekeeper/gh-pages/gatekeeper.js"></script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/shareabouts-js/src/utils.js"></script>
     <script src="bower_components/shareabouts-js/src/models.js"></script>
     <script src="bower_components/shareabouts-js/src/streetview.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
     <script>
       var sa = new Shareabouts.StreetView({
         el: '.shareabouts-streetview',
@@ -113,8 +118,6 @@
       });
 
     </script>
-    <!-- endbower -->
-    <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
