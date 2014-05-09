@@ -28,7 +28,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
+    <div class="shareabouts-location-map"></div>
     <div class="shareabouts-streetview-container">
       <div class="shareabouts-streetview-map"></div>
       <div class="shareabouts-streetview"></div>
@@ -56,136 +56,155 @@
     <!-- endbuild -->
 
     <script>
-      var sa = new Shareabouts.StreetView({
-        el: '.shareabouts-streetview',
-        map: {
-          center: [40.7210690835, -73.9981985092],
-          maxDistance: '100m'
-        },
-        placeStyles: [
-          {
-            condition: '"{{location_type}}" == "doublepark"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-doublepark.png'
-            },
-            focusIcon: {}
+      function loadStreetView(lat, lng) {
+        var sa = new Shareabouts.StreetView({
+          el: '.shareabouts-streetview',
+          map: {
+            center: [lat, lng],
+            maxDistance: '100m'
           },
-          {
-            condition: '"{{location_type}}" == "jaywalking"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-jaywalking.png'
+          placeStyles: [
+            {
+              condition: '"{{location_type}}" == "doublepark"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-doublepark.png'
+              },
+              focusIcon: {}
             },
-            focusIcon: {}
-          },
-          {
-            condition: '"{{location_type}}" == "longcross"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-longcross.png'
+            {
+              condition: '"{{location_type}}" == "jaywalking"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-jaywalking.png'
+              },
+              focusIcon: {}
             },
-            focusIcon: {}
-          },
-          {
-            condition: '"{{location_type}}" == "longwait"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-longwait.png'
+            {
+              condition: '"{{location_type}}" == "longcross"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-longcross.png'
+              },
+              focusIcon: {}
             },
-            focusIcon: {}
-          },
-          {
-            condition: '"{{location_type}}" == "notime"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-notime.png'
+            {
+              condition: '"{{location_type}}" == "longwait"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-longwait.png'
+              },
+              focusIcon: {}
             },
-            focusIcon: {}
-          },
-          {
-            condition: '"{{location_type}}" == "redlight"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-redlight.png'
+            {
+              condition: '"{{location_type}}" == "notime"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-notime.png'
+              },
+              focusIcon: {}
             },
-            focusIcon: {}
-          },
-          {
-            condition: '"{{location_type}}" == "speeding"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-speeding.png'
+            {
+              condition: '"{{location_type}}" == "redlight"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-redlight.png'
+              },
+              focusIcon: {}
             },
-            focusIcon: {}
-          },
-          {
-            condition: '"{{location_type}}" == "visibility"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-visibility.png'
+            {
+              condition: '"{{location_type}}" == "speeding"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-speeding.png'
+              },
+              focusIcon: {}
             },
-            focusIcon: {}
-          },
-          {
-            condition: '"{{location_type}}" == "yield"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-yield.png'
+            {
+              condition: '"{{location_type}}" == "visibility"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-visibility.png'
+              },
+              focusIcon: {}
             },
-            focusIcon: {}
-          },
-          {
-            condition: '"{{location_type}}" == "bike"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-bike.png'
+            {
+              condition: '"{{location_type}}" == "yield"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-yield.png'
+              },
+              focusIcon: {}
             },
-            focusIcon: {}
-          },
-          {
-            condition: '"{{location_type}}" == "other"',
-            icon: {
-              url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-unknown.png'
+            {
+              condition: '"{{location_type}}" == "bike"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-bike.png'
+              },
+              focusIcon: {}
             },
-            focusIcon: {}
-          },
-        ],
+            {
+              condition: '"{{location_type}}" == "other"',
+              icon: {
+                url: 'http://visionzero-dev.herokuapp.com/static/css/images/markers/marker-unknown.png'
+              },
+              focusIcon: {}
+            },
+          ],
 
-        datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz/places',
-        addButtonLabel: 'Add a Place',
+          datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz/places',
+          addButtonLabel: 'Add a Place',
 
-        // These are template functions that expect geojson.
-        templates: {
-          // This is only an example. You should use Mustache, Handlebars, etc in real life.
-          'place-detail': function(data) {
-            return '<h2>' + data.name + '</h2>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>' +
-              '<p>' + data.description + '</p>';
-          },
-          'place-form': function(data) {
-            return '<p class="form-instructions">Drag the map to the place you want to share.</p>' +
-              '<h2>Add a Place</h2>' +
-              '<form novalidate>' +
-              '<p><label>Your Name<input type="text" name="submitter_name" required /></label></p>' +
-              '<p><label>Your Email<input type="text" name="private-email" /></label></p>' +
-              '<p><label>Title<input type="text" name="name" required /></label></p>' +
-              '<p><label>Description<textarea name="description" required></textarea></label></p>' +
-              '<p><input type="submit" value="Add to Map"></p>'
-              '</form>'
+          // These are template functions that expect geojson.
+          templates: {
+            // This is only an example. You should use Mustache, Handlebars, etc in real life.
+            'place-detail': function(data) {
+              return '<h2>' + data.name + '</h2>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>' +
+                '<p>' + data.description + '</p>';
+            },
+            'place-form': function(data) {
+              return '<p class="form-instructions">Drag the map to the place you want to share.</p>' +
+                '<h2>Add a Place</h2>' +
+                '<form novalidate>' +
+                '<p><label>Your Name<input type="text" name="submitter_name" required /></label></p>' +
+                '<p><label>Your Email<input type="text" name="private-email" /></label></p>' +
+                '<p><label>Title<input type="text" name="name" required /></label></p>' +
+                '<p><label>Description<textarea name="description" required></textarea></label></p>' +
+                '<p><input type="submit" value="Add to Map"></p>'
+                '</form>'
+            }
           }
-        }
-      });
+        });
+      }
+
+      loadStreetView(40.7210690835, -73.9981985092);
+
+      // Make a new map, and recenter when we click.
+      map = L.map($('.shareabouts-location-map').get(0), {center: [40.7210690835, -73.9981985092], zoom: 14});
+      layerOptions = {
+        url: 'http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png',
+        attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+      };
+      L.tileLayer(layerOptions.url, layerOptions).addTo(map);
+
+      map.on('click', function(evt) {
+        var lat = evt.latlng.lat,
+            lng = evt.latlng.lng;
+
+        loadStreetView(lat, lng);
+      })
 
     </script>
 
