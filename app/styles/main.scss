@@ -1,3 +1,6 @@
+$med-screen: 40.063em;
+$large-screen: 60em;
+
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -11,35 +14,58 @@ body {
   padding: 0.2em 0;
 }
 
-.shareabouts-location-map {
-	height: 200px;
+.shareabouts {
+  @media screen and (min-width: $med-screen) {
+    height: 700px;
+  }
 }
 
-.shareabouts-map,
-.shareabouts-streetview,
-.shareabouts-streetview-map {
-  height: 400px;
-  /*width: 900px;*/
+.shareabouts-location-map-container {
+  position: relative;
+  display: none;
+  &.active { 
+    display: block; 
+  }
+  @media screen and (min-width: $med-screen) {
+    height: 100%;
+    padding-right: 18em;
+  }
+}
+.shareabouts-location-map {
+}
+.shareabouts-legend {
+  @media screen and (min-width: $med-screen) {
+    height: 100%;
+    width: 18em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: auto;
+    padding: 1em;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 
 .shareabouts-streetview {
-  width: 100%;
-}
-
-.shareabouts-streetview-map {
   display: none;
+  &.active { 
+    display: block; 
+  }
+  @media screen and (min-width: $med-screen) {
+    height: 100%;
+  }
 }
 
 .place-summary-popup {
 	width: 200px;
 }
-
 .place-summary-popup h1 {
   font-size: 1em;
   margin-right: 5px;
   margin-bottom: 5px;
 }
-
 .place-summary-popup .submitter-avatar {
   float: left;
   width: 50px;

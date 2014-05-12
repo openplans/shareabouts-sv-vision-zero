@@ -30,10 +30,31 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="shareabouts-location-map"></div>
-    <div class="shareabouts-streetview-container">
-      <div class="shareabouts-streetview-map"></div>
+    <div class="shareabouts">
       <div class="shareabouts-streetview"></div>
+      <div class="shareabouts-location-map-container active">
+        <div class="shareabouts-location-map shareabouts-map-container"></div>
+        <div class="shareabouts-legend">
+          <ul class="map-layer-list unstyled-list">
+            <li><span class="road-color" style="background-color:#fc7165;"></span>&nbsp;Pedestrian crash corridors (top 10% of streets in each borough)</li>
+            <li><img class="fatality" src="styles/images/red-square-stroked-14.png">&nbsp;Pedestrian fatality (2009-14)</li>
+            <li><span class="road-color" style="background-color:#ffff99;"></span>&nbsp;Major arterial roads</li>
+          </ul>
+          We're gathering feedback on these safety conditions:
+          <ul class="place-type-list unstyled-list">
+            <li><img src="styles/images/icon-notime.png">&nbsp;<strong>Not enough time to cross</strong></li>
+            <li><img src="styles/images/icon-doublepark.png">&nbsp;<strong>Double parking</strong></li>
+            <li><img src="styles/images/icon-longwait.png">&nbsp;<strong>Long wait to cross</strong></li>
+            <li><img src="styles/images/icon-redlight.png">&nbsp;<strong>Red light running</strong></li>
+            <li><img src="styles/images/icon-jaywalking.png">&nbsp;<strong>Jaywalking</strong></li>
+            <li><img src="styles/images/icon-visibility.png">&nbsp;<strong>Poor visibility</strong></li>
+            <li><img src="styles/images/icon-speeding.png">&nbsp;<strong>Speeding</strong></li>
+            <li><img src="styles/images/icon-longcross.png">&nbsp;<strong>Long distance to cross</strong></li>
+            <li><img src="styles/images/icon-yield.png">&nbsp;<strong>Failure to yield</strong></li>
+            <li><img src="styles/images/icon-bike.png">&nbsp;<strong>Cyclist behavior</strong></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
