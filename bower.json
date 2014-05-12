@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "modernizr": ">= 2.7.2",
-    "jquery": "~2.1.x",
+    "jquery": "2.1.0",
     "foundation": "~5.2.2",
     "leaflet-0.7.2": "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.2.zip",
     "shareabouts-js": "https://github.com/openplans/shareabouts.js.git#gh-pages",
