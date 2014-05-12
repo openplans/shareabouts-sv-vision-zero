@@ -24,4 +24,12 @@ var Shareabouts = Shareabouts || {};
     return '';
   });
 
+  Handlebars.registerHelper('debug', function(value) {
+    if (typeof(value) === typeof({})) {
+      return JSON.stringify(value, null, 4);
+    } else {
+      return value;
+    }
+  });
+
 }(Shareabouts));

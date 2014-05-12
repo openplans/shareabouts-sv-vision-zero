@@ -24,8 +24,8 @@ body {
 .shareabouts-location-map-container {
   position: relative;
   display: none;
-  &.active { 
-    display: block; 
+  &.active {
+    display: block;
   }
   @media screen and (min-width: $med-screen) {
     height: 100%;
@@ -51,8 +51,8 @@ body {
 
 .shareabouts-streetview {
   display: none;
-  &.active { 
-    display: block; 
+  &.active {
+    display: block;
   }
   @media screen and (min-width: $med-screen) {
     height: 100%;
@@ -120,4 +120,13 @@ body {
     padding: 0.75em 1.5em 0.75em 0.75em;
     border-radius: 0 2em 2em 0;
   }
+}
+
+.form-spinner {
+  display: none;
+  position: relative;
+}
+
+.loading .form-spinner {
+  display: inline-block;
 }
