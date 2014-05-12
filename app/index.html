@@ -46,7 +46,6 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
     <script src="bower_components/swag/lib/swag.js"></script>
     <script src="bower_components/moment/moment.js"></script>
@@ -121,6 +120,60 @@
         <h1>{{ place_type_label location_type }}</h1>
         <p>{{ truncate description 140 '...' }}</p>
       </div>
+    </script>
+
+    <script id="place-form" type="text/x-handlebars-template">
+      <p class="form-instructions">Drag the map to the location of the issue.</p>
+
+      <h4>Describe the issue</h4>
+
+      <form class="place-form clearfix">
+        <fieldset>
+          <input type="hidden" name="visible" value="on">
+          <!-- TODO: ??? -->
+          <input type="hidden" name="user_token" value="{{{ user_token }}}">
+
+          <div class="text form-item-container">
+            <label for="place-submitter_name">Your Name <small>(optional)</small></label>
+            <input id="place-submitter_name" name="submitter_name" type="text" placeholder="Name" size="30">
+          </div>
+
+          <div class="text form-item-container">
+            <label for="place-location_type">Observed issue </label>
+            <ul class="place-type-list place-type-selector unstyled-list">
+              <li class="prompt active">Please choose a category&hellip;</li>
+              <li data-value="notime"><img src="styles/images/icon-notime.png">&nbsp;<strong>Not Enough Time to Cross</strong></li>
+              <li data-value="doublepark"><img src="styles/images/icon-doublepark.png">&nbsp;<strong>Double Parking</strong></li>
+              <li data-value="longwait"><img src="styles/images/icon-longwait.png">&nbsp;<strong>Long Wait to Cross</strong></li>
+              <li data-value="redlight"><img src="styles/images/icon-redlight.png">&nbsp;<strong>Red Light Running</strong></li>
+              <li data-value="jaywalking"><img src="styles/images/icon-jaywalking.png">&nbsp;<strong>Jaywalking</strong></li>
+              <li data-value="visibility"><img src="styles/images/icon-visibility.png">&nbsp;<strong>Poor Visibility</strong></li>
+              <li data-value="speeding"><img src="styles/images/icon-speeding.png">&nbsp;<strong>Speeding</strong></li>
+              <li data-value="longcross"><img src="styles/images/icon-longcross.png">&nbsp;<strong>Long Distance to Cross</strong></li>
+              <li data-value="yield"><img src="styles/images/icon-yield.png">&nbsp;<strong>Failure to Yield</strong></li>
+              <li data-value="bike"><img src="styles/images/icon-bike.png">&nbsp;<strong>Cyclist Behavior</strong></li>
+              <li data-value="other"><img src="styles/images/icon-unknown.png">&nbsp;<strong>Other</strong></li>
+            </ul>
+            <input type="hidden" name="location_type" value="other">
+
+            <p class="other-type-instructions">Suggestions on this site will be used for a safety plan. Have a street defect or faded marking you would like repaired? Contact <a href="http://www.nyc.gov/html/dot/html/contact/contact-form.shtml">DOT</a> or call <a href="http://nyc.gov/311">311</a>.</p>
+          </div>
+
+          <div class="textarea form-item-container">
+            <label for="place-description">Provide more information about the issue <small class="is-hidden">(optional)</small></label>
+            <textarea id="place-description" name="description" placeholder="Description..." required></textarea>
+          </div>
+
+          <div class="text form-item-container">
+            <label for="place-private-submitter_email">Your Email <small>(optional)</small></label>
+            <input id="place-private-submitter_email" name="private-submitter_email" type="text" placeholder="Email address" size="30">
+          </div>
+
+          <input name="save-place-btn" type="submit" value="Put on map" class="btn btn-primary submit-btn">
+        </fieldset>
+
+        <div class="form-spinner"></div>
+      </form>
     </script>
 
 
@@ -262,26 +315,23 @@
                 scaledSize: new google.maps.Size(81, 120)
               }
             },
+            {
+              condition: 'true',
+              newIcon: {
+                url: 'styles/images/marker-plus-shadowed.png'
+              }
+            }
           ],
 
-          datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz/places',
+          datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz-dev/places',
           addButtonLabel: 'Add a Place',
+          maxDistance: 25,
 
           // These are template functions that expect geojson.
           templates: {
             'place-summary': Handlebars.compile($('#place-summary').html()),
             'place-detail': Handlebars.compile($('#place-detail').html()),
-            'place-form': function(data) {
-              return '<p class="form-instructions">Drag the map to the place you want to share.</p>' +
-                '<h2>Add a Place</h2>' +
-                '<form novalidate>' +
-                '<p><label>Your Name<input type="text" name="submitter_name" required /></label></p>' +
-                '<p><label>Your Email<input type="text" name="private-email" /></label></p>' +
-                '<p><label>Title<input type="text" name="name" required /></label></p>' +
-                '<p><label>Description<textarea name="description" required></textarea></label></p>' +
-                '<p><input type="submit" value="Add to Map"></p>'
-                '</form>'
-            }
+            'place-form': Handlebars.compile($('#place-form').html())
           }
         });
       }
