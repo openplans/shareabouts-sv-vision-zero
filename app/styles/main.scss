@@ -405,6 +405,25 @@ $large-screen: 60em;
   /* =The Legend
   -------------------------------------------------------------- */
 
+  .zoom-in-msg {
+    text-align: center;
+    z-index: 1;
+    padding: 0.5em;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: rgba(245, 245, 245, 0.9);
+    border-radius: 4px;
+    &.is-over-map {
+      display: none;
+      @media screen and (min-width: $med-screen) {
+        display: block;
+        position: absolute;
+        left: 20px;
+        bottom: 25px;
+        padding: 0.75em 1em;
+      }
+    }
+  }
+
   .legend {
     padding: 1em 0.5em 0.5em;
     border-bottom: 1px solid #ddd;
