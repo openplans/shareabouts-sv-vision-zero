@@ -1,4 +1,4 @@
-/*globals jQuery, L, google, Handlebars, Spinner */
+/*globals jQuery, L, google, Handlebars, Spinner, wax */
 
 var Shareabouts = Shareabouts || {};
 
@@ -212,14 +212,19 @@ var Shareabouts = Shareabouts || {};
 
   function initMap() {
     var map = new google.maps.Map($('.shareabouts-location-map').get(0),
-          {center: new google.maps.LatLng(40.7210690835, -73.9981985092), zoom: 15}),
-        intersectionLayer = new google.maps.FusionTablesLayer({
-          suppressInfoWindows: true,
-          query: {
-            select: '*',
-            from: '1LGooNPVO91c5Qu4Bh27bwisYcHPVcbztDBQhhSvs'
-          }
-        });
+          {center: new google.maps.LatLng(40.7210690835, -73.9981985092), zoom: 14});
+        // intersectionLayer = new google.maps.FusionTablesLayer({
+        //   suppressInfoWindows: true,
+        //   query: {
+        //     select: '*',
+        //     from: '1LGooNPVO91c5Qu4Bh27bwisYcHPVcbztDBQhhSvs'
+        //   },
+        //   styles: [{
+        //     markerOptions: {
+        //       iconName: 'measle_white'
+        //     }
+        //   }]
+        // });
 
     var crashDataMapType = new google.maps.ImageMapType({
       getTileUrl: function(coord, zoom) {
@@ -237,13 +242,55 @@ var Shareabouts = Shareabouts || {};
 
     map.overlayMapTypes.push(crashDataMapType);
 
-    intersectionLayer.setMap(map);
+    wax.tilejson('http://a.tiles.mapbox.com/v3/openplans.nyc-intersections.json', function(tilejson) {
+      map.overlayMapTypes.push(new wax.g.connector(tilejson));
+      wax.g.interaction()
+        .map(map)
+        .tilejson(tilejson)
+        .on({
+          on: function(obj) {
+            map.setOptions({ draggableCursor: 'pointer' });
+            if (obj.e.type === 'click') {
+              loadStreetView(obj.data.YCOORD, obj.data.XCOORD);
+            }
+          },
+          off: function(evt) {
+            map.setOptions({ draggableCursor: 'url(http://maps.google.com/mapfiles/openhand.cur), move' });
+          }
+        });
+    });
+
+    // intersectionLayer.setMap(map);
 
     // Show street view when the user clicks on an intersection
-    google.maps.event.addListener(intersectionLayer, 'click', function(evt) {
-      var latLng = evt.latLng;
-      loadStreetView(latLng.lat(), latLng.lng());
-    });
+    // google.maps.event.addListener(intersectionLayer, 'click', function(evt) {
+    //   var latLng = evt.latLng;
+    //   loadStreetView(latLng.lat(), latLng.lng());
+    // });
+
+    // google.maps.event.addListener(map, 'zoom_changed', function() {
+    //   var zoom = map.getZoom();
+    //   console.log(map.getZoom());
+    //   // intersectionLayer
+
+    //   if (zoom < 16) {
+    //     intersectionLayer.setOptions({
+    //       styles: [{
+    //         markerOptions: {
+    //           iconName: 'measle_white'
+    //         }
+    //       }]
+    //     });
+    //   } else {
+    //     intersectionLayer.setOptions({
+    //       styles: [{
+    //         markerOptions: {
+    //           iconName: 'road_shield3'
+    //         }
+    //       }]
+    //     });
+    //   }
+    // });
   }
 
   $(function() {
@@ -291,6 +338,5 @@ var Shareabouts = Shareabouts || {};
       $('.shareabouts-streetview').empty();
       $('.shareabouts-location-map-container').addClass('active');
     });
-
   });
 }(Shareabouts, jQuery));
