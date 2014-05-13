@@ -136,8 +136,8 @@
 
     <script id="place-summary" type="text/x-handlebars-template">
       <div class="place-summary-popup">
-        {{# if submitter }}<img class="submitter-avatar" src="{{ submitter.avatar_url }}">{{/ if }}
         <h1>{{ place_type_label location_type }}</h1>
+        {{# if submitter }}<img class="submitter-avatar" src="{{ submitter.avatar_url }}">{{/ if }}
         <p>{{ truncate description 140 '...' }}</p>
       </div>
     </script>
