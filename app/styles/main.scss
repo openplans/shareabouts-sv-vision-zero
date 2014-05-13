@@ -308,21 +308,33 @@ $large-screen: 60em;
     }
   }
 
-  .shareabouts-streetview {
+  .shareabouts-streetview-container {
     display: none;
     &.active { 
       display: block; 
     }
     @media screen and (min-width: $med-screen) {
       height: 100%;
-      &.panel-open {
-         .shareabouts-map-container {
-           width: 60%;
-         }
-         .shareabouts-panel {
-           width: 40%;
-         }
+      .shareabouts-streetview {
+        height: 100%;
+        &.panel-open {
+          .shareabouts-map-container {
+            width: 60%;
+          }
+          .shareabouts-panel {
+            width: 40%;
+          }
+        }
       }
+    }
+    .shareabouts-panel {
+      background-color: #fff;
+    }
+    .close-streetview-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
     }
   }
   /* Google Maps' images choke on our catch-all max-width */
