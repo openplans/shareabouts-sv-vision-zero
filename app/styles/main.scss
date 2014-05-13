@@ -336,7 +336,8 @@ $large-screen: 60em;
     }
   }
   /* Google Maps' images choke on our catch-all max-width */
-  .shareabouts-map img {
+  .shareabouts-map img,
+  .shareabouts-location-map img {
     max-width: none;
   }
 
