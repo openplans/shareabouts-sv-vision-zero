@@ -70,6 +70,7 @@
     <script src="bower_components/handlebars/handlebars.js"></script>
     <script src="bower_components/swag/lib/swag.js"></script>
     <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/spin.js/spin.js"></script>
     <script src="bower_components/shareabouts-js/src/utils.js"></script>
     <script src="bower_components/shareabouts-js/src/models.js"></script>
     <script src="bower_components/shareabouts-js/src/streetview.js"></script>
@@ -125,9 +126,7 @@
         </div>
       </section>
 
-      {{#if survey_config}}
-      <section class="survey" id="survey"></section>
-      {{/if}}
+      <section class="survey-region"></section>
     </script>
 
     <script id="place-summary" type="text/x-handlebars-template">
@@ -192,11 +191,83 @@
       </form>
     </script>
 
+    <script id="place-survey" type="text/x-handlebars-template">
+      {{# if submission_sets.comments }}
+        <h4 class="survey-header">{{ inflect submission_sets.comments.length "comment" "comments" true }}</h4>
+      {{ else }}
+        <h4 class="survey-header">0 comments</h4>
+        {{/ if }}
+      <a href="#reply" class="reply-link btn btn-small">Leave a Comment</a>
+
+      <ol class="responses survey-items unstyled-list"></ol>
+
+      <div id="reply">
+        <form id="new_response" class="new_response clearfix" action="#" method="post">
+          <input type="hidden" name="visible" value="on">
+          <!--<input type="hidden" name="user_token" value="user:1">-->
+
+          <fieldset>
+            <div class="survey-field survey-field-comment">
+              <label class="survey-label survey-label-comment" for="survey-comment">
+                Comment
+              </label>
+              <div class="survey-widgets survey-widgets-comment">
+                <textarea id="survey-comment" name="comment" required=""></textarea>
+              </div>
+            </div>
+
+            <div class="survey-field survey-field-submitter_name">
+              <label class="survey-label survey-label-submitter_name" for="survey-submitter_name">
+                Your Name
+              </label>
+              <div class="survey-widgets survey-widgets-submitter_name">
+                <input id="survey-submitter_name" name="submitter_name" type="text">
+              </div>
+            </div>
+          </fieldset>
+
+          <input name="commit" type="submit" value="Comment" class="btn btn-primary submit-btn">
+          <div class="form-spinner"></div>
+        </form>
+      </div>
+    </script>
+
+    <script id="place-survey-item" type="text/x-handlebars-template">
+      <article data-response-id="{{ id }}" class="response">
+        <header class="response-header clearfix">
+          <strong class="response-submitter">
+            {{#if submitter}}
+              <img src="{{ submitter.avatar_url }}" class="avatar" /> {{ submitter.name }}
+            {{^}}
+              <img src="styles/images/user-50.png" class="avatar" /> {{ submitter_name }}
+            {{/if}}
+          </strong>
+          <span class="response-date">
+            around {{ fromnow created_datetime }}
+          </span>
+        </header>
+
+        <div class="response-body">
+          <div class="response-item response-item-comment">
+            <span class="response-label response-label-comment">Comment</span>
+            <p class="response-value response-value-comment">{{ comment }}</p>
+          </div>
+        </div>
+      </article>
+    </script>
 
     <script>
       Swag.registerHelpers();
 
       Shareabouts = Shareabouts || {};
+
+      Shareabouts.smallSpinnerOptions = {
+        lines: 13, length: 0, width: 3, radius: 10, corners: 1, rotate: 0,
+        direction: 1, color: '#000', speed: 1, trail: 60, shadow: false,
+        hwaccel: false, className: 'spinner', zIndex: 2e9, top: 'auto',
+        left: 'auto'
+      };
+
       Shareabouts.Config = {
         placeTypes: {
           'notime': { label: 'Not Enough Time to Cross' },
@@ -348,13 +419,18 @@
           templates: {
             'place-summary': Handlebars.compile($('#place-summary').html()),
             'place-detail': Handlebars.compile($('#place-detail').html()),
-            'place-form': Handlebars.compile($('#place-form').html())
+            'place-form': Handlebars.compile($('#place-form').html()),
+            'place-survey': Handlebars.compile($('#place-survey').html()),
+            'place-survey-item': Handlebars.compile($('#place-survey-item').html())
           }
         });
+
+        $(sa).on('showplacesurvey', function(evt, view) {
+          spinner = new Spinner(Shareabouts.smallSpinnerOptions).spin(view.$('.form-spinner')[0]);
+        })
       }
 
       loadStreetView(40.7210690835, -73.9981985092);
-
 
   $(document).delegate('.place-type-selector','click',function(evt){
     var $target = $(evt.currentTarget),
