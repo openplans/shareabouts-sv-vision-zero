@@ -217,6 +217,11 @@ $large-screen: 60em;
   .form-spinner {
     clear: both;
     padding: 1em;
+    position: relative;
+    display: none;
+  }
+  .loading .form-spinner {
+    display: inline-block;
   }
 
   .submit-btn {

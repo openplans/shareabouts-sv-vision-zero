@@ -9,6 +9,10 @@ var Shareabouts = Shareabouts || {};
     return placeType ? (placeType.label || typeName) : '';
   });
 
+  Handlebars.registerHelper('window_location', function(place_id) {
+    return window.location;
+  });
+
   Handlebars.registerHelper('place_url', function(place_id) {
     var l = window.location,
         protocol = l.protocol,

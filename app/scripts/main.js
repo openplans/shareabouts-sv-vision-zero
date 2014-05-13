@@ -218,6 +218,7 @@ var Shareabouts = Shareabouts || {};
           maxZoom: 19,
           streetViewControl: false,
           panControl: false,
+          mapTypeControl: false,
           zoomControlOptions: {
             style: google.maps.ZoomControlStyle.SMALL
           }
@@ -239,7 +240,7 @@ var Shareabouts = Shareabouts || {};
 
     map.overlayMapTypes.push(crashDataMapType);
 
-    wax.tilejson('http://a.tiles.mapbox.com/v3/openplans.nyc-intersections.json', function(tilejson) {
+    wax.tilejson('http://a.tiles.mapbox.com/v3/openplans.vision-zero-places.json', function(tilejson) {
       map.overlayMapTypes.push(new wax.g.connector(tilejson));
       wax.g.interaction()
         .map(map)
