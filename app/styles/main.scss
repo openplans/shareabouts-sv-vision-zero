@@ -315,7 +315,19 @@ $large-screen: 60em;
     }
     @media screen and (min-width: $med-screen) {
       height: 100%;
+      &.panel-open {
+         .shareabouts-map-container {
+           width: 60%;
+         }
+         .shareabouts-panel {
+           width: 40%;
+         }
+      }
     }
+  }
+  /* Google Maps' images choke on our catch-all max-width */
+  .shareabouts-map img {
+    max-width: none;
   }
 
   .place-summary-popup {
