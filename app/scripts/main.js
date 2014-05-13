@@ -211,8 +211,17 @@ var Shareabouts = Shareabouts || {};
   }
 
   function initMap() {
-    var map = new google.maps.Map($('.shareabouts-location-map').get(0),
-          {center: new google.maps.LatLng(40.7210690835, -73.9981985092), zoom: 14});
+    var map = new google.maps.Map($('.shareabouts-location-map').get(0), {
+          center: new google.maps.LatLng(40.7210690835, -73.9981985092),
+          zoom: 14,
+          minZoom: 11,
+          maxZoom: 19,
+          streetViewControl: false,
+          panControl: false,
+          zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL
+          }
+        });
 
     var crashDataMapType = new google.maps.ImageMapType({
       getTileUrl: function(coord, zoom) {
@@ -246,6 +255,10 @@ var Shareabouts = Shareabouts || {};
             map.setOptions({ draggableCursor: 'url(http://maps.google.com/mapfiles/openhand.cur), move' });
           }
         });
+    });
+
+    google.maps.event.addListener(map, 'zoom_changed', function() {
+      $('.zoom-in-msg').toggleClass('is-hidden', (map.getZoom() >= 15));
     });
   }
 
