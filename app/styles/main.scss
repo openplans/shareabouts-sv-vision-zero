@@ -29,7 +29,7 @@ $large-screen: 60em;
     line-height: 1.25;
   }
   body, select, input, textarea {
-    color: #555;
+    color: #333;
     font-family: "Helvetica Neue", Arial, Helvetica, serif;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -175,6 +175,7 @@ $large-screen: 60em;
     display: block;
     width: 100%;
     height: auto;
+    font-weight: normal;
     line-height: 1.5;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -326,9 +327,6 @@ $large-screen: 60em;
           }
         }
       }
-    }
-    .shareabouts-panel {
-      background-color: #fff;
     }
     .close-streetview-button {
       position: absolute;
@@ -589,6 +587,234 @@ $large-screen: 60em;
     z-index: 3;
     display:none;
     font-size: 1.25em;
+  }
+
+
+  /* =Content: Pages & Places
+  -------------------------------------------------------------- */
+
+  .shareabouts-panel-content {
+    background: #fff;
+  }
+
+  /* Promotion: Voting & Sharing */
+  .promotion {
+    float: right;
+    margin: 0 0 1em 0.5em;
+  }
+  .support {
+    margin-bottom: 0.75em;
+    position: relative;
+  }
+  .user-support {
+    position: relative;
+  }
+  .user-support input[type=checkbox] {
+    cursor: pointer;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -ms-filter: "alpha(opacity=0)";
+    zoom: 1;
+  }
+  .user-support label {
+    display: block;
+    background: transparent url(images/heart-empty.png) left center no-repeat scroll;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 1em;
+    padding-left: 22px;
+    color: #007fbf;
+  }
+  .user-support input[type=checkbox]:checked ~ label {
+    background-image: url(images/heart.png);
+  }
+  .user-support:hover label {
+    background-color: #93b7c9;
+  }
+  .support-count {}
+  .social {
+    min-width: 84px;
+  }
+  .sharing {
+    margin: 0;
+  }
+  .share-link {
+    float: right;
+    padding: 0 !important;
+    margin-left: 10px;
+  }
+  .share-link a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    text-indent: -9999px;
+  }
+  .share-twitter a {
+    background: url(images/twitter-32.png) 0 0 no-repeat scroll;
+  }
+  .share-facebook a {
+    background: url(images/facebook-32.png) 0 0 no-repeat scroll;
+  }
+
+  /* Places */
+  .place-header {
+    margin-bottom: 1em;
+  }
+  .place-header a {
+    text-decoration: none;
+  }
+  .place-submission-details {
+    display: block;
+    padding-left: 3.75em;
+  }
+  .point-submitter .avatar {
+    width: 3.25em;
+    height: 3.25em;
+    float: left;
+    margin-left: -3.75em;
+  }
+  .response-date {
+    display: block;
+    text-transform: uppercase;
+    color: #888;
+    font-size: 0.75em;
+  }
+  .response-date a {
+    color: #888;
+  }
+  .response-date a:hover {
+    color: #00aaff;
+  }
+  .survey-count {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  /* Surveys */
+  .survey-region,
+  .survey {
+    position: relative;
+  }
+  .survey-header {
+    border-bottom: 1px solid #a8a8a8;
+    padding-bottom: 0.75em;
+    margin-bottom: 1em;
+    font-size: 1.25em;
+  }
+  a.reply-link {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1.5;
+  }
+  ol.responses {
+  }
+  .response {
+    position: relative;
+    padding-bottom: 2.625em;
+    margin-bottom: 1em;
+  }
+  .response-header {
+    padding-left: 3.75em;
+    margin: 0 0 0 1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .response-submitter {}
+  .response-submitter .avatar {
+    width: 3em;
+    height: 3em;
+    float: left;
+    margin-left: -3.75em;
+  }
+  .response-meta {}
+  .response-body {
+    margin: 0 0 1em;
+    padding: 1em;
+    border-top: 1px solid #a8a8a8;
+    border-right: 1px solid #c8c8c8;
+    border-bottom: 0;
+    border-left: 1px solid #c8c8c8;
+    background: #eee;
+    border-radius: 1em;
+    position: relative;
+  }
+  .response-body:after {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 1em solid transparent;
+    border-top-color: #eee;
+    position: absolute;
+    top: 100%;
+    left: 1.5em;
+  }
+  .response-label-comment {
+    display: none;
+  }
+  .response-value-comment {
+    margin-bottom: 0.5em;
+  }
+
+  article.response footer {
+    text-align: right;
+  }
+  .survey-reply-link {
+    color: #999;
+    background: #eee;
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .survey-reply-link:hover {
+    background: #607890;
+    color: #fff;
+  }
+
+  .submit-btn {
+    float: left;
+    margin: 0 0.75em 0 0;
+  }
+
+  form .signed-in-as {
+    float: left;
+    white-space: nowrap;
+    padding-top: 0.125em;
+    line-height: 1.5;
+  }
+  form .signed-in-as .avatar {
+    height: 1.5em;
+    width: auto;
+    position: relative;
+    top: 0.5em;
+  }
+  form .signed-in-as a {
+    font-weight: bold;
+    font-size: 0.875em;
+    text-transform: uppercase;
+  }
+  .or-sign-in {
+    display: block;
+    margin-top: 0.5em;
+  }
+  a.auth-inline {
+    display: inline;
+    font-size: 0.875em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.25em 0.5em;
   }
 
 
