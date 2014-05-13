@@ -39,9 +39,12 @@ var Shareabouts = Shareabouts || {};
   };
 
   function loadStreetView(lat, lng) {
-    var containerSelector = '.shareabouts-streetview';
+    // Show the streetview container
+    $('.shareabouts-streetview-container').addClass('active');
+    $('.shareabouts-location-map-container').removeClass('active');
+
     var sa = new NS.StreetView({
-      el: containerSelector,
+      el: '.shareabouts-streetview',
       map: {
         center: [lat, lng],
         maxDistance: '100m'
@@ -183,15 +186,11 @@ var Shareabouts = Shareabouts || {};
     $(sa).on('showplacesurvey', function(evt, view) {
       var spinner = new Spinner(NS.smallSpinnerOptions).spin(view.$('.form-spinner')[0]);
     });
-
-    // Show the streetview container
-    $(containerSelector).addClass('active')
-      .siblings('.shareabouts-location-map-container').removeClass('active');
   }
 
   function initMap() {
     var map = new google.maps.Map($('.shareabouts-location-map').get(0),
-          {center: new google.maps.LatLng(40.7210690835, -73.9981985092), zoom: 14}),
+          {center: new google.maps.LatLng(40.7210690835, -73.9981985092), zoom: 15}),
         intersectionLayer = new google.maps.FusionTablesLayer({
           suppressInfoWindows: true,
           query: {
@@ -216,8 +215,6 @@ var Shareabouts = Shareabouts || {};
 
     map.overlayMapTypes.push(crashDataMapType);
 
-
-
     intersectionLayer.setMap(map);
 
     // Show street view when the user clicks on an intersection
@@ -225,61 +222,53 @@ var Shareabouts = Shareabouts || {};
       var latLng = evt.latLng;
       loadStreetView(latLng.lat(), latLng.lng());
     });
-
-
   }
-
-  $(document).delegate('.place-type-selector','click',function(evt){
-    var $target = $(evt.currentTarget),
-        $clicked = $(evt.target).closest('li'),
-        isOpen = $target.hasClass('is-open'),
-        value = $clicked.attr('data-value'),
-        $input = $('[name="location_type"]');
-
-    if(isOpen){
-      // Set the value of the hidden input
-      $input.val(value);
-
-      // Set the selected type as active
-      $target.find('li').removeClass('active');
-      $clicked.addClass('active');
-
-      // Close the list
-      $target.removeClass('is-open');
-
-      if (value === 'other') {
-        $('.other-type-instructions').removeClass('is-hidden');
-        $('#place-description').prop('required', true);
-        $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
-      } else {
-        $('.other-type-instructions').addClass('is-hidden');
-        $('#place-description').prop('required', false);
-        $('label[for="place-description"] small').removeClass('is-hidden'); // the '(optional)' text
-      }
-
-      // Make sure to bring the selector back into view
-      $('label[for="place-location_type"]').get(0).scrollIntoView();
-
-    } else {
-      $target.addClass('is-open');
-    }
-  });
 
   $(function() {
     initMap();
 
-    // var layerOptions = {
-    //   url: 'http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png',
-    //   attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
-    // };
-    // L.tileLayer(layerOptions.url, layerOptions).addTo(map);
+    $(document).on('click', '.place-type-selector', function(evt){
+      var $target = $(evt.currentTarget),
+          $clicked = $(evt.target).closest('li'),
+          isOpen = $target.hasClass('is-open'),
+          value = $clicked.attr('data-value'),
+          $input = $('[name="location_type"]');
 
-    // map.on('click', function(evt) {
-    //   var lat = evt.latlng.lat,
-    //       lng = evt.latlng.lng;
+      if(isOpen){
+        // Set the value of the hidden input
+        $input.val(value);
 
-    //   loadStreetView(lat, lng);
-    // });
+        // Set the selected type as active
+        $target.find('li').removeClass('active');
+        $clicked.addClass('active');
+
+        // Close the list
+        $target.removeClass('is-open');
+
+        if (value === 'other') {
+          $('.other-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else {
+          $('.other-type-instructions').addClass('is-hidden');
+          $('#place-description').prop('required', false);
+          $('label[for="place-description"] small').removeClass('is-hidden'); // the '(optional)' text
+        }
+
+        // Make sure to bring the selector back into view
+        $('label[for="place-location_type"]').get(0).scrollIntoView();
+
+      } else {
+        $target.addClass('is-open');
+      }
+    });
+
+    $(document).on('click', '.close-streetview-button', function(evt) {
+      // Show the streetview container
+      $('.shareabouts-streetview-container').removeClass('active');
+      $('.shareabouts-streetview').empty();
+      $('.shareabouts-location-map-container').addClass('active');
+    });
 
   });
 }(Shareabouts, jQuery));
