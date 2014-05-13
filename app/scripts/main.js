@@ -213,18 +213,6 @@ var Shareabouts = Shareabouts || {};
   function initMap() {
     var map = new google.maps.Map($('.shareabouts-location-map').get(0),
           {center: new google.maps.LatLng(40.7210690835, -73.9981985092), zoom: 14});
-        // intersectionLayer = new google.maps.FusionTablesLayer({
-        //   suppressInfoWindows: true,
-        //   query: {
-        //     select: '*',
-        //     from: '1LGooNPVO91c5Qu4Bh27bwisYcHPVcbztDBQhhSvs'
-        //   },
-        //   styles: [{
-        //     markerOptions: {
-        //       iconName: 'measle_white'
-        //     }
-        //   }]
-        // });
 
     var crashDataMapType = new google.maps.ImageMapType({
       getTileUrl: function(coord, zoom) {
@@ -259,38 +247,6 @@ var Shareabouts = Shareabouts || {};
           }
         });
     });
-
-    // intersectionLayer.setMap(map);
-
-    // Show street view when the user clicks on an intersection
-    // google.maps.event.addListener(intersectionLayer, 'click', function(evt) {
-    //   var latLng = evt.latLng;
-    //   loadStreetView(latLng.lat(), latLng.lng());
-    // });
-
-    // google.maps.event.addListener(map, 'zoom_changed', function() {
-    //   var zoom = map.getZoom();
-    //   console.log(map.getZoom());
-    //   // intersectionLayer
-
-    //   if (zoom < 16) {
-    //     intersectionLayer.setOptions({
-    //       styles: [{
-    //         markerOptions: {
-    //           iconName: 'measle_white'
-    //         }
-    //       }]
-    //     });
-    //   } else {
-    //     intersectionLayer.setOptions({
-    //       styles: [{
-    //         markerOptions: {
-    //           iconName: 'road_shield3'
-    //         }
-    //       }]
-    //     });
-    //   }
-    // });
   }
 
   $(function() {
