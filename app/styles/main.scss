@@ -1,123 +1,571 @@
 $med-screen: 40.063em;
 $large-screen: 60em;
 
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
-}
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
 .shareabouts {
+
+  font-family: Helvetica, Arial, sans-serif;
   position: relative;
   @media screen and (min-width: $med-screen) {
     height: 700px;
   }
-}
 
-.shareabouts-location-map-container {
-  position: relative;
-  display: none;
-  &.active { 
-    display: block; 
+
+  /*! normalize.css v1.1.2 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.67em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}blockquote{margin:1em 40px}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+  
+  .browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
   }
-  @media screen and (min-width: $med-screen) {
-    height: 100%;
-    padding-right: 18em;
+
+
+  /* =Base Styles
+  -------------------------------------------------------------- */
+
+  /* Typography */
+  body {
+    line-height: 1.25;
   }
-}
-.shareabouts-location-map {
-}
-.shareabouts-legend {
-  @media screen and (min-width: $med-screen) {
-    height: 100%;
-    width: 18em;
-    position: absolute;
-    top: 0;
-    right: 0;
-    overflow: auto;
-    padding: 1em;
+  body, select, input, textarea {
+    color: #555;
+    font-family: "Helvetica Neue", Arial, Helvetica, serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.25em 0;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.75em;
+  }
+  h4 {
+    font-size: 1.5em;
+  }
+  h5 {
+    font-size: 1.25em;
+  }
+  h6 {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+  p {
+    margin: 0 0 1.5em;
+  }
+  ul,
+  ol,
+  dl {
+    margin-bottom: 0.75em;
+    line-height: inherit;
+  }
+  li {
+    padding-bottom: 0.75em;
+    line-height: inherit;
+  }
+  nav ul,
+  nav ol,
+  .unstyled-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav li,
+  .unstyled-list li {
+    padding-bottom: 0;
+  }
+  strong {
+    font-weight: 800;
+  }
+  hr {
+    margin: 1.5em 0;
+    border: 1px solid #eeeeee;
+    border-top-color: rgba(0,0,0,0.2);
+    border-bottom-color: rgba(255,255,255,0.75);
+    border-right: 0;
+    border-left: 0;
+  }
+
+  /* Buttons */
+  .btn,
+  .btn:visited,
+  .btn:link,
+  .button,
+  .button:visited,
+  .button:link {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding: 0.325em 0.625em;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #f26522;
+    box-shadow: none;
+    font-weight: 400;
+    border: 0;
+    border-radius: 0;
+  }
+  .btn:hover,
+  .button:hover {
+    background-color: #f26522;
+    color: #fff;
+  }
+  .btn-block,
+  .btn-block:visited,
+  .btn-block:link {
+    clear: both;
+    display: block;
+    padding: 0.5em 0.75em;
+    width: 100%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
-}
-
-.shareabouts-streetview {
-  display: none;
-  &.active { 
-    display: block; 
+  .btn-large {
+    font-size: 1.25em;
+    padding: 0.75em 1em 0.5em;
   }
-  @media screen and (min-width: $med-screen) {
-    height: 100%;
+  .btn-small {
+    font-size: 0.75em;
   }
-}
 
-.place-summary-popup {
-	width: 200px;
-}
-.place-summary-popup h1 {
-  font-size: 1em;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-.place-summary-popup .submitter-avatar {
-  float: left;
-  width: 50px;
-}
-
-.shareabouts-geometry-set .form-instructions {
-  display: none;
-}
-
-.button {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  padding: 0.325em 0.625em;
-  margin-bottom: 0;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  color: #eee;
-  text-decoration: none;
-  text-transform: uppercase;
-  background-color: #f26522;
-  box-shadow: none;
-  font-weight: 400;
-  border: 0;
-  border-radius: 0;
-}
-.button:hover {
-  background-color: #f26522;
-  color: #fff;
-}
-
-.shareabouts-add-button-container {
-  width: auto;/* TODO: This overrides an explicit width in shareabouts.css that shouldn't be set. */
-  @media screen and (min-width: $med-screen) {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
+  /* Forms */
+  form {
   }
-}
-.shareabouts-add-button {
-  display: block;
-  margin: 1em 0;
-  padding: 0.625em 0.875em;
-  font-size: 1.25em;
-  white-space: nowrap;
-  @media screen and (min-width: $med-screen) {
-    display: inline-block;
+  fieldset {
+    border: 0;
     margin: 0;
-    font-size: 1.5em;
-    padding: 0.75em 1.5em 0.75em 0.75em;
-    border-radius: 0 2em 2em 0;
+    padding: 0 0 1.2em;
   }
+  label {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    color: #999;
+    margin: 0 0.5em 0 0;
+  }
+  label small {
+    text-transform: none;
+  }
+  input[type=date],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=email],
+  input[type=month],
+  input[type=number],
+  input[type=password],
+  input[type=tel],
+  input[type=text],
+  input[type=time],
+  input[type=url],
+  input[type=week],
+  textarea {
+    outline: 0;
+    border: 0.25em solid #ccc;
+    border-radius: 0;
+    padding: 0.5em;
+    display: block;
+    width: 100%;
+    height: auto;
+    line-height: 1.5;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  input:focus,
+  textarea:focus {
+//    outline: 2px solid #007fbf;
+  }
+  textarea {
+    height: 6.5em;
+    resize: none;
+  }
+  .form-submitted input:invalid,
+  .form-submitted textarea:invalid,
+  .form-submitted select:invalid {
+//    outline: 2px solid #b2182b;
+  }
+
+  .fileinput-container {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .fileinput-container input {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .fileinput-name {
+    display: inline-block;
+  }
+  .form-spinner {
+    clear: both;
+    padding: 1em;
+  }
+
+  .submit-btn {
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .icon-inline {
+    height: 1.5em;
+    width: auto;
+    margin: 0 0.25em -0.325em 0.5em;
+  }
+  .icon-muted {
+    opacity: 0.75;
+  }
+
+
+  /* =Nonsemantic Base Styles
+  -------------------------------------------------------------- */
+
+  .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+  .clearfix:after { clear: both; }
+  .clearfix { zoom: 1; }
+
+  /* Hide for both screenreaders and browsers */
+  .is-hidden, .hidden { display: none; visibility: hidden; }
+  /* Hide only visually, but have it available for screenreaders */
+  .is-screen-reader-text,
+  .is-visuallyhidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  /* Hide visually and from screenreaders, but maintain layout */
+  .is-invisible { visibility: hidden; }
+
+  .nobreak { white-space: nowrap; }
+  .capitalize { text-transform: capitalize; }
+
+
+  /* =Map
+  -------------------------------------------------------------- */
+
+  /* Geolocation Button */
+  .locate-me {
+    background-image: url(images/locate-me.png);
+  }
+  #map .leaflet-bar a,
+  #map .leaflet-bar a:hover {
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+  }
+
+  /* Map Attribution */
+  #map .leaflet-control-attribution {
+    font-size: 9px;
+    -webkit-text-size-adjust: none; /* keep iPhone from getting smart with the font sizes */
+  }
+
+  .shareabouts-location-map-container {
+    position: relative;
+    display: none;
+    &.active { 
+      display: block; 
+    }
+    @media screen and (min-width: $med-screen) {
+      height: 100%;
+      padding-right: 18em;
+    }
+  }
+  .shareabouts-location-map {
+  }
+  .shareabouts-legend {
+    @media screen and (min-width: $med-screen) {
+      height: 100%;
+      width: 18em;
+      position: absolute;
+      top: 0;
+      right: 0;
+      overflow: auto;
+      padding: 1em;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+  }
+
+  .shareabouts-streetview {
+    display: none;
+    &.active { 
+      display: block; 
+    }
+    @media screen and (min-width: $med-screen) {
+      height: 100%;
+    }
+  }
+
+  .place-summary-popup {
+  	width: 200px;
+  }
+  .place-summary-popup h1 {
+    font-size: 1em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  .place-summary-popup .submitter-avatar {
+    float: left;
+    width: 50px;
+  }
+
+  .shareabouts-geometry-set .form-instructions {
+    display: none;
+  }
+
+  .shareabouts-add-button-container {
+    width: auto;/* TODO: This overrides an explicit width in shareabouts.css that shouldn't be set. */
+    @media screen and (min-width: $med-screen) {
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+    }
+  }
+  .shareabouts-add-button,
+  .shareabouts-add-button:visited,
+  .shareabouts-add-button:link {
+    display: block;
+    padding: 0.625em 0.875em;
+    font-size: 1.25em;
+    white-space: nowrap;
+    @media screen and (min-width: $med-screen) {
+      display: inline-block;
+      font-size: 1.5em;
+      padding: 0.75em 1.5em 0.75em 0.75em;
+      border-radius: 0 2em 2em 0;
+      box-shadow: 0 0 10px rgba(85, 85, 85, 0.8);
+    }
+  }
+
+  /* Drag Instructions (for adding a new place) */
+  .form-instructions {
+    background-color: LightYellow;
+    background-color: rgba(240,240,0,0.2);
+    color: #444;
+    font-weight: bold;
+    text-shadow: -1px 1px 0 rgba(255,255,255,0.5);
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 0.75em 1em 0.875em;
+    border-radius: 0.325em;
+  }
+
+
+  /* =The Legend
+  -------------------------------------------------------------- */
+
+  .legend {
+    padding: 1em 0.5em 0.5em;
+    border-bottom: 1px solid #ddd;
+  }
+  .legend ul {
+    font-size: 0.875em;
+    padding: 0 0 0.75em;
+  }
+  .map-layer-list li,
+  .place-type-list li {
+    padding: 0 0 0.5em;
+  }
+  .map-layer-list {
+  }
+  .road-color {
+    padding-left: 1.75em;
+    display: inline-block;
+    height: 0.375em;
+    position: relative;
+    top: -0.125em;
+  }
+  .fatality {
+    padding-right: 0.875em;
+    padding-left: 0.875em;
+    margin-right: -7px;
+    margin-left: -7px;
+    vertical-align: middle;
+  }
+  .place-type-list {
+  }
+  .place-type-list li {
+    position: relative;
+    cursor: default;
+  }
+  .place-type-list img {
+    height: 1.75em;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  .place-type-description {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    top: auto;
+    right: 3em;
+    bottom: 100%;
+    left: 0.875em;
+    margin: 0 0 0.75em 0;
+    border-radius: 0.5em 0.5em 0.5em 0;
+    background: #000;
+    color: #fff;
+    font-size: 0.875em;
+    box-shadow: -0.25em 0 1em rgba(255,255,255,0.8);
+    -webkit-transition: opacity .25s ease-in-out;
+       -moz-transition: opacity .25s ease-in-out;
+            transition: opacity .25s ease-in-out;
+  }
+  .place-type-li:hover .place-type-description {
+    height: auto;
+    padding: 0.5em 0.625em;
+    opacity: 1;
+    overflow: visible;
+  }
+  .place-type-li:hover .place-type-description:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 0.5em solid transparent;
+    border-top-color: #000;
+    border-left-color: #000;
+  }
+
+
+  .legend-add-container {
+    display: none;
+  }
+
+
+  /* =Place Type Selector
+  -------------------------------------------------------------- */
+
+  .place-type-selector {
+    border: 0.25em solid #ccc;
+    border-bottom: 0;
+    padding: 0;
+  }
+  .place-type-selector li {
+    cursor: pointer;
+    padding: 0.5em;
+    border-bottom: 0.25em solid #ccc;
+    display: none;
+  }
+  .place-type-selector li:hover {
+    color: #203970;
+  }
+  .place-type-selector li.active,
+  .place-type-selector.is-open li {
+    display: block;
+  }
+  .place-type-selector.is-open .prompt {
+    display: none;
+  }
+
+  .place-type-selector .prompt,
+  .place-type-selector .prompt:hover {
+    color: #999;
+    border-top: 0;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+  }
+  /* Match the prompt and placeholder color. */
+  ::-webkit-input-placeholder { color: #999; }
+  ::-moz-placeholder { color: #999; }
+  :-ms-input-placeholder { color: #999; }
+  input:-moz-placeholder { color: #999; }
+
+  /* Put form items in <div> instead of <p> (<p> cannot contain block elements like <ul>). */
+  .form-item-container {
+    margin: 0 0 1.5em;
+  }
+
+
+  /* Ajax Error Message */
+  #ajax-error-msg {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    max-width: 300px;
+    z-index: 9999;
+    padding: 0.625em;
+    color: #8D5251;
+    border: 1px solid #CFABAB;
+    background-color: rgba(242, 206, 206, 0.8);
+    border-radius: 4px;
+  }
+
+
+  /* =Progress Bars
+  -------------------------------------------------------------- */
+
+  .progress-bar {
+    background: #777;
+    background: rgba(85,85,85,0.5);
+    height: 1.5em;
+    padding: 0 0.25em;
+    position: relative;
+    border-radius: 0.75em;
+    cursor: default;
+    pointer-events: none;
+  }
+  .progress-bar strong {
+    position: absolute;
+    top: 0;
+    left: 1em;
+    z-index: 2;
+    color: #fff;
+    font-size: 0.75em;
+    line-height: 1.875;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.25em rgba(85,85,85,1);
+  }
+  .progress-bar span {
+    background: #00aaff;
+    display: block;
+    width: 0%;
+    height: 1em;
+    position: relative;
+    z-index: 1;
+    top: 0.25em;
+    overflow: visible;
+    border-radius: 0.5em;
+    white-space: nowrap;
+  }
+  #map-progress {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    bottom: auto;
+    left: 50px;
+    z-index: 3;
+    display:none;
+    font-size: 1.25em;
+  }
+
+
 }
