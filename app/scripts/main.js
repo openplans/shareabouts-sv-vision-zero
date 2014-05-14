@@ -186,13 +186,7 @@ var Shareabouts = Shareabouts || {};
       maxDistance: 25,
 
       // These are template functions that expect geojson.
-      templates: {
-        'place-summary': Handlebars.compile($('#place-summary').html()),
-        'place-detail': Handlebars.compile($('#place-detail').html()),
-        'place-form': Handlebars.compile($('#place-form').html()),
-        'place-survey': Handlebars.compile($('#place-survey').html()),
-        'place-survey-item': Handlebars.compile($('#place-survey-item').html())
-      }
+      templates: NS.Templates
     });
 
     $(sa).on('showplacesurvey', function(evt, view) {

@@ -1,0 +1,47 @@
+<section class="promotion clearfix">
+  <div class="support"></div>
+  <div class="social">
+    <ul class="sharing unstyled-list">
+      <li class="share-link share-twitter"><a href="https://twitter.com/intent/tweet?hashtags=VisionZero&url={{ window_location }}&text=I shared my knowledge to help make Vision Zero a reality in NYC" target="_blank" data-shareto="twitter">Tweet This</a></li>
+      <li class="share-link share-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ window_location }}" target="_blank" data-shareto="facebook">Recommend on Facebook</a></li>
+    </ul>
+  </div>
+</section>
+
+<header class="place-header clearfix">
+  <h1>{{ place_type_label location_type }}</h1>
+  <span class="place-submission-details">
+     <strong class="point-submitter">
+      {{#if submitter.avatar_url }}
+        <img src="{{ submitter.avatar_url }}" class="avatar" />
+      {{^}}
+        <img src="styles/images/user-50.png" class="avatar" />
+      {{/if}}
+      {{#if submitter.name }}
+        {{ action_text }} by {{ submitter.name }}
+      {{^}}
+        {{#is submitter_name "Someone"}}
+          {{^}}
+            {{ action_text }} by {{ submitter_name }}
+        {{/is}}
+      {{/if}}
+    </strong>
+
+    <time datetime="{{ created_datetime }}" class="response-date"><a href="/place/{{ id }}">{{ fromnow created_datetime }}</a></time>
+
+    <span class="survey-count">{{ survey_count }} {{ survey_label_by_count }}</span>
+  </span>
+</header>
+
+<section class="place-items">
+  {{# attachments }}
+  <div class="place-item place-item-attachment place-attachment-{{ name }}">
+    <img src="{{ file }}" class="place-value place-value-{{ name }}" alt="{{ name }}">
+  </div>
+  {{/ attachments }}
+  <div class="place-item place-item-description">
+    <p class="place-value place-value-description">{{ description }}</p>
+  </div>
+</section>
+
+<section class="survey-region"></section>

@@ -210,7 +210,8 @@ module.exports = function (grunt) {
         // additional tasks can operate on them
         useminPrepare: {
             options: {
-                dest: '<%= yeoman.dist %>'
+                dest: '<%= yeoman.dist %>',
+                root: ['.tmp', '<%= yeoman.app %>']
             },
             html: '<%= yeoman.app %>/index.html'
         },
@@ -306,7 +307,8 @@ module.exports = function (grunt) {
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
                         'styles/images/{,*/}*.*',
-                        'styles/fonts/{,*/}*.*'
+                        'styles/fonts/{,*/}*.*',
+                        '!jstemplates/{,*/}*.html'
                     ]
                 }]
             },
@@ -348,6 +350,20 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+
+        handlebars: {
+            options: {
+                namespace: 'Shareabouts.Templates',
+                processName: function(filePath) {
+                    return filePath.replace(/^app\/jstemplates\//, '').replace(/\.html$/, '');
+                }
+            },
+            all: {
+                files: {
+                    ".tmp/scripts/jstemplates.js": ["<%= yeoman.app %>/jstemplates/**/*.html"]
+                }
+            }
         }
     });
 
@@ -359,6 +375,7 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
+            'handlebars',
             'concurrent:server',
             'autoprefixer',
             'connect:livereload',
@@ -388,6 +405,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'handlebars',
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
