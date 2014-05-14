@@ -10,18 +10,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link href="bower_components/shareabouts-js/src/styles/shareabouts.css" rel="stylesheet" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
+    <!-- build:css(.tmp) styles/visionzero.css -->
     <link rel="stylesheet" href="//www.nyc.gov/html/visionzero/assets/css/styles.min.css" type="text/css" media="screen" />
+    <link href="bower_components/shareabouts-js/src/styles/shareabouts.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
 
@@ -62,19 +55,16 @@
       </div>
     </div>
 
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.marionette/1.8.0/backbone.marionette.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
 
-    <script src="//rawgit.com/openplans/gatekeeper/gh-pages/gatekeeper.js"></script>
-    <script src="//rawgit.com/mapbox/wax/master/dist/wax.g.js"></script>
-
-    <!-- build:js scripts/vendor.js -->
+    <!-- build:js scripts/visionzero.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="bower_components/backbone.marionette/lib/backbone.marionette.js"></script>
+    <script src="bower_components/gatekeeper/gatekeeper.js"></script>
+    <script src="bower_components/wax/dist/wax.g.js"></script>
     <script src="bower_components/jqxdomainrequest/jQuery.XDomainRequest.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
     <script src="bower_components/swag/lib/swag.js"></script>
@@ -83,203 +73,10 @@
     <script src="bower_components/shareabouts-js/src/utils.js"></script>
     <script src="bower_components/shareabouts-js/src/models.js"></script>
     <script src="bower_components/shareabouts-js/src/streetview.js"></script>
-
-    <script src="scripts/handlebars-helpers.js"></script>
     <!-- endbower -->
-    <!-- endbuild -->
 
-    <script id="place-detail" type="text/x-handlebars-template">
-      <section class="promotion clearfix">
-        <div class="support"></div>
-        <div class="social">
-          <ul class="sharing unstyled-list">
-            <li class="share-link share-twitter"><a href="https://twitter.com/intent/tweet?hashtags=VisionZero&url={{ window_location }}&text=I shared my knowledge to help make Vision Zero a reality in NYC" target="_blank" data-shareto="twitter">Tweet This</a></li>
-            <li class="share-link share-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ window_location }}" target="_blank" data-shareto="facebook">Recommend on Facebook</a></li>
-          </ul>
-        </div>
-      </section>
-
-      <header class="place-header clearfix">
-        <h1>{{ place_type_label location_type }}</h1>
-        <span class="place-submission-details">
-           <strong class="point-submitter">
-            {{#if submitter.avatar_url }}
-              <img src="{{ submitter.avatar_url }}" class="avatar" />
-            {{^}}
-              <img src="styles/images/user-50.png" class="avatar" />
-            {{/if}}
-            {{#if submitter.name }}
-              {{ action_text }} by {{ submitter.name }}
-            {{^}}
-              {{#is submitter_name "Someone"}}
-                {{^}}
-                  {{ action_text }} by {{ submitter_name }}
-              {{/is}}
-            {{/if}}
-          </strong>
-
-          <time datetime="{{ created_datetime }}" class="response-date"><a href="/place/{{ id }}">{{ fromnow created_datetime }}</a></time>
-
-          <span class="survey-count">{{ survey_count }} {{ survey_label_by_count }}</span>
-        </span>
-      </header>
-
-      <section class="place-items">
-        {{# attachments }}
-        <div class="place-item place-item-attachment place-attachment-{{ name }}">
-          <img src="{{ file }}" class="place-value place-value-{{ name }}" alt="{{ name }}">
-        </div>
-        {{/ attachments }}
-        <div class="place-item place-item-description">
-          <p class="place-value place-value-description">{{ description }}</p>
-        </div>
-      </section>
-
-      <section class="survey-region"></section>
-    </script>
-
-    <script id="place-summary" type="text/x-handlebars-template">
-      <div class="place-summary-popup">
-        <h1>{{ place_type_label location_type }}</h1>
-        {{# if submitter }}<img class="submitter-avatar" src="{{ submitter.avatar_url }}">{{/ if }}
-        <p>{{ truncate description 140 '...' }}</p>
-      </div>
-    </script>
-
-    <script id="place-form" type="text/x-handlebars-template">
-      <p class="form-instructions">Drag the marker to the location of the issue you&apos;re sharing.</p>
-
-      <h4>Describe the issue</h4>
-
-      <form class="place-form clearfix">
-        <fieldset>
-          <input type="hidden" name="visible" value="on">
-          <!-- TODO: ??? -->
-          <input type="hidden" name="user_token" value="{{{ user_token }}}">
-
-          <div class="text form-item-container">
-            <label for="place-submitter_name">Your Name <small>(optional)</small></label>
-            <input id="place-submitter_name" name="submitter_name" type="text" placeholder="Name" size="30">
-          </div>
-
-          <div class="text form-item-container">
-            <label for="place-location_type">Observed issue </label>
-            <ul class="place-type-list place-type-selector unstyled-list">
-              <li class="prompt active">Please choose a category&hellip;</li>
-              <li data-value="notime"><img src="styles/images/icon-notime.png">&nbsp;<strong>Not Enough Time to Cross</strong></li>
-              <li data-value="doublepark"><img src="styles/images/icon-doublepark.png">&nbsp;<strong>Double Parking</strong></li>
-              <li data-value="longwait"><img src="styles/images/icon-longwait.png">&nbsp;<strong>Long Wait to Cross</strong></li>
-              <li data-value="redlight"><img src="styles/images/icon-redlight.png">&nbsp;<strong>Red Light Running</strong></li>
-              <li data-value="jaywalking"><img src="styles/images/icon-jaywalking.png">&nbsp;<strong>Jaywalking</strong></li>
-              <li data-value="visibility"><img src="styles/images/icon-visibility.png">&nbsp;<strong>Poor Visibility</strong></li>
-              <li data-value="speeding"><img src="styles/images/icon-speeding.png">&nbsp;<strong>Speeding</strong></li>
-              <li data-value="longcross"><img src="styles/images/icon-longcross.png">&nbsp;<strong>Long Distance to Cross</strong></li>
-              <li data-value="yield"><img src="styles/images/icon-yield.png">&nbsp;<strong>Failure to Yield</strong></li>
-              <li data-value="bike"><img src="styles/images/icon-bike.png">&nbsp;<strong>Cyclist Behavior</strong></li>
-              <li data-value="other"><img src="styles/images/icon-unknown.png">&nbsp;<strong>Other</strong></li>
-            </ul>
-            <input type="hidden" name="location_type" value="other">
-
-            <p class="other-type-instructions is-hidden">Suggestions on this site will be used for a safety plan. Have a street defect or faded marking you would like repaired? Contact <a href="http://www.nyc.gov/html/dot/html/contact/contact-form.shtml">DOT</a> or call <a href="http://nyc.gov/311">311</a>.</p>
-          </div>
-
-          <div class="textarea form-item-container">
-            <label for="place-description">Provide more information about the issue <small class="is-hidden">(optional)</small></label>
-            <textarea id="place-description" name="description" placeholder="Description..." required></textarea>
-          </div>
-
-          <div class="text form-item-container">
-            <label for="place-private-submitter_email">Your Email <small>(optional)</small></label>
-            <input id="place-private-submitter_email" name="private-submitter_email" type="text" placeholder="Email address" size="30">
-          </div>
-
-          <input name="save-place-btn" type="submit" value="Put on map" class="btn btn-primary submit-btn">
-        </fieldset>
-
-        <div class="form-spinner"></div>
-      </form>
-    </script>
-
-    <script id="place-survey" type="text/x-handlebars-template">
-      {{# if submission_sets.comments }}
-        <h4 class="survey-header">{{ inflect submission_sets.comments.length "comment" "comments" true }}</h4>
-      {{ else }}
-        <h4 class="survey-header">0 comments</h4>
-        {{/ if }}
-      <a href="#reply" class="reply-link btn btn-small">Leave a Comment</a>
-
-      <ol class="responses survey-items unstyled-list"></ol>
-
-      <div id="reply">
-        <form id="new_response" class="new_response clearfix" action="#" method="post">
-          <input type="hidden" name="visible" value="on">
-          <!--<input type="hidden" name="user_token" value="user:1">-->
-
-          <fieldset>
-            <div class="survey-field survey-field-comment">
-              <label class="survey-label survey-label-comment" for="survey-comment">
-                Comment
-              </label>
-              <div class="survey-widgets survey-widgets-comment">
-                <textarea id="survey-comment" name="comment" required=""></textarea>
-              </div>
-            </div>
-
-            <div class="survey-field survey-field-submitter_name">
-              <label class="survey-label survey-label-submitter_name" for="survey-submitter_name">
-                Your Name
-              </label>
-              <div class="survey-widgets survey-widgets-submitter_name">
-                <input id="survey-submitter_name" name="submitter_name" type="text">
-              </div>
-            </div>
-          </fieldset>
-
-          <input name="commit" type="submit" value="Comment" class="btn btn-primary submit-btn">
-          <div class="form-spinner"></div>
-        </form>
-      </div>
-    </script>
-
-    <script id="place-survey-item" type="text/x-handlebars-template">
-      <article data-response-id="{{ id }}" class="response">
-        <header class="response-header clearfix">
-          <strong class="response-submitter">
-            {{#if submitter}}
-              <img src="{{ submitter.avatar_url }}" class="avatar" /> {{ submitter.name }}
-            {{^}}
-              <img src="styles/images/user-50.png" class="avatar" /> {{ submitter_name }}
-            {{/if}}
-          </strong>
-          <span class="response-date">
-            around {{ fromnow created_datetime }}
-          </span>
-        </header>
-
-        <div class="response-body">
-          <div class="response-item response-item-comment">
-            <span class="response-label response-label-comment">Comment</span>
-            <p class="response-value response-value-comment">{{ comment }}</p>
-          </div>
-        </div>
-      </article>
-    </script>
-
-    <script>
-      Swag.registerHelpers();
-    </script>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
-    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/jstemplates.js"></script>
+    <script src="scripts/handlebars-helpers.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>

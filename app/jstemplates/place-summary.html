@@ -1,0 +1,5 @@
+<div class="place-summary-popup">
+  <h1>{{ place_type_label location_type }}</h1>
+  {{# if submitter }}<img class="submitter-avatar" src="{{ submitter.avatar_url }}">{{/ if }}
+  <p>{{ truncate description 140 '...' }}</p>
+</div>
