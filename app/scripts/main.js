@@ -245,6 +245,15 @@ var Shareabouts = Shareabouts || {};
     google.maps.event.addListener(map, 'zoom_changed', function() {
       $('.zoom-in-msg').toggleClass('is-hidden', (map.getZoom() >= 15));
     });
+
+    $(document).on('click', '.close-streetview-button', function(evt) {
+      // Show the map container
+      $('.shareabouts-streetview-container').removeClass('active');
+      $('.shareabouts-streetview').empty();
+      $('.shareabouts-location-map-container').addClass('active');
+      // Resize the map to make sure it's the right size
+      google.maps.event.trigger(map, 'resize');
+    });
   }
 
   $(function() {
@@ -286,11 +295,5 @@ var Shareabouts = Shareabouts || {};
       }
     });
 
-    $(document).on('click', '.close-streetview-button', function(evt) {
-      // Show the streetview container
-      $('.shareabouts-streetview-container').removeClass('active');
-      $('.shareabouts-streetview').empty();
-      $('.shareabouts-location-map-container').addClass('active');
-    });
   });
 }(Shareabouts, jQuery));
