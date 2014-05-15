@@ -348,6 +348,13 @@ var Shareabouts = Shareabouts || {};
       }
     });
 
+    $(document).on('click', '.reply-link', function(evt) {
+      evt.preventDefault();
+      $('.survey-comment')
+        .focus()
+        .get(0).scrollIntoView();
+    });
+
     NS.router = new NS.Router();
     Backbone.history.start({root: window.location.pathname});
   });
