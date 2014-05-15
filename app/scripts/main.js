@@ -349,6 +349,6 @@ var Shareabouts = Shareabouts || {};
     });
 
     NS.router = new NS.Router();
-    Backbone.history.start({pushState: true, root: window.location.pathname});
+    Backbone.history.start({root: window.location.pathname});
   });
 }(Shareabouts, jQuery));
