@@ -1,4 +1,4 @@
-/*globals jQuery, L, google, Handlebars, Spinner, wax, Swag */
+/*globals jQuery, L, google, Handlebars, Spinner, wax, Swag, Backbone */
 
 var Shareabouts = Shareabouts || {};
 
@@ -25,18 +25,41 @@ var Shareabouts = Shareabouts || {};
       'yield': { label: 'Failure to Yield' },
       'bike': { label: 'Cyclist Behavior' },
       'other': { label: 'Other' }
-    }
+    },
+    datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz-dev/places',
   };
 
-  function loadStreetView(lat, lng) {
+  NS.Router = Backbone.Router.extend({
+    routes: {
+      ':id': 'showPlace'
+    },
+
+    showPlace: function(id) {
+      var placeModel = new NS.PlaceModel({id: id});
+      placeModel.urlRoot = NS.Config.datasetUrl;
+
+      placeModel.fetch({
+        success: function(model, response, options) {
+          loadStreetView([model.get('intersection_lat'),
+            model.get('intersection_lng')], model.get('intersection_id'),
+            model);
+        }
+      });
+    }
+  });
+
+
+  // Allow an optional parameter for focusing on a place
+  function loadStreetView(intersectionLatLng, intersectionId, lookAtPlaceModel) {
+    var panoPosition, heading;
     // Show the streetview container
     $('.shareabouts-streetview-container').addClass('active');
     $('.shareabouts-location-map-container').removeClass('active');
 
-    var sa = new NS.StreetView({
+    NS.streetview = new NS.StreetView({
       el: '.shareabouts-streetview',
       map: {
-        center: [lat, lng],
+        center: intersectionLatLng,
         maxDistance: '100m'
       },
       placeStyles: [
@@ -181,17 +204,44 @@ var Shareabouts = Shareabouts || {};
         }
       ],
 
-      datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz-dev/places',
+      datasetUrl: NS.Config.datasetUrl,
       addButtonLabel: 'Share an Issue',
       maxDistance: 25,
 
-      // These are template functions that expect geojson.
       templates: NS.Templates
     });
 
-    $(sa).on('showplacesurvey', function(evt, view) {
+    $(NS.streetview).on('showplace', function(evt, view) {
+      NS.router.navigate(view.model.id.toString());
+    });
+
+    $(NS.streetview).on('closeplace', function(evt, view) {
+      NS.router.navigate('');
+    });
+
+    $(NS.streetview).on('showplacesurvey', function(evt, view) {
       var spinner = new Spinner(NS.smallSpinnerOptions).spin(view.$('.form-spinner')[0]);
     });
+
+    $(NS.streetview).on('showplaceform', function(evt, view) {
+      // Set the intersection information on the form when it is shown
+      view.$('[name="intersection_id"]').val(intersectionId);
+      view.$('[name="intersection_lat"]').val(intersectionLatLng[0]);
+      view.$('[name="intersection_lng"]').val(intersectionLatLng[1]);
+    });
+
+    if (lookAtPlaceModel) {
+      // origin
+      panoPosition = NS.streetview.panorama.getPosition();
+      // from the origin to the place
+      heading = google.maps.geometry.spherical.computeHeading(panoPosition,
+        new google.maps.LatLng(lookAtPlaceModel.get('geometry').coordinates[1],
+          lookAtPlaceModel.get('geometry').coordinates[0]));
+
+      // look at the place
+      NS.streetview.panorama.setPov({heading: heading, pitch: NS.streetview.panorama.getPov().pitch});
+      NS.streetview.showPlace(lookAtPlaceModel);
+    }
   }
 
   function initMap() {
@@ -233,7 +283,7 @@ var Shareabouts = Shareabouts || {};
           on: function(obj) {
             map.setOptions({ draggableCursor: 'pointer' });
             if (obj.e.type === 'click') {
-              loadStreetView(obj.data.YCOORD, obj.data.XCOORD);
+              loadStreetView([obj.data.YCOORD, obj.data.XCOORD], obj.data.NodeID_1);
             }
           },
           off: function(evt) {
@@ -253,6 +303,9 @@ var Shareabouts = Shareabouts || {};
       $('.shareabouts-location-map-container').addClass('active');
       // Resize the map to make sure it's the right size
       google.maps.event.trigger(map, 'resize');
+
+      // Remove any event handlers
+      $(NS.streetview).off();
     });
   }
 
@@ -295,5 +348,7 @@ var Shareabouts = Shareabouts || {};
       }
     });
 
+    NS.router = new NS.Router();
+    Backbone.history.start({pushState: true, root: window.location.pathname});
   });
 }(Shareabouts, jQuery));
