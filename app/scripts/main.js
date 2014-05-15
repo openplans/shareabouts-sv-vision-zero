@@ -26,7 +26,7 @@ var Shareabouts = Shareabouts || {};
       'bike': { label: 'Cyclist Behavior' },
       'other': { label: 'Other' }
     },
-    datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz-dev/places',
+    datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz/places',
   };
 
   NS.Router = Backbone.Router.extend({
