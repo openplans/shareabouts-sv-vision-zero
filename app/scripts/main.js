@@ -318,7 +318,7 @@ var Shareabouts = Shareabouts || {};
       success: function(userData) {
         if (userData) {
           console.log(userData);
-          $('.shareabouts-authentication').html('<a href="http://data.shareabouts.org/api/v2/users/logout/">Log Out</a>');
+          $('.shareabouts-authentication').html('<img src="' + userData.avatar_url + '"> You are logged in as ' + userData.username + '. <a href="http://data.shareabouts.org/api/v2/users/logout/">Log Out</a>');
         } else {
           console.log('No user data');
         }
