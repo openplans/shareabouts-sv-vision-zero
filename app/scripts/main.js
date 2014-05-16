@@ -309,7 +309,25 @@ var Shareabouts = Shareabouts || {};
     });
   }
 
+  function initUser() {
+    $.ajax({
+      url: 'http://data.shareabouts.org/api/v2/users/current',
+      xhrFields: {
+        withCredentials: true
+      },
+      success: function(userData) {
+        if (userData) {
+          console.log(userData);
+          $('.shareabouts-authentication').html('<a href="http://data.shareabouts.org/api/v2/users/logout/">Log Out</a>');
+        } else {
+          console.log('No user data');
+        }
+      }
+    });
+  };
+
   $(function() {
+    initUser();
     initMap();
 
     $(document).on('click', '.place-type-selector', function(evt){
