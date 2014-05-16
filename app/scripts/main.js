@@ -352,6 +352,7 @@ var Shareabouts = Shareabouts || {};
       $('.shareabouts-streetview-container').removeClass('active');
       // Empty out the Street View div, for good measure
       $('.shareabouts-streetview').empty();
+      $('.shareabouts-intersection-detail').empty();
       // Show the map panel
       $('.shareabouts-location-map-container').addClass('active');
       // Resize the map to make sure it's the right size
