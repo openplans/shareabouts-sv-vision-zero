@@ -83,140 +83,140 @@ var Shareabouts = Shareabouts || {};
         {
           condition: '"{{location_type}}" == "doublepark"',
           icon: {
-            url: 'styles/images/markers/marker-doublepark.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-doublepark.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-doublepark.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-doublepark-focused.png',
+            anchor: new google.maps.Point(38,106)
           }
         },
         {
           condition: '"{{location_type}}" == "jaywalking"',
           icon: {
-            url: 'styles/images/markers/marker-jaywalking.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-jaywalking.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-jaywalking.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-jaywalking-focused.png',
+            anchor: new google.maps.Point(38,106)
+
           }
         },
         {
           condition: '"{{location_type}}" == "longcross"',
           icon: {
-            url: 'styles/images/markers/marker-longcross.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-longcross.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-longcross.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-longcross-focused.png',
+            anchor: new google.maps.Point(38,106)
+
           }
         },
         {
           condition: '"{{location_type}}" == "longwait"',
           icon: {
-            url: 'styles/images/markers/marker-longwait.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-longwait.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-longwait.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-longwait-focused.png',
+            anchor: new google.maps.Point(38,106)
+
           }
         },
         {
           condition: '"{{location_type}}" == "notime"',
           icon: {
-            url: 'styles/images/markers/marker-notime.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-notime.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-notime.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-notime-focused.png',
+            anchor: new google.maps.Point(38,106)
+
           }
         },
         {
           condition: '"{{location_type}}" == "redlight"',
           icon: {
-            url: 'styles/images/markers/marker-redlight.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-redlight.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-redlight.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-redlight-focused.png',
+            anchor: new google.maps.Point(38,106)
+
           }
         },
         {
           condition: '"{{location_type}}" == "speeding"',
           icon: {
-            url: 'styles/images/markers/marker-speeding.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-speeding.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-speeding.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-speeding-focused.png',
+            anchor: new google.maps.Point(38,106)
+
           }
         },
         {
           condition: '"{{location_type}}" == "visibility"',
           icon: {
-            url: 'styles/images/markers/marker-visibility.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-visibility.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-visibility.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-visibility-focused.png',
+            anchor: new google.maps.Point(38,106)
+
           }
         },
         {
           condition: '"{{location_type}}" == "yield"',
           icon: {
-            url: 'styles/images/markers/marker-yield.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-yield.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-yield.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-yield-focused.png',
+            anchor: new google.maps.Point(38,106)
+
           }
         },
         {
           condition: '"{{location_type}}" == "bike"',
           icon: {
-            url: 'styles/images/markers/marker-bike.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-bike.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-bike.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-bike-focused.png',
+            anchor: new google.maps.Point(38,106)
+
           }
         },
         {
           condition: '"{{location_type}}" == "other"',
           icon: {
-            url: 'styles/images/markers/marker-unknown.png',
-            scaledSize: new google.maps.Size(48, 57),
-            anchor: new google.maps.Point(24, 48)
+            url: 'styles/images/markers/marker-70x124-unknown.png',
+            anchor: new google.maps.Point(35,103)
           },
           focusIcon: {
-            url: 'styles/images/markers/marker-unknown.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-76x127-unknown-focused.png',
+            anchor: new google.maps.Point(38,106)
+
           }
         },
         {
           condition: 'true',
           newIcon: {
-            url: 'styles/images/marker-plus-shadowed.png',
-            anchor: new google.maps.Point(40, 79)
+            url: 'styles/images/markers/marker-70x124-plus.png',
+            anchor: new google.maps.Point(35,103)
+
           }
         }
       ],
