@@ -2,7 +2,7 @@
 
 var Shareabouts = Shareabouts || {};
 
-(function(NS, $) {
+(function(NS, $, console) {
   Swag.registerHelpers();
 
   NS.smallSpinnerOptions = {
@@ -35,14 +35,31 @@ var Shareabouts = Shareabouts || {};
     },
 
     showPlace: function(id) {
-      var placeModel = new NS.PlaceModel({id: id});
+      var self = this,
+          placeModel = new NS.PlaceModel({id: id});
       placeModel.urlRoot = NS.Config.datasetUrl;
 
+      // Get the info for this place id
       placeModel.fetch({
         success: function(model, response, options) {
-          loadStreetView([model.get('intersection_lat'),
-            model.get('intersection_lng')], model.get('intersection_id'),
-            model);
+          var lat = model.get('intersection_lat'),
+              lng = model.get('intersection_lng');
+
+          // Existing places don't have intersection data, so this is a more
+          // graceful fallback.
+          if (!lat || !lng) {
+            console.warn('Place', id, 'does not have an intersection.');
+            self.navigate('', {replace: true});
+            return;
+          }
+
+          // Show the street view
+          loadStreetView([lat, lng], model.get('intersection_id'), model);
+
+        },
+        error: function() {
+          // No place found for this id, clear the id from the url. No history.
+          self.navigate('', {replace: true});
         }
       });
     }
@@ -211,14 +228,18 @@ var Shareabouts = Shareabouts || {};
       templates: NS.Templates
     });
 
+    // When the place panel is shown, update the url with the id
     $(NS.streetview).on('showplace', function(evt, view) {
       NS.router.navigate(view.model.id.toString());
     });
 
+    // When the place panel is closed, clear the id from the url
     $(NS.streetview).on('closeplace', function(evt, view) {
       NS.router.navigate('');
     });
 
+    // Init the spinner (not shown) when a place survey is shown. This is
+    // necessary since it's JS.
     $(NS.streetview).on('showplacesurvey', function(evt, view) {
       var spinner = new Spinner(NS.smallSpinnerOptions).spin(view.$('.form-spinner')[0]);
     });
@@ -230,16 +251,18 @@ var Shareabouts = Shareabouts || {};
       view.$('[name="intersection_lng"]').val(intersectionLatLng[1]);
     });
 
+    // Change the POV if we need to be looking at a marker.
     if (lookAtPlaceModel) {
-      // origin
+      // Origin
       panoPosition = NS.streetview.panorama.getPosition();
-      // from the origin to the place
+      // From the origin to the place
       heading = google.maps.geometry.spherical.computeHeading(panoPosition,
         new google.maps.LatLng(lookAtPlaceModel.get('geometry').coordinates[1],
           lookAtPlaceModel.get('geometry').coordinates[0]));
 
-      // look at the place
+      // Look at the place
       NS.streetview.panorama.setPov({heading: heading, pitch: NS.streetview.panorama.getPov().pitch});
+      // Show the panel with details
       NS.streetview.showPlace(lookAtPlaceModel);
     }
   }
@@ -258,6 +281,7 @@ var Shareabouts = Shareabouts || {};
           }
         });
 
+    // Map layer with dangerous cooridors and crashes
     var crashDataMapType = new google.maps.ImageMapType({
       getTileUrl: function(coord, zoom) {
         function getRandomInt (min, max) {
@@ -265,7 +289,6 @@ var Shareabouts = Shareabouts || {};
         }
 
         var subdomains = ['a', 'b', 'c', 'd'];
-
         return ['http://', subdomains[getRandomInt(0, 3)], '.tiles.mapbox.com/v3/openplans.i7opnbif/',
             zoom, '/', coord.x, '/', coord.y, '.png'].join('');
       },
@@ -274,6 +297,8 @@ var Shareabouts = Shareabouts || {};
 
     map.overlayMapTypes.push(crashDataMapType);
 
+    // Interactive tile layer hosted on mapbox.com. NOTE: wax is a DEPRECATED
+    // library, but still better for styling+interactivity than Fusion Tables.
     wax.tilejson('http://a.tiles.mapbox.com/v3/openplans.vision-zero-places.json', function(tilejson) {
       map.overlayMapTypes.push(new wax.g.connector(tilejson));
       wax.g.interaction()
@@ -281,37 +306,45 @@ var Shareabouts = Shareabouts || {};
         .tilejson(tilejson)
         .on({
           on: function(obj) {
+            // On mouse over, including clicks
             map.setOptions({ draggableCursor: 'pointer' });
             if (obj.e.type === 'click') {
               loadStreetView([obj.data.YCOORD, obj.data.XCOORD], obj.data.NodeID_1);
             }
           },
           off: function(evt) {
+            // On mouse out
             map.setOptions({ draggableCursor: 'url(http://maps.google.com/mapfiles/openhand.cur), move' });
           }
         });
     });
 
+    // Change the map instructions based on the zoom level
     google.maps.event.addListener(map, 'zoom_changed', function() {
       $('.zoom-in-msg').toggleClass('is-hidden', (map.getZoom() >= 15));
     });
 
+    // Exit button on Street View to dismiss it and return to the map
     $(document).on('click', '.close-streetview-button', function(evt) {
       // Show the map container
       $('.shareabouts-streetview-container').removeClass('active');
+      // Empty out the Street View div, for good measure
       $('.shareabouts-streetview').empty();
+      // Show the map panel
       $('.shareabouts-location-map-container').addClass('active');
       // Resize the map to make sure it's the right size
       google.maps.event.trigger(map, 'resize');
-
-      // Remove any event handlers
+      // Remove any event handlers - important to prevent zombie street views
       $(NS.streetview).off();
     });
   }
 
+  // Ready set go!
   $(function() {
+    // Init the map
     initMap();
 
+    // Init interactivity on the place type selector in the place form.
     $(document).on('click', '.place-type-selector', function(evt){
       var $target = $(evt.currentTarget),
           $clicked = $(evt.target).closest('li'),
@@ -348,6 +381,7 @@ var Shareabouts = Shareabouts || {};
       }
     });
 
+    // Init interactivity on the reply link on the place form.
     $(document).on('click', '.reply-link', function(evt) {
       evt.preventDefault();
       $('.survey-comment')
@@ -355,7 +389,8 @@ var Shareabouts = Shareabouts || {};
         .get(0).scrollIntoView();
     });
 
+    // Init the router so we can link to places.
     NS.router = new NS.Router();
     Backbone.history.start({root: window.location.pathname});
   });
-}(Shareabouts, jQuery));
+}(Shareabouts, jQuery, Shareabouts.Util.console));
