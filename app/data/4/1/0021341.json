@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "2",
+  "B_Sev": "1",
+  "P_Inj": "35",
+  "info": "There were 3 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "13",
+  "P_Fat": "0",
+  "P_Sev": "2",
+  "M_Inj": "28",
+  "M_Sev": "0",
+  "NodeID_1": "0021341",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Eighth Avenue",
+  "hcc_text": "Eighth Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
+  "MV_KSI": "0",
+  "intersection": "Eighth Avenue and West 34th Street",
+  "B_Fat": "0",
+  "B_KSI": "1"
+}

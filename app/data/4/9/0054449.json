@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top Third",
+  "P_KSI": "0",
+  "B_Sev": "0",
+  "P_Inj": "0",
+  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "0",
+  "P_Fat": "0",
+  "P_Sev": "0",
+  "M_Inj": "3",
+  "M_Sev": "2",
+  "NodeID_1": "0054449",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "East 222nd Street",
+  "hcc_text": "East 222nd Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
+  "MV_KSI": "2",
+  "intersection": "East 222nd Street and Kingsland Avenue",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "1",
+  "B_Sev": "0",
+  "P_Inj": "1",
+  "info": "There were 3 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "0",
+  "P_Fat": "0",
+  "P_Sev": "1",
+  "M_Inj": "25",
+  "M_Sev": "2",
+  "NodeID_1": "0055549",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Main Street",
+  "hcc_text": "Main Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
+  "MV_KSI": "2",
+  "intersection": "Main Street and 58th Road",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

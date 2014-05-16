@@ -11,12 +11,14 @@ BASEDIR = dirname(__file__)
 def write_intersection_file(data):
     nodeid = data['NodeID_1']
 
-    # Split the files into separate folders so that there's not more than 1000
-    # or so files per folder.
-    path = pathjoin(BASEDIR, *(digit for digit in nodeid[:4]))
+    # # Split the files into separate folders so that there's not more than 1000
+    # # or so files per folder.
+    path = pathjoin(BASEDIR, *(digit for digit in nodeid[-2:]))
 
-    if not exists(path):
+    try:
         os.makedirs(path)
+    except FileExistsError:
+        pass
 
     with open(pathjoin(path, nodeid + '.json'), 'w') as intersection_file:
         json.dump(data, intersection_file, indent=2)
