@@ -434,6 +434,16 @@ $large-screen: 60em;
       bottom: 0;
       overflow: auto;
     }
+    .intersection-title {
+      font-size: 1em;
+      margin: -1em -1em 1em;
+      padding: 0.75em 1em;
+      background-color: #000;
+      color: #fff;
+      span {
+        font-size: 1.25em;
+      }
+    }
   }
 
   /* =The Legend
