@@ -306,6 +306,17 @@ $large-screen: 60em;
     }
     .shareabouts-legend {
       display: none;
+      p {
+        font-size: 0.875em;
+        margin-bottom: 0.5em;
+      }
+      .place-type-list {
+        font-size: 0.875em;
+      }
+      .map-layer-list { 
+        margin-bottom: 0.5em;
+        font-size: 0.75em;
+      }
     }
     &.active .shareabouts-legend {
       display: block;
