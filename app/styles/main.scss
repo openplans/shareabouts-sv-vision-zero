@@ -345,10 +345,14 @@ $large-screen: 60em;
       }
     }
     .close-streetview-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 1;
+      display: none;
+      @media screen and (min-width: $med-screen) {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+      }
     }
   }
   /* Google Maps' images choke on our catch-all max-width */
