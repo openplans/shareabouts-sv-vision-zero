@@ -68,7 +68,29 @@ var Shareabouts = Shareabouts || {};
 
   // Allow an optional parameter for focusing on a place
   function loadStreetView(intersectionLatLng, intersectionId, lookAtPlaceModel) {
-    var panoPosition, heading;
+    var panoPosition, heading,
+        count, i, dataFilePath;
+
+    // Get the intersection data file
+    dataFilePath = 'data/';
+    for (count = 0, i = intersectionId.length - 2;
+         count < 2; ++i, ++count) {
+      dataFilePath += intersectionId[i] + '/';
+    }
+    dataFilePath += intersectionId + '.json';
+
+    $.ajax({
+      url: dataFilePath,
+      success: function(intersection) {
+        var html = NS.Templates['intersection-detail'](intersection);
+        console.log(intersection);
+        $('.shareabouts-intersection-detail').html(html);
+      },
+      error: function() {
+        $('.shareabouts-intersection-detail').empty();
+      }
+    });
+
     // Show the streetview container
     $('.shareabouts-streetview-container').addClass('active');
     $('.shareabouts-location-map-container').removeClass('active');
