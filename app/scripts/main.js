@@ -83,7 +83,6 @@ var Shareabouts = Shareabouts || {};
       url: dataFilePath,
       success: function(intersection) {
         var html = NS.Templates['intersection-detail'](intersection);
-        console.log(intersection);
         $('.shareabouts-intersection-detail').html(html);
       },
       error: function() {
