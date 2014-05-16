@@ -11,8 +11,8 @@ BASEDIR = dirname(__file__)
 def write_intersection_file(data):
     nodeid = data['NodeID_1']
 
-    # # Split the files into separate folders so that there's not more than 1000
-    # # or so files per folder.
+    # Split the files into separate folders so that there's not more than 1000
+    # or so files per folder.
     path = pathjoin(BASEDIR, *(digit for digit in nodeid[-2:]))
 
     try:
