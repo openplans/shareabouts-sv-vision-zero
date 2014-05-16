@@ -1,0 +1,20 @@
+{
+  "NodeID_1": "0014265",
+  "P_Inj": "1",
+  "M_Fat": "0",
+  "B_Sev": "1",
+  "P_HCC_CLASS": "Top Third",
+  "B_KSI": "1",
+  "B_Fat": "0",
+  "M_Sev": "0",
+  "P_Fat": "0",
+  "MV_KSI": "0",
+  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
+  "P_KSI": "0",
+  "hcc_text": "14th Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
+  "P_Sev": "0",
+  "B_Inj": "5",
+  "M_Inj": "5",
+  "P_HCC_STREETNAME": "14th Avenue",
+  "intersection": "14th Avenue and 35th Street"
+}

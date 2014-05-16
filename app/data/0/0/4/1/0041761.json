@@ -1,0 +1,20 @@
+{
+  "NodeID_1": "0041761",
+  "P_Inj": "4",
+  "M_Fat": "0",
+  "B_Sev": "1",
+  "P_HCC_CLASS": "Top Third",
+  "B_KSI": "1",
+  "B_Fat": "0",
+  "M_Sev": "0",
+  "P_Fat": "0",
+  "MV_KSI": "0",
+  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "P_KSI": "1",
+  "hcc_text": "48th Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
+  "P_Sev": "1",
+  "B_Inj": "5",
+  "M_Inj": "3",
+  "P_HCC_STREETNAME": "48th Street",
+  "intersection": "48th Street and Skillman Avenue"
+}

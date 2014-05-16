@@ -1,0 +1,20 @@
+{
+  "NodeID_1": "0014928",
+  "P_Inj": "1",
+  "M_Fat": "1",
+  "B_Sev": "0",
+  "P_HCC_CLASS": "Top Third",
+  "B_KSI": "0",
+  "B_Fat": "0",
+  "M_Sev": "0",
+  "P_Fat": "0",
+  "MV_KSI": "1",
+  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "P_KSI": "1",
+  "hcc_text": "Third Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
+  "P_Sev": "1",
+  "B_Inj": "3",
+  "M_Inj": "6",
+  "P_HCC_STREETNAME": "Third Avenue",
+  "intersection": "Third Avenue and 3rd Street"
+}

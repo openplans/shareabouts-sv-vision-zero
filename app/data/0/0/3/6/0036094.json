@@ -1,0 +1,20 @@
+{
+  "NodeID_1": "0036094",
+  "P_Inj": "3",
+  "M_Fat": "0",
+  "B_Sev": "0",
+  "P_HCC_CLASS": "Top Third",
+  "B_KSI": "0",
+  "B_Fat": "0",
+  "M_Sev": "5",
+  "P_Fat": "1",
+  "MV_KSI": "5",
+  "info": "There were 6 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "P_KSI": "1",
+  "hcc_text": "Guy R Brewer Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
+  "P_Sev": "0",
+  "B_Inj": "0",
+  "M_Inj": "212",
+  "P_HCC_STREETNAME": "Guy R Brewer Boulevard",
+  "intersection": "Guy R Brewer Boulevard at 150th Road, 150th Avenue and Rockaway Boulevard"
+}
