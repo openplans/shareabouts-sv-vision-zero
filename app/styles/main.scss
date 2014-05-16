@@ -313,7 +313,7 @@ $large-screen: 60em;
       .place-type-list {
         font-size: 0.875em;
       }
-      .map-layer-list { 
+      .map-layer-list {
         margin-bottom: 0.5em;
         font-size: 0.75em;
       }
@@ -453,6 +453,14 @@ $large-screen: 60em;
       color: #fff;
       span {
         font-size: 1.25em;
+      }
+    }
+
+    .incident-table {
+      width: 100%;
+
+      thead {
+        font-weight: bold;
       }
     }
   }
