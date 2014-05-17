@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "2",
+  "B_Sev": "0",
+  "P_Inj": "15",
+  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "2",
+  "P_Fat": "1",
+  "P_Sev": "1",
+  "M_Inj": "65",
+  "M_Sev": "0",
+  "NodeID_1": "0044783",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Broadway",
+  "hcc_text": "Broadway is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
+  "MV_KSI": "0",
+  "intersection": "Broadway at West 225th Street and Broadway Bridge",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

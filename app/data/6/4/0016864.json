@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top Third",
+  "P_KSI": "1",
+  "B_Sev": "0",
+  "P_Inj": "7",
+  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "3",
+  "P_Fat": "0",
+  "P_Sev": "1",
+  "M_Inj": "42",
+  "M_Sev": "1",
+  "NodeID_1": "0016864",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Emmons Avenue",
+  "hcc_text": "Emmons Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
+  "MV_KSI": "1",
+  "intersection": "Emmons Avenue at Neptune Avenue, East 14th Street and Shore Boulevard",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

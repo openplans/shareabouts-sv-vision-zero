@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "0",
+  "B_Sev": "1",
+  "P_Inj": "0",
+  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "1",
+  "P_Fat": "0",
+  "P_Sev": "0",
+  "M_Inj": "1",
+  "M_Sev": "0",
+  "NodeID_1": "0003361",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Victory Boulevard",
+  "hcc_text": "Victory Boulevard is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Staten Island)",
+  "MV_KSI": "0",
+  "intersection": "Victory Boulevard and Ridgeway Avenue",
+  "B_Fat": "0",
+  "B_KSI": "1"
+}

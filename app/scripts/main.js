@@ -65,10 +65,35 @@ var Shareabouts = Shareabouts || {};
     }
   });
 
+  function getIntersectionFileUrl(intersectionId) {
+    var count, i, dataFilePath
+
+    dataFilePath = 'data/';
+    for (count = 0, i = intersectionId.length - 2;
+         count < 2; ++i, ++count) {
+      dataFilePath += intersectionId[i] + '/';
+    }
+    dataFilePath += intersectionId + '.json';
+
+    return dataFilePath;
+  }
 
   // Allow an optional parameter for focusing on a place
   function loadStreetView(intersectionLatLng, intersectionId, lookAtPlaceModel) {
     var panoPosition, heading;
+
+    // Get the intersection data file
+    $.ajax({
+      url: getIntersectionFileUrl(intersectionId),
+      success: function(intersection) {
+        var html = NS.Templates['intersection-detail'](intersection);
+        $('.shareabouts-intersection-detail').html(html);
+      },
+      error: function() {
+        $('.shareabouts-intersection-detail').empty();
+      }
+    });
+
     // Show the streetview container
     $('.shareabouts-streetview-container').addClass('active');
     $('.shareabouts-location-map-container').removeClass('active');
@@ -77,7 +102,8 @@ var Shareabouts = Shareabouts || {};
       el: '.shareabouts-streetview',
       map: {
         center: intersectionLatLng,
-        maxDistance: '100m'
+        maxDistance: '100m',
+        streetViewControl: false
       },
       placeStyles: [
         {
@@ -265,6 +291,34 @@ var Shareabouts = Shareabouts || {};
       // Show the panel with details
       NS.streetview.showPlace(lookAtPlaceModel);
     }
+
+    // Center the map on the intersection (making sure the map knows what size
+    // it is first)
+    resetMap(NS.map, {
+      center: {lat: intersectionLatLng[0], lng: intersectionLatLng[1]},
+      pan: true
+    });
+
+    // Add a marker to the map (or move it if it already exists)
+    NS.currentMarker = NS.currentMarker || new google.maps.Marker({});
+    NS.currentMarker.setMap(NS.map);
+    NS.currentMarker.setPosition({lat: intersectionLatLng[0], lng: intersectionLatLng[1]});
+  }
+
+  function resetMap(map, options) {
+    options = options || {};
+    _.defaults(options, {
+      center: map.getCenter(),
+      pan: false,
+      resize: true
+    });
+
+    if (options.resize) {
+      google.maps.event.trigger(map, 'resize');
+    }
+
+    var centerFunc = _.bind(options.pan ? map.panTo : map.setCenter, map);
+    centerFunc(options.center);
   }
 
   function initMap() {
@@ -280,6 +334,7 @@ var Shareabouts = Shareabouts || {};
             style: google.maps.ZoomControlStyle.SMALL
           }
         });
+    NS.map = map;
 
     // Map layer with dangerous cooridors and crashes
     var crashDataMapType = new google.maps.ImageMapType({
@@ -330,10 +385,13 @@ var Shareabouts = Shareabouts || {};
       $('.shareabouts-streetview-container').removeClass('active');
       // Empty out the Street View div, for good measure
       $('.shareabouts-streetview').empty();
+      $('.shareabouts-intersection-detail').empty();
+      // Get rid of the map marker
+      NS.currentMarker.setMap(null);
       // Show the map panel
       $('.shareabouts-location-map-container').addClass('active');
       // Resize the map to make sure it's the right size
-      google.maps.event.trigger(map, 'resize');
+      resetMap(map);
       // Remove any event handlers - important to prevent zombie street views
       $(NS.streetview).off();
     });

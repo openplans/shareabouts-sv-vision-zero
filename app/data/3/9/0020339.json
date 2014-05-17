@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "3",
+  "B_Sev": "0",
+  "P_Inj": "14",
+  "info": "There were 4 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "3",
+  "P_Fat": "0",
+  "P_Sev": "3",
+  "M_Inj": "20",
+  "M_Sev": "1",
+  "NodeID_1": "0020339",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "West 14th Street",
+  "hcc_text": "West 14th Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
+  "MV_KSI": "1",
+  "intersection": "West 14th Street at Ninth Avenue and Hudson Street",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

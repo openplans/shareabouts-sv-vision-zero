@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "4",
+  "B_Sev": "0",
+  "P_Inj": "14",
+  "info": "There were 6 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "5",
+  "P_Fat": "1",
+  "P_Sev": "3",
+  "M_Inj": "11",
+  "M_Sev": "2",
+  "NodeID_1": "0020581",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Bowery",
+  "hcc_text": "Bowery is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
+  "MV_KSI": "2",
+  "intersection": "Bowery and Grand Street",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

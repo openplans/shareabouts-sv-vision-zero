@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "1",
+  "B_Sev": "0",
+  "P_Inj": "6",
+  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "1",
+  "P_Fat": "0",
+  "P_Sev": "1",
+  "M_Inj": "5",
+  "M_Sev": "0",
+  "NodeID_1": "0031330",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Liberty Avenue",
+  "hcc_text": "Liberty Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
+  "MV_KSI": "0",
+  "intersection": "Liberty Avenue and Sheridan Avenue",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

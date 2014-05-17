@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "1",
+  "B_Sev": "0",
+  "P_Inj": "3",
+  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "0",
+  "P_Fat": "0",
+  "P_Sev": "1",
+  "M_Inj": "29",
+  "M_Sev": "1",
+  "NodeID_1": "0008569",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Victory Boulevard",
+  "hcc_text": "Victory Boulevard is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Staten Island)",
+  "MV_KSI": "1",
+  "intersection": "Victory Boulevard and Slosson Avenue",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}
