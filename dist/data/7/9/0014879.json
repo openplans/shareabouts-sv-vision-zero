@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top Third",
+  "P_KSI": "0",
+  "B_Sev": "0",
+  "P_Inj": "3",
+  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "2",
+  "P_Fat": "0",
+  "P_Sev": "0",
+  "M_Inj": "4",
+  "M_Sev": "1",
+  "NodeID_1": "0014879",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Smith Street",
+  "hcc_text": "Smith Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
+  "MV_KSI": "1",
+  "intersection": "Smith Street and Butler Street",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

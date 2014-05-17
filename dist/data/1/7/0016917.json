@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top Third",
+  "P_KSI": "2",
+  "B_Sev": "0",
+  "P_Inj": "3",
+  "info": "There were 3 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "1",
+  "P_Fat": "0",
+  "P_Sev": "2",
+  "M_Inj": "8",
+  "M_Sev": "1",
+  "NodeID_1": "0016917",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Avenue V",
+  "hcc_text": "Avenue V is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
+  "MV_KSI": "1",
+  "intersection": "Avenue V and East 16th Street",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}
