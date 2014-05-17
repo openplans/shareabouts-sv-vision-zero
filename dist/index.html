@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="//www.nyc.gov/html/visionzero/assets/css/styles.min.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="styles/efdaf60f.shareabouts.css"/>
-    <link rel="stylesheet" href="styles/c76950a1.visionzero.css"/>
+    <link rel="stylesheet" href="styles/4c9a60ef.visionzero.css"/>
   </head>
   <body>
 
@@ -26,20 +26,9 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
 
-      <div class="shareabouts-streetview-container">
-        <div class="shareabouts-streetview"></div>
-        <button class="close-streetview-button btn">&times; <small>Go Back</small></button>
-      </div>
       <div class="shareabouts-location-map-container active">
         <div class="shareabouts-location-map shareabouts-map-container"></div>
         <div class="shareabouts-legend">
-          <p class="map-instruction">Please <span class="zoom-in-msg">zoom in and</span> select <span class="nobreak">an intersection</span>.</p>
-          <ul class="map-layer-list unstyled-list">
-            <li><span class="road-color" style="background-color:#fc7165;"></span>&nbsp;Pedestrian crash corridors (top 10% of streets in each borough)</li>
-            <li><img class="fatality" src="styles/images/red-square-stroked-14.png">&nbsp;Pedestrian fatality (2009-14)</li>
-            <li><span class="road-color" style="background-color:#ffff99;"></span>&nbsp;Major arterial roads</li>
-          </ul>
-          <hr>
           <p>We're gathering feedback on these safety conditions:</p>
           <ul class="place-type-list unstyled-list">
             <li><img src="styles/images/icon-notime.png">&nbsp;<strong>Not enough time to cross</strong></li>
@@ -53,15 +42,27 @@
             <li><img src="styles/images/icon-yield.png">&nbsp;<strong>Failure to yield</strong></li>
             <li><img src="styles/images/icon-bike.png">&nbsp;<strong>Cyclist behavior</strong></li>
           </ul>
+          <ul class="map-layer-list unstyled-list">
+            <li><span class="road-color" style="background-color:#fc7165;"></span>&nbsp;Pedestrian crash corridors (top 10% of streets in each borough)</li>
+            <li><img class="fatality" src="styles/images/red-square-stroked-14.png">&nbsp;Pedestrian fatality (2009-14)</li>
+            <li><span class="road-color" style="background-color:#ffff99;"></span>&nbsp;Major arterial roads</li>
+          </ul>
         </div>
         <p class="map-instruction is-over-map">Please <span class="zoom-in-msg">zoom in and</span> select <span class="nobreak">an intersection</span>.</p>
       </div>
+
+      <div class="shareabouts-streetview-container">
+        <div class="shareabouts-streetview"></div>
+        <button class="close-streetview-button btn"><small>Full Map</small></button>
+        <div class="shareabouts-intersection-detail"></div>
+      </div>
+
     </div>
 
     <div class="row"><footer><div class="container"><div class="span9 footer-links"><a href="http://www1.nyc.gov/nyc-resources/agencies.page">Directory of City Agencies</a><a href="http://www1.nyc.gov/home/contact-us.page">Contact NYC Government</a><a href="https://a127-ess.nyc.gov/">City Employees</a><a href="http://www.nyc.gov/notifynyc">Notify NYC</a><a href="http://a856-citystore.nyc.gov/">CityStore</a><a href="http://www1.nyc.gov/connect/social-media.page">Stay Connected</a><a href="http://www1.nyc.gov/connect/applications.page">NYC Mobile Apps</a><a href="http://maps.nyc.gov/doitt/nycitymap/">Maps</a><a href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page">Resident Toolkit</a></div><div class="span3"><span class="logo-nyc">NYC</span><form method="get" action="http://www1.nyc.gov/home/search/index.page" class="form-search"><input type="text" name="search-terms" placeholder="Search" class="input-search placeholder"><button class="ico-search">Search</button></form><div class="copyright"><p>City of New York © 2014 All Rights Reserved</p><a href="http://www1.nyc.gov/home/privacy-policy.page">Privacy Policy</a>. <a href="http://www1.nyc.gov/home/terms-of-use.page">Terms of Use</a></div></div></div></footer></div>
 
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=geometry" type="text/javascript"></script>
 
-    <script src="scripts/fcc2f11a.visionzero.js"></script>
+    <script src="scripts/455f167d.visionzero.js"></script>
 </body>
 </html>
