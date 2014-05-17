@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "5",
+  "B_Sev": "0",
+  "P_Inj": "23",
+  "info": "There were 9 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "3",
+  "P_Fat": "1",
+  "P_Sev": "4",
+  "M_Inj": "110",
+  "M_Sev": "3",
+  "NodeID_1": "0018959",
+  "M_Fat": "1",
+  "P_HCC_STREETNAME": "Eastern Parkway",
+  "hcc_text": "Eastern Parkway is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
+  "MV_KSI": "4",
+  "intersection": "Eastern Parkway and Nostrand Avenue",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

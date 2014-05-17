@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "0",
+  "B_Sev": "0",
+  "P_Inj": "2",
+  "info": "There were 3 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "2",
+  "P_Fat": "0",
+  "P_Sev": "0",
+  "M_Inj": "107",
+  "M_Sev": "3",
+  "NodeID_1": "0029167",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Eastern Parkway Ex",
+  "hcc_text": "Eastern Parkway Ex is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
+  "MV_KSI": "3",
+  "intersection": "Eastern Parkway Ex at Vanderveer Street and Bushwick Avenue",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

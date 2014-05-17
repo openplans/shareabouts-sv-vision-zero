@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "2",
+  "B_Sev": "1",
+  "P_Inj": "7",
+  "info": "There were 3 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "5",
+  "P_Fat": "1",
+  "P_Sev": "1",
+  "M_Inj": "38",
+  "M_Sev": "0",
+  "NodeID_1": "0022532",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Central Park South",
+  "hcc_text": "Central Park South is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
+  "MV_KSI": "0",
+  "intersection": "Central Park South at Seventh Avenue and C Point Seventh Avenue Appr",
+  "B_Fat": "0",
+  "B_KSI": "1"
+}

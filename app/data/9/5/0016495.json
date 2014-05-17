@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top Third",
+  "P_KSI": "0",
+  "B_Sev": "0",
+  "P_Inj": "0",
+  "info": "There was one injury caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "0",
+  "P_Fat": "0",
+  "P_Sev": "0",
+  "M_Inj": "1",
+  "M_Sev": "0",
+  "NodeID_1": "0016495",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Avenue Y",
+  "hcc_text": "Avenue Y is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
+  "MV_KSI": "0",
+  "intersection": "Avenue Y and East 1st Street",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

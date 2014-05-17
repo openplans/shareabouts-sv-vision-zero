@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "1",
+  "B_Sev": "0",
+  "P_Inj": "0",
+  "info": "There was 1 death caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "0",
+  "P_Fat": "1",
+  "P_Sev": "0",
+  "M_Inj": "3",
+  "M_Sev": "0",
+  "NodeID_1": "0048944",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Hughes Avenue",
+  "hcc_text": "Hughes Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)",
+  "MV_KSI": "0",
+  "intersection": "Hughes Avenue and East 187th Street",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

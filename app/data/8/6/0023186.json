@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "0",
+  "B_Sev": "1",
+  "P_Inj": "2",
+  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "1",
+  "P_Fat": "0",
+  "P_Sev": "0",
+  "M_Inj": "7",
+  "M_Sev": "0",
+  "NodeID_1": "0023186",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "23rd Street",
+  "hcc_text": "23rd Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
+  "MV_KSI": "0",
+  "intersection": "23rd Street and 44th Drive",
+  "B_Fat": "0",
+  "B_KSI": "1"
+}

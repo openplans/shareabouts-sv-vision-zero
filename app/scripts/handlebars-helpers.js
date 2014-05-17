@@ -13,12 +13,19 @@ var Shareabouts = Shareabouts || {};
     return window.location;
   });
 
-  Handlebars.registerHelper('place_url', function(place_id) {
+  Handlebars.registerHelper('place_url', function(place_id, encode, options) {
     var l = window.location,
-        protocol = l.protocol,
-        host = l.host;
+        url = [l.protocol, '//', l.host, l.pathname, '#', place_id].join('');
 
-    return [protocol, '//', host, '/place/', place_id].join('');
+    if (!options) {
+      options = encode;
+      encode = false;
+    }
+
+    if (encode) {
+      return encodeURIComponent(url);
+    }
+    return url;
   });
 
   Handlebars.registerHelper('fromnow', function(datetime) {

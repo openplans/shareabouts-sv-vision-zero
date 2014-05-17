@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top Third",
+  "P_KSI": "2",
+  "B_Sev": "0",
+  "P_Inj": "2",
+  "info": "There were 3 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "0",
+  "P_Fat": "0",
+  "P_Sev": "2",
+  "M_Inj": "8",
+  "M_Sev": "1",
+  "NodeID_1": "0021435",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Madison Avenue",
+  "hcc_text": "Madison Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
+  "MV_KSI": "1",
+  "intersection": "Madison Avenue and East 29th Street",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

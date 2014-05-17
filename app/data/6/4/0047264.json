@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top Third",
+  "P_KSI": "0",
+  "B_Sev": "0",
+  "P_Inj": "0",
+  "info": "There were 9 injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "0",
+  "P_Fat": "0",
+  "P_Sev": "0",
+  "M_Inj": "9",
+  "M_Sev": "0",
+  "NodeID_1": "0047264",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Kelly Street",
+  "hcc_text": "Kelly Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
+  "MV_KSI": "0",
+  "intersection": "Kelly Street and Avenue Street John",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

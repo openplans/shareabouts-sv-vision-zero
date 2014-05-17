@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "3",
+  "B_Sev": "1",
+  "P_Inj": "16",
+  "info": "There were 4 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "10",
+  "P_Fat": "0",
+  "P_Sev": "3",
+  "M_Inj": "17",
+  "M_Sev": "0",
+  "NodeID_1": "0020466",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "West 14th Street",
+  "hcc_text": "West 14th Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
+  "MV_KSI": "0",
+  "intersection": "West 14th Street and Eighth Avenue",
+  "B_Fat": "0",
+  "B_KSI": "1"
+}

@@ -267,7 +267,7 @@ $large-screen: 60em;
   .capitalize { text-transform: capitalize; }
 
 
-  /* =Map
+  /* =Map, Streetview, & Basic Layout(s)
   -------------------------------------------------------------- */
 
   /* Geolocation Button */
@@ -289,30 +289,53 @@ $large-screen: 60em;
 
   .shareabouts-location-map-container {
     position: relative;
-    display: none;
-    &.active {
-      display: block;
-    }
     @media screen and (min-width: $med-screen) {
-      height: 100%;
-      padding-right: 18em;
-    }
-  }
-  .shareabouts-location-map {
-  }
-  .shareabouts-legend {
-    @media screen and (min-width: $med-screen) {
-      height: 100%;
-      width: 18em;
+      height: 200px;
       position: absolute;
       top: 0;
       right: 0;
-      overflow: auto;
+      width: 40%;
+    }
+    &.active {
+      position: relative;
+      width: auto;
+      @media screen and (min-width: $med-screen) {
+        height: 100%;
+        padding-right: 18em;
+      }
+    }
+    .shareabouts-legend {
+      display: none;
+      p {
+        font-size: 0.875em;
+        margin-bottom: 0.5em;
+      }
+      .place-type-list {
+        font-size: 0.875em;
+      }
+      .map-layer-list {
+        margin-bottom: 0.5em;
+        font-size: 0.75em;
+      }
+    }
+    &.active .shareabouts-legend {
+      display: block;
       padding: 1em;
       -webkit-box-sizing: border-box;
          -moz-box-sizing: border-box;
               box-sizing: border-box;
+      @media screen and (min-width: $med-screen) {
+        height: 100%;
+        width: 18em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: auto;
+      }
     }
+
+    .shareabouts-location-map {}
+
   }
 
   .shareabouts-streetview-container {
@@ -324,21 +347,23 @@ $large-screen: 60em;
       height: 100%;
       .shareabouts-streetview {
         height: 100%;
-        &.panel-open {
-          .shareabouts-map-container {
-            width: 60%;
-          }
-          .shareabouts-panel {
-            width: 40%;
-          }
+        .shareabouts-map-container {
+          width: 60%;
+        }
+        .shareabouts-panel {
+          width: 40%;
         }
       }
     }
     .close-streetview-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 1;
+      display: none;
+      @media screen and (min-width: $med-screen) {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+      }
     }
   }
   /* Google Maps' images choke on our catch-all max-width */
@@ -406,26 +431,59 @@ $large-screen: 60em;
     border-radius: 0.325em;
   }
 
+  .shareabouts-intersection-detail {
+    padding: 1em;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    @media screen and (min-width: $med-screen) {
+      width: 40%;
+      box-shadow: 0 0 1em rgba(0,0,0,0.2);
+      position: absolute;
+      top: 200px;
+      right: 0;
+      bottom: 0;
+      overflow: auto;
+    }
+    .intersection-title {
+      font-size: 1em;
+      margin: -1em -1em 1em;
+      padding: 0.75em 1em;
+      background-color: #000;
+      color: #fff;
+      span {
+        font-size: 1.25em;
+      }
+    }
+
+    .incident-table {
+      width: 100%;
+
+      thead {
+        font-weight: bold;
+      }
+    }
+  }
 
   /* =The Legend
   -------------------------------------------------------------- */
 
   .map-instruction {
+    display: none;
+  }
+  .shareabouts-location-map-container.active  .map-instruction {
+    padding: 0.75em 1em;
     text-align: center;
     z-index: 1;
     padding: 0.5em;
     border: 1px solid rgba(0,0,0,0.1);
     background-color: rgba(245, 245, 245, 0.9);
     border-radius: 4px;
-    &.is-over-map {
-      display: none;
-      @media screen and (min-width: $med-screen) {
-        display: block;
-        position: absolute;
-        left: 20px;
-        bottom: 25px;
-        padding: 0.75em 1em;
-      }
+    @media screen and (min-width: $med-screen) {
+      display: block;
+      position: absolute;
+      left: 20px;
+      bottom: 25px;
     }
   }
 

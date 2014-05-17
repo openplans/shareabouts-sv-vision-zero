@@ -312,6 +312,7 @@ module.exports = function (grunt) {
                         '{,*/}*.html',
                         'styles/images/{,*/}*.*',
                         'styles/fonts/{,*/}*.*',
+                        'data/*/**/*.json',
                         '!jstemplates/{,*/}*.html'
                     ]
                 }]

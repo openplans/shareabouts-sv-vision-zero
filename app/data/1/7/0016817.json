@@ -1,0 +1,20 @@
+{
+  "P_HCC_CLASS": "Top 10%",
+  "P_KSI": "3",
+  "B_Sev": "0",
+  "P_Inj": "7",
+  "info": "There were 5 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "B_Inj": "1",
+  "P_Fat": "0",
+  "P_Sev": "3",
+  "M_Inj": "29",
+  "M_Sev": "2",
+  "NodeID_1": "0016817",
+  "M_Fat": "0",
+  "P_HCC_STREETNAME": "Coney Island Avenue",
+  "hcc_text": "Coney Island Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
+  "MV_KSI": "2",
+  "intersection": "Coney Island Avenue and Avenue V",
+  "B_Fat": "0",
+  "B_KSI": "0"
+}

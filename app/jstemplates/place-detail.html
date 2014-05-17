@@ -2,8 +2,8 @@
   <div class="support"></div>
   <div class="social">
     <ul class="sharing unstyled-list">
-      <li class="share-link share-twitter"><a href="https://twitter.com/intent/tweet?hashtags=VisionZero&url={{ window_location }}&text=I shared my knowledge to help make Vision Zero a reality in NYC" target="_blank" data-shareto="twitter">Tweet This</a></li>
-      <li class="share-link share-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ window_location }}" target="_blank" data-shareto="facebook">Recommend on Facebook</a></li>
+      <li class="share-link share-twitter"><a href="https://twitter.com/intent/tweet?hashtags=VisionZero&url={{ place_url id true }}&text=I shared my knowledge to help make Vision Zero a reality in NYC" target="_blank" data-shareto="twitter">Tweet This</a></li>
+      <li class="share-link share-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ place_url id true }}" target="_blank" data-shareto="facebook">Recommend on Facebook</a></li>
     </ul>
   </div>
 </section>
@@ -20,10 +20,9 @@
       {{#if submitter.name }}
         {{ action_text }} by {{ submitter.name }}
       {{^}}
-        {{#is submitter_name "Someone"}}
-          {{^}}
-            {{ action_text }} by {{ submitter_name }}
-        {{/is}}
+        {{#if submitter_name }}
+          {{ action_text }} by {{ submitter_name }}
+        {{/if}}
       {{/if}}
     </strong>
 
