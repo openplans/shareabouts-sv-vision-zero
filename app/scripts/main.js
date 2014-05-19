@@ -271,7 +271,7 @@ var Shareabouts = Shareabouts || {};
         }
       }
     ],
-    datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz/places',
+    datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz-dev/places',
   };
 
   NS.Router = Backbone.Router.extend({
@@ -299,7 +299,8 @@ var Shareabouts = Shareabouts || {};
           }
 
           // Show the street view
-          loadStreetView([lat, lng], model.get('intersection_id'), model);
+          loadStreetView([parseFloat(lat), parseFloat(lng)],
+            model.get('intersection_id'), model);
 
         },
         error: function() {
@@ -445,7 +446,9 @@ var Shareabouts = Shareabouts || {};
           }
         }),
         markers = {},
-        summaryWindow = new google.maps.InfoWindow(),
+        summaryWindow = new google.maps.InfoWindow({
+          disableAutoPan: true
+        }),
         summaryWindowTid;
 
     // Make these accessible outside of this function
@@ -581,6 +584,13 @@ var Shareabouts = Shareabouts || {};
             clearTimeout(summaryWindowTid);
           }
         });
+
+        // Focus on the place when it's clicked
+        google.maps.event.addListener(markers[model.id], 'click', function(evt) {
+          NS.router.navigate(model.id.toString(), {trigger: true});
+          evt.stop();
+        });
+
       }
     });
 
