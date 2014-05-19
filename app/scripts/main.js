@@ -483,7 +483,10 @@ var Shareabouts = Shareabouts || {};
             // On mouse over, including clicks
             map.setOptions({ draggableCursor: 'pointer' });
             if (obj.e.type === 'click') {
-              loadStreetView([obj.data.YCOORD, obj.data.XCOORD], obj.data.NodeID_1);
+              // If not a double click
+              if (obj.e.detail === 1) {
+                loadStreetView([obj.data.YCOORD, obj.data.XCOORD], obj.data.NodeID_1);
+              }
             }
           },
           off: function(evt) {
