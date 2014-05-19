@@ -1,9 +1,34 @@
-/*globals jQuery, L, google, Handlebars, Spinner, wax, Swag, Backbone */
+/*globals jQuery, L, google, Handlebars, Spinner, wax, Swag, Backbone, _ */
 
 var Shareabouts = Shareabouts || {};
 
 (function(NS, $, console) {
   Swag.registerHelpers();
+
+  // http://mir.aculo.us/2011/03/09/little-helpers-a-tweet-sized-javascript-templating-engine/
+  var t = function t(s,d){
+   for(var p in d)
+     s=s.replace(new RegExp('{{'+p+'}}','g'), d[p]);
+   return s;
+  };
+
+  // Get the style rule for this feature by evaluating the condition option
+  var getStyleRule = function(properties, rules) {
+    var self = this,
+        len, i, condition;
+
+    for (i=0, len=rules.length; i<len; i++) {
+      // Replace the template with the property variable, not the value.
+      // this is so we don't have to worry about strings vs nums.
+      condition = t(rules[i].condition, properties);
+
+      // Simpler code plus a trusted source; negligible performance hit
+      if (eval(condition)) {
+        return rules[i];
+      }
+    }
+    return null;
+  };
 
   NS.smallSpinnerOptions = {
     lines: 13, length: 0, width: 3, radius: 10, corners: 1, rotate: 0,
@@ -26,7 +51,227 @@ var Shareabouts = Shareabouts || {};
       'bike': { label: 'Cyclist Behavior' },
       'other': { label: 'Other' }
     },
-    datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz-dev/places',
+    placeStyles: [
+      {
+        condition: '"{{location_type}}" == "doublepark"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-doublepark.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-doublepark-focused.png',
+          anchor: new google.maps.Point(38,106)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "jaywalking"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-jaywalking.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-jaywalking-focused.png',
+          anchor: new google.maps.Point(38,106)
+
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "longcross"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-longcross.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-longcross-focused.png',
+          anchor: new google.maps.Point(38,106)
+
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "longwait"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-longwait.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-longwait-focused.png',
+          anchor: new google.maps.Point(38,106)
+
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "notime"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-notime.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-notime-focused.png',
+          anchor: new google.maps.Point(38,106)
+
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "redlight"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-redlight.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-redlight-focused.png',
+          anchor: new google.maps.Point(38,106)
+
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "speeding"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-speeding.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-speeding-focused.png',
+          anchor: new google.maps.Point(38,106)
+
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "visibility"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-visibility.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-visibility-focused.png',
+          anchor: new google.maps.Point(38,106)
+
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "yield"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-yield.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-yield-focused.png',
+          anchor: new google.maps.Point(38,106)
+
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "bike"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-bike.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-bike-focused.png',
+          anchor: new google.maps.Point(38,106)
+
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "other"',
+        icon: {
+          url: 'styles/images/markers/marker-70x124-unknown.png',
+          anchor: new google.maps.Point(35,103)
+        },
+        focusIcon: {
+          url: 'styles/images/markers/marker-76x127-unknown-focused.png',
+          anchor: new google.maps.Point(38,106)
+
+        }
+      },
+      {
+        condition: 'true',
+        newIcon: {
+          url: 'styles/images/markers/marker-70x124-plus.png',
+          anchor: new google.maps.Point(35,103)
+
+        }
+      }
+    ],
+    mapPlaceStyles: [
+      {
+        condition: '"{{location_type}}" == "doublepark"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-doublepark.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "jaywalking"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-jaywalking.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "longcross"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-longcross.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "longwait"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-longwait.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "notime"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-notime.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "redlight"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-redlight.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "speeding"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-speeding.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "visibility"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-visibility.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "yield"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-yield.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "bike"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-bike.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      },
+      {
+        condition: '"{{location_type}}" == "other"',
+        icon: {
+          url: 'styles/images/markers/icon-dot-unknown.png',
+          anchor: new google.maps.Point(16, 16)
+        }
+      }
+    ],
+    datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz/places',
   };
 
   NS.Router = Backbone.Router.extend({
@@ -66,7 +311,7 @@ var Shareabouts = Shareabouts || {};
   });
 
   function getIntersectionFileUrl(intersectionId) {
-    var count, i, dataFilePath
+    var count, i, dataFilePath;
 
     dataFilePath = 'data/';
     for (count = 0, i = intersectionId.length - 2;
@@ -105,148 +350,7 @@ var Shareabouts = Shareabouts || {};
         maxDistance: '100m',
         streetViewControl: false
       },
-      placeStyles: [
-        {
-          condition: '"{{location_type}}" == "doublepark"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-doublepark.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-doublepark-focused.png',
-            anchor: new google.maps.Point(38,106)
-          }
-        },
-        {
-          condition: '"{{location_type}}" == "jaywalking"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-jaywalking.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-jaywalking-focused.png',
-            anchor: new google.maps.Point(38,106)
-
-          }
-        },
-        {
-          condition: '"{{location_type}}" == "longcross"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-longcross.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-longcross-focused.png',
-            anchor: new google.maps.Point(38,106)
-
-          }
-        },
-        {
-          condition: '"{{location_type}}" == "longwait"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-longwait.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-longwait-focused.png',
-            anchor: new google.maps.Point(38,106)
-
-          }
-        },
-        {
-          condition: '"{{location_type}}" == "notime"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-notime.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-notime-focused.png',
-            anchor: new google.maps.Point(38,106)
-
-          }
-        },
-        {
-          condition: '"{{location_type}}" == "redlight"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-redlight.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-redlight-focused.png',
-            anchor: new google.maps.Point(38,106)
-
-          }
-        },
-        {
-          condition: '"{{location_type}}" == "speeding"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-speeding.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-speeding-focused.png',
-            anchor: new google.maps.Point(38,106)
-
-          }
-        },
-        {
-          condition: '"{{location_type}}" == "visibility"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-visibility.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-visibility-focused.png',
-            anchor: new google.maps.Point(38,106)
-
-          }
-        },
-        {
-          condition: '"{{location_type}}" == "yield"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-yield.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-yield-focused.png',
-            anchor: new google.maps.Point(38,106)
-
-          }
-        },
-        {
-          condition: '"{{location_type}}" == "bike"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-bike.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-bike-focused.png',
-            anchor: new google.maps.Point(38,106)
-
-          }
-        },
-        {
-          condition: '"{{location_type}}" == "other"',
-          icon: {
-            url: 'styles/images/markers/marker-70x124-unknown.png',
-            anchor: new google.maps.Point(35,103)
-          },
-          focusIcon: {
-            url: 'styles/images/markers/marker-76x127-unknown-focused.png',
-            anchor: new google.maps.Point(38,106)
-
-          }
-        },
-        {
-          condition: 'true',
-          newIcon: {
-            url: 'styles/images/markers/marker-70x124-plus.png',
-            anchor: new google.maps.Point(35,103)
-
-          }
-        }
-      ],
-
+      placeStyles: NS.Config.placeStyles,
       datasetUrl: NS.Config.datasetUrl,
       addButtonLabel: 'Share an Issue',
       maxDistance: 25,
@@ -303,6 +407,9 @@ var Shareabouts = Shareabouts || {};
     NS.currentMarker = NS.currentMarker || new google.maps.Marker({});
     NS.currentMarker.setMap(NS.map);
     NS.currentMarker.setPosition({lat: intersectionLatLng[0], lng: intersectionLatLng[1]});
+
+    // Remove the summary info window from the map
+    NS.summaryWindow.close();
   }
 
   function resetMap(map, options) {
@@ -322,7 +429,10 @@ var Shareabouts = Shareabouts || {};
   }
 
   function initMap() {
-    var map = new google.maps.Map($('.shareabouts-location-map').get(0), {
+    var minVectorZoom = 16,
+        maxVectorZoom = 19,
+        mapPlaceCollection = new NS.PlaceCollection(),
+        map = new google.maps.Map($('.shareabouts-location-map').get(0), {
           center: new google.maps.LatLng(40.7210690835, -73.9981985092),
           zoom: 14,
           minZoom: 11,
@@ -333,8 +443,17 @@ var Shareabouts = Shareabouts || {};
           zoomControlOptions: {
             style: google.maps.ZoomControlStyle.SMALL
           }
-        });
+        }),
+        markers = {},
+        summaryWindow = new google.maps.InfoWindow(),
+        summaryWindowTid;
+
+    // Make these accessible outside of this function
     NS.map = map;
+    NS.summaryWindow = summaryWindow;
+
+    // This has to be set directly, not via the options
+    mapPlaceCollection.url = NS.Config.datasetUrl;
 
     // Map layer with dangerous cooridors and crashes
     var crashDataMapType = new google.maps.ImageMapType({
@@ -375,9 +494,103 @@ var Shareabouts = Shareabouts || {};
     });
 
     // Change the map instructions based on the zoom level
+    // Decide if we should switch to vector markers
     google.maps.event.addListener(map, 'zoom_changed', function() {
-      $('.zoom-in-msg').toggleClass('is-hidden', (map.getZoom() >= 15));
+      var zoom = map.getZoom(),
+          center = map.getCenter();
+      $('.zoom-in-msg').toggleClass('is-hidden', (zoom >= 15));
+
+      if (zoom < minVectorZoom) {
+        // Zoomed out... clear the collection/map
+        mapPlaceCollection.reset();
+      } else {
+        // Zoomed in... get some places
+        mapPlaceCollection.fetchAllPages({
+          data: {
+            near: center.lat()+','+center.lng(),
+            distance_lt: '800m'
+          }
+        });
+      }
     });
+
+    // Fetch places for this new area
+    google.maps.event.addListener(map, 'dragend', function() {
+      var zoom = map.getZoom(),
+          center = map.getCenter();
+
+      if (zoom >= minVectorZoom) {
+        // console.log('fetch places for', map.getBounds().toString());
+
+        mapPlaceCollection.fetchAllPages({
+          data: {
+            near: center.lat()+','+center.lng(),
+            distance_lt: '800m'
+          }
+        });
+      }
+    });
+
+    // On model add, put a new styled marker on the map
+    mapPlaceCollection.on('add', function(model, collection) {
+      var geom = model.get('geometry'),
+          position = new google.maps.LatLng(geom.coordinates[1], geom.coordinates[0]),
+          styleRule = getStyleRule(model.toJSON(), NS.Config.mapPlaceStyles),
+          marker;
+
+      // Create and cache the map marker
+      if (styleRule && !markers[model.id]) {
+        markers[model.id] = new google.maps.Marker({
+          position: position,
+          map: map,
+          icon: styleRule.icon
+        });
+
+        // Show a summary info window when the user hovers over the marker for
+        // at least 500ms
+        google.maps.event.addListener(markers[model.id], 'mouseover', function(evt) {
+          // Already planning to show another summary. Cancel it.
+          if (summaryWindowTid) {
+            clearTimeout(summaryWindowTid);
+          }
+
+          // Show the summary info window in 500ms
+          summaryWindowTid = setTimeout(function() {
+            // close the shared window if it's already open
+            summaryWindow.close();
+
+            // set the window content
+            summaryWindow.setOptions({
+              content: NS.Templates['place-summary'](model.toJSON())
+            });
+
+            // show the window
+            summaryWindow.open(map, markers[model.id]);
+
+            // reset the timeout id
+            summaryWindowTid = null;
+          }, 500);
+        });
+
+        // I moused off a marker before it was shown, so cancel it.
+        google.maps.event.addListener(markers[model.id], 'mouseout', function(evt) {
+          if (summaryWindowTid) {
+            clearTimeout(summaryWindowTid);
+          }
+        });
+      }
+    });
+
+    // The collection was cleared, so clear the markers from the map and cache
+    mapPlaceCollection.on('reset', function() {
+      _.each(markers, function(marker, key) {
+        // from the map
+        marker.setMap(null);
+        // from the cache
+        delete markers[key];
+      });
+    });
+
 
     // Exit button on Street View to dismiss it and return to the map
     $(document).on('click', '.close-streetview-button', function(evt) {
