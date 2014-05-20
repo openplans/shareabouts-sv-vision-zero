@@ -6,6 +6,7 @@ contain a JSON list with objects with a NodeID_1 attribute.
 """
 
 import os
+import csv
 import json
 from os.path import join as pathjoin, dirname, exists
 from multiprocessing import Pool
@@ -26,10 +27,25 @@ def write_intersection_file(data):
         pass
 
     with open(pathjoin(path, nodeid + '.json'), 'w') as intersection_file:
-        json.dump(data, intersection_file, indent=2)
+        json.dump(data, intersection_file, indent=2, sort_keys=True)
 
 
 if __name__ == '__main__':
+    intersections = {}
+
+    # Load the intersection names CSV file
+    with open(pathjoin(BASEDIR, 'intersection-names.txt')) as intersection_names:
+        reader = csv.reader(intersection_names)
+        header = None
+        for row in reader:
+            if header is None:
+                header = row
+                continue
+
+            key = row[0]
+            intersections[key] = dict(zip(header, row))
+
+    # Update the intersection data with the crash data json file
     with open(pathjoin(BASEDIR, 'intersection_data.json')) as intersections_file:
         data = json.load(intersections_file)
         if isinstance(data, dict):
@@ -37,5 +53,10 @@ if __name__ == '__main__':
         else:
             data_iter = data
 
+        for elem in data_iter:
+            key = elem['NodeID_1']
+            intersections[key].update(elem)
+
+    # Write the intersection files
     pool = Pool(processes=4)
-    pool.map(write_intersection_file, data_iter)
+    pool.map(write_intersection_file, intersections.values())
