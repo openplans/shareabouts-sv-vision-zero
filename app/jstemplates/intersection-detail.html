@@ -1,6 +1,7 @@
 <h3 class="intersection-title"><span>{{ intersection }}</span></h3>
 {{# if hcc_text }}
 <p>{{ hcc_text }}. {{ info }}</p>
+{{/ if }}
 
 <table class="incident-table">
   <thead>
@@ -13,20 +14,19 @@
 
   <tbody>
     <tr>
-      <td>{{ P_Inj }} <small>Injuries</small></td>
-      <td>{{ B_Inj }} <small>Injuries</small></td>
-      <td>{{ M_Inj }} <small>Injuries</small></td>
+      <td>{{ default P_Inj 0 }} <small>Injuries</small></td>
+      <td>{{ default B_Inj 0 }} <small>Injuries</small></td>
+      <td>{{ default M_Inj 0 }} <small>Injuries</small></td>
     </tr>
     <tr>
-      <td>{{ P_Sev }} <small>Severe Injuries</small></td>
-      <td>{{ B_Sev }} <small>Severe Injuries</small></td>
-      <td>{{ M_Sev }} <small>Severe Injuries</small></td>
+      <td>{{ default P_Sev 0 }} <small>Severe Injuries</small></td>
+      <td>{{ default B_Sev 0 }} <small>Severe Injuries</small></td>
+      <td>{{ default M_Sev 0 }} <small>Severe Injuries</small></td>
     </tr>
     <tr>
-      <td>{{ P_Fat }} <small>Deaths</small></td>
-      <td>{{ B_Fat }} <small>Deaths</small></td>
-      <td>{{ M_Fat }} <small>Deaths</small></td>
+      <td>{{ default P_Fat 0 }} <small>Deaths</small></td>
+      <td>{{ default B_Fat 0 }} <small>Deaths</small></td>
+      <td>{{ default M_Fat 0 }} <small>Deaths</small></td>
     </tr>
   </tbody>
 </table>
-{{/ if }}
