@@ -1,4 +1,5 @@
 <h3 class="intersection-title"><span>{{ intersection }}</span></h3>
+{{# if hcc_text }}
 <p>{{ hcc_text }}. {{ info }}</p>
 
 <table class="incident-table">
@@ -28,3 +29,4 @@
     </tr>
   </tbody>
 </table>
+{{/ if }}
