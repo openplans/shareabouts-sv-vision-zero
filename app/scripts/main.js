@@ -5,6 +5,8 @@ var Shareabouts = Shareabouts || {};
 (function(NS, $, console) {
   Swag.registerHelpers();
 
+  var preventIntersectionClick = false;
+
   // http://mir.aculo.us/2011/03/09/little-helpers-a-tweet-sized-javascript-templating-engine/
   var t = function t(s,d){
    for(var p in d)
@@ -488,9 +490,10 @@ var Shareabouts = Shareabouts || {};
           on: function(obj) {
             // On mouse over, including clicks
             map.setOptions({ draggableCursor: 'pointer' });
-            if (obj.e.type === 'click') {
+            if (obj.e.type === 'click' && !preventIntersectionClick) {
               // If not a double click
               if (obj.e.detail === 1) {
+                console.log('intersection click');
                 loadStreetView([obj.data.YCOORD, obj.data.XCOORD], obj.data.NodeID_1);
               }
             }
@@ -590,10 +593,24 @@ var Shareabouts = Shareabouts || {};
 
         // Focus on the place when it's clicked
         google.maps.event.addListener(markers[model.id], 'click', function(evt) {
-          NS.router.navigate(model.id.toString(), {trigger: true});
+          // This doesn't really do anything useful.
           evt.stop();
-        });
 
+          // Okay. This is global to app. There's a problem with wax (DEPRECATED)
+          // where if I click on a Google Marker that the wax interaction fires
+          // too. This is bad because the map marker triggers an action (show
+          // the place details) first, but then the interaction triggers its
+          // action (reload the Streetview). So, we're setting a global flag
+          // that tell the wax click handler whether it should trigger its
+          // action. After 350ms, we allow it to work normally.
+          preventIntersectionClick = true;
+          setTimeout(function() {
+            preventIntersectionClick = false;
+          }, 350);
+
+          // Show the place details
+          NS.router.navigate(model.id.toString(), {trigger: true});
+        });
       }
     });
 
