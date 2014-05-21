@@ -465,27 +465,65 @@ $large-screen: 60em;
     }
   }
 
-  /* =The Legend
+
+  /* =Zoom UI & Message
   -------------------------------------------------------------- */
 
-  .map-instruction {
+  .shareabouts-zoom-ui {
     display: none;
-  }
-  .shareabouts-location-map-container.active  .map-instruction {
-    padding: 0.75em 1em;
-    text-align: center;
-    z-index: 1;
-    padding: 0.5em;
+    padding: 0.75em 0.75em 0.75em 4em;
+    line-height: 1.25;
     border: 1px solid rgba(0,0,0,0.1);
-    background-color: rgba(245, 245, 245, 0.9);
-    border-radius: 4px;
+    background-color: rgba(240, 240, 240, 0.9);
     @media screen and (min-width: $med-screen) {
-      display: block;
       position: absolute;
-      left: 20px;
-      bottom: 25px;
+      left: 6px;
+      top: 10px;
+      z-index: 1;
+      border-radius: 4px;
+    }
+    @media screen and (min-width: $large-screen) {
+      padding-right: 1em;
+      padding-left: 2.75em;
+      line-height: 1.75;
     }
   }
+  .shareabouts-location-map-container.active  .shareabouts-zoom-ui {
+    display: block;
+  }
+  .shareabouts-zoom-buttons {
+    float: left;
+    margin: -0.5em 0 -0.5em -3.75em;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 0.125em;
+    @media screen and (min-width: $large-screen) {
+      margin-left: -2.5em;
+    }
+  }
+  .shareabouts-zoom-button {
+    font-size: 1.5em;
+    float: left;
+    width: 1em;
+    height: 1em;
+    color: #000;
+    text-align: center;
+    line-height: 0.875;
+    box-shadow: 1px 1px 0 #bbb;
+    @media screen and (min-width: $large-screen) {
+      clear: left;
+    }
+  }
+  .map-instruction {
+    font-size: 0.75em;
+    @media screen and (min-width: $large-screen) {
+      font-size: 1.25em;
+    }
+  }
+
+
+  /* =The Legend
+  -------------------------------------------------------------- */
 
   .legend {
     padding: 1em 0.5em 0.5em;

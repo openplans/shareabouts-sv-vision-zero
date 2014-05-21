@@ -507,7 +507,7 @@ var Shareabouts = Shareabouts || {};
     google.maps.event.addListener(map, 'zoom_changed', function() {
       var zoom = map.getZoom(),
           center = map.getCenter();
-      $('.zoom-in-msg').toggleClass('is-hidden', (zoom >= 15));
+      // $('.zoom-in-msg').toggleClass('is-hidden', (zoom >= 15));
 
       if (zoom < minVectorZoom) {
         // Zoomed out... clear the collection/map
