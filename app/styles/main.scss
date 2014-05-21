@@ -496,9 +496,8 @@ $large-screen: 60em;
   -------------------------------------------------------------- */
 
   .shareabouts-zoom-ui {
-    display: none;
-    padding: 0.75em 0.75em 0.75em 4em;
-    line-height: 1.25;
+    padding: 0.25em;
+    line-height: 2.25;
     border: 1px solid rgba(0,0,0,0.1);
     background-color: rgba(240, 240, 240, 0.9);
     @media screen and (min-width: $med-screen) {
@@ -509,23 +508,14 @@ $large-screen: 60em;
       border-radius: 4px;
     }
     @media screen and (min-width: $large-screen) {
-      padding-right: 1em;
-      padding-left: 2.75em;
-      line-height: 1.75;
+      line-height: 2.5;
     }
-  }
-  .shareabouts-location-map-container.active  .shareabouts-zoom-ui {
-    display: block;
   }
   .shareabouts-zoom-buttons {
     float: left;
-    margin: -0.5em 0 -0.5em -3.75em;
     background-color: #fff;
     border: 1px solid #bbb;
     border-radius: 0.125em;
-    @media screen and (min-width: $large-screen) {
-      margin-left: -2.5em;
-    }
   }
   .shareabouts-zoom-button {
     font-size: 1.5em;
@@ -542,8 +532,20 @@ $large-screen: 60em;
   }
   .map-instruction {
     font-size: 0.75em;
+    margin-right: 0.25em;
+    margin-left: 4.75em;
+    @media screen and (min-width: $med-screen) {
+      display: none;
+    }
     @media screen and (min-width: $large-screen) {
       font-size: 1.25em;
+      margin-right: 0.5em;
+      margin-left: 1.75em;
+    }
+  }
+  .shareabouts-location-map-container.active  .map-instruction {
+    @media screen and (min-width: $med-screen) {
+      display: block;
     }
   }
 
