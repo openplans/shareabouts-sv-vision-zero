@@ -6,7 +6,33 @@ $large-screen: 60em;
   font-family: Helvetica, Arial, sans-serif;
   position: relative;
   @media screen and (min-width: $med-screen) {
-    height: 500px;
+    height: 250px;
+    @media screen and (min-height:  525px) { height:  300px; }
+    @media screen and (min-height:  575px) { height:  350px; }
+    @media screen and (min-height:  625px) { height:  400px; }
+    @media screen and (min-height:  675px) { height:  450px; }
+    @media screen and (min-height:  725px) { height:  500px; }
+    @media screen and (min-height:  775px) { height:  550px; }
+    @media screen and (min-height:  825px) { height:  600px; }
+    @media screen and (min-height:  875px) { height:  650px; }
+    @media screen and (min-height:  925px) { height:  700px; }
+    @media screen and (min-height:  975px) { height:  750px; }
+    @media screen and (min-height: 1025px) { height:  800px; }
+    @media screen and (min-height: 1075px) { height:  850px; }
+    @media screen and (min-height: 1125px) { height:  900px; }
+    @media screen and (min-height: 1175px) { height:  950px; }
+    @media screen and (min-height: 1225px) { height: 1000px; }
+    @media screen and (min-height: 1275px) { height: 1050px; }
+    @media screen and (min-height: 1325px) { height: 1100px; }
+    @media screen and (min-height: 1375px) { height: 1150px; }
+    @media screen and (min-height: 1425px) { height: 1200px; }
+    @media screen and (min-height: 1475px) { height: 1250px; }
+    @media screen and (min-height: 1525px) { height: 1300px; }
+    @media screen and (min-height: 1575px) { height: 1350px; }
+    @media screen and (min-height: 1625px) { height: 1400px; }
+    @media screen and (min-height: 1675px) { height: 1450px; }
+    @media screen and (min-height: 1725px) { height: 1500px; }
+    @media screen and (min-height: 1725px) { height: 1500px; }
   }
 
 
@@ -944,5 +970,10 @@ $large-screen: 60em;
     padding: 0.25em 0.5em;
   }
 
+}
 
+#main .shareabouts {
+  @media screen and (min-width: 630px) {
+    margin-bottom: -60px;
+  }
 }
