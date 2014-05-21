@@ -446,9 +446,7 @@ var Shareabouts = Shareabouts || {};
           mapTypeControl: false,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
           styles: NS.Config.mapStyle,
-          zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.SMALL
-          }
+          zoomControl: false
         }),
         markers = {},
         summaryWindow = new google.maps.InfoWindow({
