@@ -463,6 +463,16 @@ var Shareabouts = Shareabouts || {};
     // This has to be set directly, not via the options
     mapPlaceCollection.url = NS.Config.datasetUrl;
 
+    // Bind zoom-in/out to our custom buttons
+    $('.shareabouts-zoom-in').click(function(evt) {
+      evt.preventDefault();
+      map.setZoom(map.getZoom() + 1);
+    });
+    $('.shareabouts-zoom-out').click(function(evt) {
+      evt.preventDefault();
+      map.setZoom(map.getZoom() - 1);
+    });
+
     // Map layer with dangerous cooridors and crashes
     var crashDataMapType = new google.maps.ImageMapType({
       getTileUrl: function(coord, zoom) {
