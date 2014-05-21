@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+"""
+This script expects a file named instersection_data.json. The file should
+contain a JSON list with objects with a NodeID_1 attribute.
+"""
+
 import os
 import csv
 import json
