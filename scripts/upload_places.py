@@ -5,18 +5,25 @@ Read a list of places encoded in JSON from standard in and upload them to the
 dataset configured below.
 """
 
-import json
-import sys
-import requests
 import itertools
+import json
+import os
+import requests
+import sys
+
+env = os.environ.copy()
+
+try:
+    with open('.env') as env_file:
+        env.update(json.load(env_file))
+except IOError:
+    pass
 
 ###
 # Configuration
-
-owner = 'demo-user'
-dataset = 'demo-data'
-key = 'NTNhODE3Y2IzODlmZGZjMWU4NmU3NDhj'
-
+owner = env['OWNER']
+dataset = env['DATASET']
+key = env['APIKEY']
 # -- End Configuration
 ###
 

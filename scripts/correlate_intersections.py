@@ -7,16 +7,29 @@ writted to standard out.
 """
 
 import json
-from urllib.request import urlopen
 import math
 import multiprocessing
+import os
+import requests
 import sys
+import time
 
-def simple_distance(lat1, long1, lat2, long2):
-    dlat = lat2 - lat1
-    dlong = long2 - long1
-    dist = (dlat**2 + dlong**2)**0.5
-    return dist
+env = os.environ.copy()
+
+try:
+    with open('.env') as env_file:
+        env.update(json.load(env_file))
+except IOError:
+    pass
+
+###
+# Configuration
+owner = env['OWNER']
+dataset = env['DATASET']
+username = env['USERNAME']
+password = env['PASSWORD']
+# -- End Configuration
+###
 
 def distance_on_unit_sphere(lat1, long1, lat2, long2):
 
@@ -59,9 +72,21 @@ def find_nearest_node(place_data, intersections_data):
     return closest
 
 if __name__ == '__main__':
-    print('Downloading the places...', file=sys.stderr)
-    with urlopen('http://data.shareabouts.org/api/v2/nycdot/datasets/vz-dev/places?page_size=5000') as places_request:
-        places_data = json.loads(places_request.read().decode('utf-8'))['features']
+    url = 'http://data.shareabouts.org/api/v2/%s/datasets/%s/places?page_size=10000&include_invisible' % (owner, dataset)
+
+    successful = False
+    while not successful:
+        print('Downloading the places...', file=sys.stderr)
+        response = requests.get(url, auth=(username, password), headers={
+            'Content-type': 'application/json',
+            'X-Shareabouts-Silent': True})
+
+        if response.status_code != 200:
+            print('Failed to download. \n\n %s \n\n %s \n\n Retrying in 15 seconds... (Ctrl+c to cancel)' % (response, response.text), file=sys.stderr)
+            time.sleep(15)
+        else:
+            successful = True
+    places_data = response.json()['features']
 
     print('Loading the intersection data...', file=sys.stderr)
     with open('intersection_nodes.json') as nodes_file:
