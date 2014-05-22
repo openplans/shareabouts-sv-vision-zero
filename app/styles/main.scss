@@ -325,6 +325,20 @@ $small-map-height: 200px;
       @media screen and (min-height:  975px) { height: $small-map-height + 250; }
       @media screen and (min-height: 1025px) { height: $small-map-height + 300; }
       @media screen and (min-height: 1075px) { height: $small-map-height + 350; }
+      @media screen and (min-height: 1125px) { height: $small-map-height + 400; }
+      @media screen and (min-height: 1175px) { height: $small-map-height + 450; }
+      @media screen and (min-height: 1225px) { height: $small-map-height + 500; }
+      @media screen and (min-height: 1275px) { height: $small-map-height + 550; }
+      @media screen and (min-height: 1325px) { height: $small-map-height + 600; }
+      @media screen and (min-height: 1375px) { height: $small-map-height + 650; }
+      @media screen and (min-height: 1425px) { height: $small-map-height + 700; }
+      @media screen and (min-height: 1475px) { height: $small-map-height + 750; }
+      @media screen and (min-height: 1525px) { height: $small-map-height + 800; }
+      @media screen and (min-height: 1575px) { height: $small-map-height + 850; }
+      @media screen and (min-height: 1625px) { height: $small-map-height + 900; }
+      @media screen and (min-height: 1675px) { height: $small-map-height + 950; }
+      @media screen and (min-height: 1725px) { height: $small-map-height + 1000; }
+      @media screen and (min-height: 1725px) { height: $small-map-height + 1050; }
       position: absolute;
       top: 0;
       right: 0;
@@ -475,13 +489,27 @@ $small-map-height: 200px;
       box-shadow: 0 0 1em rgba(0,0,0,0.2);
       position: absolute;
       top: $small-map-height;
-      @media screen and (min-height:  775px) { top: $small-map-height + 50; }
+      @media screen and (min-height:  775px) { top: $small-map-height +  50; }
       @media screen and (min-height:  825px) { top: $small-map-height + 100; }
       @media screen and (min-height:  875px) { top: $small-map-height + 150; }
       @media screen and (min-height:  925px) { top: $small-map-height + 200; }
       @media screen and (min-height:  975px) { top: $small-map-height + 250; }
       @media screen and (min-height: 1025px) { top: $small-map-height + 300; }
       @media screen and (min-height: 1075px) { top: $small-map-height + 350; }
+      @media screen and (min-height: 1125px) { top: $small-map-height + 400; }
+      @media screen and (min-height: 1175px) { top: $small-map-height + 450; }
+      @media screen and (min-height: 1225px) { top: $small-map-height + 500; }
+      @media screen and (min-height: 1275px) { top: $small-map-height + 550; }
+      @media screen and (min-height: 1325px) { top: $small-map-height + 600; }
+      @media screen and (min-height: 1375px) { top: $small-map-height + 650; }
+      @media screen and (min-height: 1425px) { top: $small-map-height + 700; }
+      @media screen and (min-height: 1475px) { top: $small-map-height + 750; }
+      @media screen and (min-height: 1525px) { top: $small-map-height + 800; }
+      @media screen and (min-height: 1575px) { top: $small-map-height + 850; }
+      @media screen and (min-height: 1625px) { top: $small-map-height + 900; }
+      @media screen and (min-height: 1675px) { top: $small-map-height + 950; }
+      @media screen and (min-height: 1725px) { top: $small-map-height + 1000; }
+      @media screen and (min-height: 1725px) { top: $small-map-height + 1050; }
       right: 0;
       bottom: 0;
       overflow: auto;
