@@ -1,5 +1,6 @@
 $med-screen: 40.063em;
 $large-screen: 60em;
+$small-map-height: 200px;
 
 .shareabouts {
 
@@ -316,7 +317,7 @@ $large-screen: 60em;
   .shareabouts-location-map-container {
     position: relative;
     @media screen and (min-width: $med-screen) {
-      height: 200px;
+      height: $small-map-height;
       position: absolute;
       top: 0;
       right: 0;
@@ -466,7 +467,7 @@ $large-screen: 60em;
       width: 40%;
       box-shadow: 0 0 1em rgba(0,0,0,0.2);
       position: absolute;
-      top: 200px;
+      top: $small-map-height;
       right: 0;
       bottom: 0;
       overflow: auto;
