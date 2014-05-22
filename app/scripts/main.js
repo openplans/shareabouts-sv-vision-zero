@@ -363,6 +363,9 @@ var Shareabouts = Shareabouts || {};
       datasetUrl: NS.Config.datasetUrl,
       addButtonLabel: 'Share an Issue',
       maxDistance: 25,
+      newPlaceInfoWindow: {
+        content: '<strong>Drag me to the spot where the issue occurs.</strong>'
+      },
 
       templates: NS.Templates
     });
