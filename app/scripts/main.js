@@ -5,7 +5,8 @@ var Shareabouts = Shareabouts || {};
 (function(NS, $, console) {
   Swag.registerHelpers();
 
-  var preventIntersectionClick = false;
+  var preventIntersectionClick = false,
+      streetviewVisible = false;
 
   // http://mir.aculo.us/2011/03/09/little-helpers-a-tweet-sized-javascript-templating-engine/
   var t = function t(s,d){
@@ -331,6 +332,10 @@ var Shareabouts = Shareabouts || {};
   function loadStreetView(intersectionLatLng, intersectionId, lookAtPlaceModel) {
     var panoPosition, heading;
 
+    // This global indicates that the streetview is currently visible. This is
+    // good for things like hiding the summary infowindow on a small map.
+    streetviewVisible = true;
+
     // Get the intersection data file
     $.ajax({
       url: getIntersectionFileUrl(intersectionId),
@@ -574,22 +579,24 @@ var Shareabouts = Shareabouts || {};
             clearTimeout(summaryWindowTid);
           }
 
-          // Show the summary info window in 500ms
-          summaryWindowTid = setTimeout(function() {
-            // close the shared window if it's already open
-            summaryWindow.close();
+          if (!streetviewVisible) {
+            // Show the summary info window in 500ms
+            summaryWindowTid = setTimeout(function() {
+              // close the shared window if it's already open
+              summaryWindow.close();
 
-            // set the window content
-            summaryWindow.setOptions({
-              content: NS.Templates['place-summary'](model.toJSON())
-            });
+              // set the window content
+              summaryWindow.setOptions({
+                content: NS.Templates['place-summary'](model.toJSON())
+              });
 
-            // show the window
-            summaryWindow.open(map, markers[model.id]);
+              // show the window
+              summaryWindow.open(map, markers[model.id]);
 
-            // reset the timeout id
-            summaryWindowTid = null;
-          }, 500);
+              // reset the timeout id
+              summaryWindowTid = null;
+            }, 500);
+          }
         });
 
         // I moused off a marker before it was shown, so cancel it.
@@ -648,6 +655,8 @@ var Shareabouts = Shareabouts || {};
       resetMap(map);
       // Remove any event handlers - important to prevent zombie street views
       $(NS.streetview).off();
+      // Set the flag
+      streetviewVisible = false;
     });
   }
 
