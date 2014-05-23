@@ -3,7 +3,7 @@ var fs = require('graceful-fs');
 function getIntersectionFileUrl(intersectionId) {
   var count, i, dataFilePath;
 
-  dataFilePath = '/Users/aogle/Projects/openplans/shareabouts-sv-vision-zero/app/data/';
+  dataFilePath = '../app/data/';
   for (count = 0, i = intersectionId.length - 2;
        count < 2; ++i, ++count) {
     dataFilePath += intersectionId[i] + '/';
