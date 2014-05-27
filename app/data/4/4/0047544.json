@@ -10,11 +10,11 @@
   "NodeID_1": "0047544",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top 10%",
-  "P_HCC_STREETNAME": "Hunts Point Avenue",
+  "P_HCC_STREETNAME": "Hunts Pt Avenue", 
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Hunts Point Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There were 5 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Hunts Point Avenue and Randall Avenue"
+  "hcc_text": "Hunts Pt Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)", 
+  "info": "At Hunts Pt Avenue and Randall Avenue, there were 5 injuries in crashes between 2008 and 2012.", 
+  "intersection": "Hunts Pt Avenue and Randall Avenue"
 }

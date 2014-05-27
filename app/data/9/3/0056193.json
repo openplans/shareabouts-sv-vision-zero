@@ -10,11 +10,11 @@
   "NodeID_1": "0056193",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Whitestone Expressway Service Road West",
+  "P_HCC_STREETNAME": "Whitestone Exwy Service Road West", 
   "P_Inj": "4",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Whitestone Expressway Service Road West is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There were 7 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Whitestone Expressway Service Road West and 20th Avenue"
+  "hcc_text": "Whitestone Exwy Service Road West is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)", 
+  "info": "At Whitestone Exwy Service Road West and 20th Avenue, there were 7 severe injuries in crashes between 2008 and 2012.", 
+  "intersection": "Whitestone Exwy Service Road West and 20th Avenue"
 }

@@ -10,11 +10,11 @@
   "NodeID_1": "0083361",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Willets Point Boulevard",
+  "P_HCC_STREETNAME": "Willets Pt Boulevard", 
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Willets Point Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
+  "hcc_text": "Willets Pt Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)", 
   "info": "",
-  "intersection": "Willets Point Boulevard and 23rd Avenue"
+  "intersection": "Willets Pt Boulevard and 23rd Avenue"
 }

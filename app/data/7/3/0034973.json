@@ -10,11 +10,11 @@
   "NodeID_1": "0034973",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Van Wyck Expressway Service Road West",
+  "P_HCC_STREETNAME": "Van Wyck Exwy Service Road West", 
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Van Wyck Expressway Service Road West is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There were 79 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Van Wyck Expressway Service Road West and 101st Avenue"
+  "hcc_text": "Van Wyck Exwy Service Road West is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)", 
+  "info": "At Van Wyck Exwy Service Road West and 101st Avenue, there were 79 injuries in crashes between 2008 and 2012.", 
+  "intersection": "Van Wyck Exwy Service Road West and 101st Avenue"
 }

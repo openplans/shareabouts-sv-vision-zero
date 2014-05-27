@@ -10,11 +10,11 @@
   "NodeID_1": "0056602",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Willets Point Boulevard",
+  "P_HCC_STREETNAME": "Willets Pt Boulevard", 
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Willets Point Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There were 4 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Willets Point Boulevard and 157th Street"
+  "hcc_text": "Willets Pt Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)", 
+  "info": "At Willets Pt Boulevard and 157th Street, there were 4 injuries in crashes between 2008 and 2012.", 
+  "intersection": "Willets Pt Boulevard and 157th Street"
 }

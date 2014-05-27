@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 """
 This script expects a file named instersection_data.json. The file should
@@ -23,7 +23,7 @@ def write_intersection_file(data):
 
     try:
         os.makedirs(path)
-    except FileExistsError:
+    except OSError:
         pass
 
     with open(pathjoin(path, nodeid + '.json'), 'w') as intersection_file:

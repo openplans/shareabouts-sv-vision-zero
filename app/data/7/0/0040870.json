@@ -10,11 +10,11 @@
   "NodeID_1": "0040870",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Hunters Point Avenue",
+  "P_HCC_STREETNAME": "Hunters Pt Avenue", 
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Hunters Point Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
+  "hcc_text": "Hunters Pt Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)", 
   "info": "",
-  "intersection": "Hunters Point Avenue at Lie Westbound Exit 16 and Borden Avenue"
+  "intersection": "Hunters Pt Avenue at Lie Westbound Exit 16 and Borden Avenue"
 }

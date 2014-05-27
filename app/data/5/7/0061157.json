@@ -10,11 +10,11 @@
   "NodeID_1": "0061157",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Hollis Court Boulevard",
+  "P_HCC_STREETNAME": "Hollis Ct Boulevard", 
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Hollis Court Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
+  "hcc_text": "Hollis Ct Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)", 
   "info": "",
-  "intersection": "Hollis Court Boulevard and 90 Court"
+  "intersection": "Hollis Ct Boulevard and 90 Court"
 }
