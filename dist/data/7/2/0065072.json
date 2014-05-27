@@ -14,7 +14,7 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Mosholu Parkway is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There were 93 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Mosholu Parkway and Drive Kazimiroff Boulevard"
+  "hcc_text": "Mosholu Parkway is in the middle third in the Bronx for pedestrian deaths and serious injuries per mile.", 
+  "info": "At Mosholu Parkway and Dr Kazimiroff Boulevard, there were 93 injuries in crashes between 2008 and 2012.", 
+  "intersection": "Mosholu Parkway and Dr Kazimiroff Boulevard"
 }

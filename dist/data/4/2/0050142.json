@@ -10,11 +10,11 @@
   "NodeID_1": "0050142",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Hor Harding Expressway Service Road South",
+  "P_HCC_STREETNAME": "Hor Harding Exwy Service Road South", 
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Hor Harding Expressway Service Road South is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
+  "hcc_text": "Hor Harding Exwy Service Road South is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)", 
   "info": "",
-  "intersection": "Hor Harding Expressway Service Road South and 62nd Avenue"
+  "intersection": "Hor Harding Exwy Service Road South and 62nd Avenue"
 }

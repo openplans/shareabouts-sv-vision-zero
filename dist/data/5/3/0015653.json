@@ -14,7 +14,7 @@
   "P_Inj": "3",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Willow Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "hcc_text": "Willow Street is in the middle third in Brooklyn for pedestrian deaths and serious injuries per mile.", 
+  "info": "At Willow Street and Clark Street, there were 2 severe injuries in crashes between 2008 and 2012.", 
   "intersection": "Willow Street and Clark Street"
 }
