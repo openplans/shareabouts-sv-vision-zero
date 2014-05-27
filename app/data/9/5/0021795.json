@@ -14,7 +14,7 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Avenue B is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 4 injuries caused by traffic crashes here between 2009 and 2012.",
+  "hcc_text": "Avenue B is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
+  "info": "At Avenue B and East 12th Street, there were 4 injuries in crashes between 2008 and 2012.", 
   "intersection": "Avenue B and East 12th Street"
 }

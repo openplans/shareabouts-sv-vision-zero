@@ -14,7 +14,7 @@
   "P_Inj": "5",
   "P_KSI": "2",
   "P_Sev": "1",
-  "hcc_text": "Eldridge Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "hcc_text": "Eldridge Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
+  "info": "At Eldridge Street and Hester Street, there were 2 deaths and severe injuries in crashes between 2008 and 2012.", 
   "intersection": "Eldridge Street and Hester Street"
 }

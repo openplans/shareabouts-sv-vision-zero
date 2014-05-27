@@ -10,11 +10,11 @@
   "NodeID_1": "0013211",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top 10%",
-  "P_HCC_STREETNAME": "Ft Hamilton Parkway",
+  "P_HCC_STREETNAME": "Fort Hamilton Parkway", 
   "P_Inj": "5",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "Ft Hamilton Parkway is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Ft Hamilton Parkway and Bay Ridge Avenue"
+  "hcc_text": "Fort Hamilton Parkway is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)", 
+  "info": "At Fort Hamilton Parkway and Bay Ridge Avenue, there were 2 severe injuries in crashes between 2008 and 2012.", 
+  "intersection": "Fort Hamilton Parkway and Bay Ridge Avenue"
 }

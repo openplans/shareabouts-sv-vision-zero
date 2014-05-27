@@ -10,11 +10,11 @@
   "NodeID_1": "0055314",
   "P_Fat": "0",
   "P_HCC_CLASS": "Middle Third",
-  "P_HCC_STREETNAME": "Grnd Cntrl Parkway Service Road North",
+  "P_HCC_STREETNAME": "Grnd Cntrl Pkwy Service Road North", 
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Grnd Cntrl Parkway Service Road North is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There were 7 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Grnd Cntrl Parkway Service Road North and 167th Street"
+  "hcc_text": "Grnd Cntrl Pkwy Service Road North is in the middle third in Queens for pedestrian deaths and serious injuries per mile.", 
+  "info": "At Grnd Cntrl Pkwy Service Road North and 167th Street, there were 7 injuries in crashes between 2008 and 2012.", 
+  "intersection": "Grnd Cntrl Pkwy Service Road North and 167th Street"
 }

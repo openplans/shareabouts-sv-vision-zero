@@ -14,7 +14,7 @@
   "P_Inj": "3",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "Madison Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "hcc_text": "Madison Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
+  "info": "At Madison Street and Jefferson Street, there were 2 severe injuries in crashes between 2008 and 2012.", 
   "intersection": "Madison Street and Jefferson Street"
 }

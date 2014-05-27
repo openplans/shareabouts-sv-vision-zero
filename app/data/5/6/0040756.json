@@ -10,11 +10,11 @@
   "NodeID_1": "0040756",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Hunters Point Avenue",
+  "P_HCC_STREETNAME": "Hunters Pt Avenue", 
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Hunters Point Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There were 18 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Hunters Point Avenue and 31st Place"
+  "hcc_text": "Hunters Pt Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)", 
+  "info": "At Hunters Pt Avenue and 31st Place, there were 18 injuries in crashes between 2008 and 2012.", 
+  "intersection": "Hunters Pt Avenue and 31st Place"
 }

@@ -10,11 +10,11 @@
   "NodeID_1": "0048054",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Lane Fontaine Avenue",
+  "P_HCC_STREETNAME": "La Fontaine Avenue", 
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Lane Fontaine Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There were 2 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Lane Fontaine Avenue and East 178th Street"
+  "hcc_text": "La Fontaine Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)", 
+  "info": "At La Fontaine Avenue and East 178th Street, there were 2 injuries in crashes between 2008 and 2012.", 
+  "intersection": "La Fontaine Avenue and East 178th Street"
 }
