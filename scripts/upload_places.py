@@ -56,4 +56,4 @@ if __name__ == '__main__':
                 success = True
             else:
                 error_count += 1
-                print('\rError #%s: There was an error uploading page %s. Retrying...' % (error_count, page_num), end='', file=sys.stderr)
+                print('\rError #%s: There was an error (%s) uploading page %s. Retrying...' % (error_count, response.status_code, page_num), end='', file=sys.stderr)

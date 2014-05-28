@@ -77,10 +77,7 @@ if __name__ == '__main__':
     successful = False
     while not successful:
         print('Downloading the places...', file=sys.stderr)
-        response = requests.get(url, auth=(username, password), headers={
-            'Content-type': 'application/json',
-            'X-Shareabouts-Silent': True})
-
+        response = requests.get(url, auth=(username, password))
         if response.status_code != 200:
             print('Failed to download. \n\n %s \n\n %s \n\n Retrying in 15 seconds... (Ctrl+c to cancel)' % (response, response.text), file=sys.stderr)
             time.sleep(15)
