@@ -1,9 +1,6 @@
 <h3 class="intersection-title"><span>{{ intersection }}</span></h3>
 {{# if hcc_text }}
 <p>{{ hcc_text }} {{ info }}</p>
-{{ else }}
-<p>At {{ intersection }}, there were no severe injuries in crashes between 2008 and 2012.</p>
-{{/ if }}
 
 <table class="incident-table">
   <thead>
@@ -32,3 +29,6 @@
     </tr>
   </tbody>
 </table>
+{{ else }}
+<p>No reported injuries between 2008 and 2012.</p>
+{{/ if }}
