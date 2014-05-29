@@ -688,11 +688,62 @@ var Shareabouts = Shareabouts || {};
         $target.removeClass('is-open');
 
         if (value === 'other') {
+          $('.type-instructions').addClass('is-hidden');
           $('.other-type-instructions').removeClass('is-hidden');
           $('#place-description').prop('required', true);
           $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'bike') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.bike-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'yield') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.yield-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'longcross') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.longcross-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'speeding') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.speeding-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'visibility') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.visibility-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'jaywalking') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.jaywalking-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'redlight') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.redlight-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'longwait') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.longwait-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'doublepark') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.doublepark-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'notime') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.notime-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
         } else {
-          $('.other-type-instructions').addClass('is-hidden');
+          $('.type-instructions').addClass('is-hidden');
           $('#place-description').prop('required', false);
           $('label[for="place-description"] small').removeClass('is-hidden'); // the '(optional)' text
         }
