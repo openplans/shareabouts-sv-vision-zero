@@ -1,3 +1,12 @@
+"""
+Adapted from https://gist.github.com/fitnr/ef8c05e9e5a854bb7fba
+
+This script only does part of what the above does. This will transform
+the intersection and borough fields into human readable values. For the
+other parts of the above script, see
+https://github.com/openplans/shareabouts-sv-vision-zero/blob/master/app/scripts/handlebars-helpers.js
+"""
+
 from __future__ import print_function
 
 import csv
