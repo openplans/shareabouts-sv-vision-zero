@@ -14,7 +14,6 @@
   "P_Inj": "3",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "West 45th Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At West 45th Street and Shubert Alley, there were 4 injuries in crashes between 2008 and 2012.", 
-  "intersection": "West 45th Street and Shubert Alley"
+  "borough": "Manhattan",
+  "intersection": "West 45th Street and Shubert Al"
 }

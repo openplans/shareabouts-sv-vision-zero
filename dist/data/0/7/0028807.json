@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Avenue M is in the middle third in Brooklyn for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Avenue M and East 94th Street, there were 15 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Avenue M and East 94th Street"
 }

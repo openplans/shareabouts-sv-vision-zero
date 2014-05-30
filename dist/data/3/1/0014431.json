@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Hamilton Avenue is in the middle third in Brooklyn for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Hamilton Avenue and Van Brunt Street, there was one injury in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Hamilton Avenue and Van Brunt Street"
 }

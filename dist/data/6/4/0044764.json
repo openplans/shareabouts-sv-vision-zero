@@ -10,11 +10,10 @@
   "NodeID_1": "0044764",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top 10%",
-  "P_HCC_STREETNAME": "Dr M L King Jr Boulevard", 
+  "P_HCC_STREETNAME": "Dr M L King Jr Boulevard",
   "P_Inj": "12",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "Dr M L King Jr Boulevard is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)", 
-  "info": "At Dr M L King Jr Boulevard and West 183rd Street, there were 6 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Dr M L King Jr Boulevard and West 183rd Street"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "4",
   "P_KSI": "2",
   "P_Sev": "1",
-  "hcc_text": "Chestnut Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Chestnut Street and Pitkin Avenue, there were 2 deaths and severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Chestnut Street and Pitkin Avenue"
 }

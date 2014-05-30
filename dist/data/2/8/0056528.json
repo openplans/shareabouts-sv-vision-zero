@@ -10,11 +10,10 @@
   "NodeID_1": "0056528",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Cross Is Pkwy Service Road South", 
+  "P_HCC_STREETNAME": "Cross Is Pkwy Service Road South",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Cross Is Pkwy Service Road South is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)", 
-  "info": "",
+  "borough": "Queens",
   "intersection": "Cross Is Pkwy Service Road South and 150th Place"
 }

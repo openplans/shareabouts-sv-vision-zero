@@ -10,11 +10,10 @@
   "NodeID_1": "0055244",
   "P_Fat": "0",
   "P_HCC_CLASS": "Middle Third",
-  "P_HCC_STREETNAME": "Grnd Cntrl Pkwy Service Road North", 
+  "P_HCC_STREETNAME": "Grnd Cntrl Pkwy Service Road North",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Grnd Cntrl Pkwy Service Road North is in the middle third in Queens for pedestrian deaths and serious injuries per mile.", 
-  "info": "",
+  "borough": "Queens",
   "intersection": "Grnd Cntrl Pkwy Service Road North and 161st Street"
 }

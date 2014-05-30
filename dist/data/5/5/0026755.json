@@ -14,7 +14,6 @@
   "P_Inj": "4",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Albany Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Albany Avenue and St. John's Place, there were 21 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Albany Avenue and St. John's Place"
 }

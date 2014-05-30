@@ -14,7 +14,6 @@
   "P_Inj": "6",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "41st Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At 41st Avenue and Bowne Street, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "41st Avenue and Bowne Street"
 }

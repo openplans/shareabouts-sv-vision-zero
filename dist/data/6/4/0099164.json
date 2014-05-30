@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Bruckner Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At Bruckner Boulevard and Southern Boulevard, there were 30 injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Bruckner Boulevard and Southern Boulevard"
 }

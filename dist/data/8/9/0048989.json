@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Briggs Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At Briggs Avenue and East 199th Street, there were 5 injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Briggs Avenue and East 199th Street"
 }

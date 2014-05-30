@@ -14,7 +14,6 @@
   "P_Inj": "16",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "Flatbush Avenue Ex is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Flatbush Avenue Ex at Myrtle Avenue and Gold Street, there were 8 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Flatbush Avenue Ex at Myrtle Avenue and Gold Street"
 }

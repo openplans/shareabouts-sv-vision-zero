@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Bruckner Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At Bruckner Boulevard at Whitlock Avenue, Longfellow Avenue and Bruckner Boulevard Eb, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Bruckner Boulevard at Whitlock Avenue, Longfellow Avenue and Bruckner Boulevard Eb"
 }

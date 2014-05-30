@@ -14,7 +14,6 @@
   "P_Inj": "13",
   "P_KSI": "3",
   "P_Sev": "3",
-  "hcc_text": "Spring Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Spring Street at Lafayette Street and Cleveland Place, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Spring Street at Lafayette Street and Cleveland Place"
 }

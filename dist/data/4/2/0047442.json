@@ -10,11 +10,10 @@
   "NodeID_1": "0047442",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top 10%",
-  "P_HCC_STREETNAME": "Hunts Pt Avenue", 
+  "P_HCC_STREETNAME": "Hunts Pt Avenue",
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Hunts Pt Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)", 
-  "info": "At Hunts Pt Avenue and Seneca Avenue, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Hunts Pt Avenue and Seneca Avenue"
 }

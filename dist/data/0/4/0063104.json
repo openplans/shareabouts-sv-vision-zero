@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "80th Avenue is in the middle third in Queens for pedestrian deaths and serious injuries per mile.", 
-  "info": "At 80th Avenue and 263rd Street, there were 2 injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "80th Avenue and 263rd Street"
 }

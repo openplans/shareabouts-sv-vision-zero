@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Bayswater Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At Bayswater Avenue and Mott Avenue, there was one injury in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Bayswater Avenue and Mott Avenue"
 }

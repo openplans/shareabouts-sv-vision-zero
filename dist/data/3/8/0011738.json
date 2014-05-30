@@ -14,7 +14,6 @@
   "P_Inj": "28",
   "P_KSI": "5",
   "P_Sev": "5",
-  "hcc_text": "86th Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At 86th Street and Fourth Avenue, there were 6 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "86th Street and Fourth Avenue"
 }

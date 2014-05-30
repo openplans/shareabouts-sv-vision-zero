@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Garfield Place is in the middle third in Brooklyn for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Garfield Place and Prospect Park West, there were 4 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Garfield Place and Prospect Park West"
 }

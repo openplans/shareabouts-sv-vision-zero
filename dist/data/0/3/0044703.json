@@ -14,7 +14,6 @@
   "P_Inj": "4",
   "P_KSI": "1",
   "P_Sev": "0",
-  "hcc_text": "West Fordham Road is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At West Fordham Road and Cedar Avenue, there was 1 death in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "West Fordham Road and Cedar Avenue"
 }

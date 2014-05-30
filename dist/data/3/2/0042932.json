@@ -14,7 +14,6 @@
   "P_Inj": "9",
   "P_KSI": "3",
   "P_Sev": "3",
-  "hcc_text": "Alexander Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At Alexander Avenue at Third Avenue and East 143rd Street, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Alexander Avenue at Third Avenue and East 143rd Street"
 }

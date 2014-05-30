@@ -14,7 +14,6 @@
   "P_Inj": "3",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Avenue J is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Avenue J and East 8th Street, there were 5 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Avenue J and East 8th Street"
 }

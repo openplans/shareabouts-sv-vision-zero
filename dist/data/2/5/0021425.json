@@ -14,7 +14,6 @@
   "P_Inj": "7",
   "P_KSI": "2",
   "P_Sev": "1",
-  "hcc_text": "Ninth Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At Ninth Avenue and West 53rd Street, there were 3 deaths and severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Ninth Avenue and West 53rd Street"
 }

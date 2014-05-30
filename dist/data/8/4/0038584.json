@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "0",
+  "B_KSI": "0",
+  "B_Sev": "0",
+  "MV_KSI": "0",
+  "M_Fat": "0",
+  "M_Inj": "5",
+  "M_Sev": "0",
   "NodeID_1": "0038584",
+  "P_Fat": "1",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "145th Avenue",
+  "P_Inj": "1",
+  "P_KSI": "1",
+  "P_Sev": "0",
+  "borough": "$borough",
   "intersection": "145th Avenue and 243rd Street"
 }

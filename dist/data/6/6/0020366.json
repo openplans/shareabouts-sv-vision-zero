@@ -14,7 +14,6 @@
   "P_Inj": "12",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Canal Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At Canal Street and Mercer Street, there were 21 injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Canal Street and Mercer Street"
 }

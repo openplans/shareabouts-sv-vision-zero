@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Walker Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Walker Street and Cortlandt Alley, there were 3 injuries in crashes between 2008 and 2012.", 
-  "intersection": "Walker Street and Cortlandt Alley"
+  "borough": "Manhattan",
+  "intersection": "Walker Street and Cortlandt Al"
 }

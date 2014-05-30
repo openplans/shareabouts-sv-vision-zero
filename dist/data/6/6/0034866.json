@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "133rd Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At 133rd Street at 103rd Avenue and Liberty Avenue, there were 12 injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "133rd Street at 103rd Avenue and Liberty Avenue"
 }

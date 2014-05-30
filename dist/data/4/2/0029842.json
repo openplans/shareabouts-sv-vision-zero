@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Hemlock Street is in the middle third in Brooklyn for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Hemlock Street and Adler Place, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Hemlock Street and Adler Place"
 }

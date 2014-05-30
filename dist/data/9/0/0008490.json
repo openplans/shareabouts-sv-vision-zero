@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Manor Road is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Staten Island)",
-  "info": "At Manor Road and Josephine Street, there was one injury in crashes between 2008 and 2012.", 
+  "borough": "Staten Island",
   "intersection": "Manor Road and Josephine Street"
 }

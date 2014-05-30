@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "West 48th Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At West 48th Street and Twelfth Avenue, there were 2 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "West 48th Street and Twelfth Avenue"
 }

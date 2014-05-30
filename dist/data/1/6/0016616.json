@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Avenue U is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Avenue U and East 4th Street, there were 8 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Avenue U and East 4th Street"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "St. Nicholas Avenue is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At St. Nicholas Avenue at Fort George Hill and Fairview Avenue, there were 9 injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "St. Nicholas Avenue at Fort George Hill and Fairview Avenue"
 }

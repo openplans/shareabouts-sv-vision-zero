@@ -14,7 +14,6 @@
   "P_Inj": "4",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Bedell Street is in the middle third in Queens for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Bedell Street and 127th Avenue, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Bedell Street and 127th Avenue"
 }

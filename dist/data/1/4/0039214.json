@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "228th Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At 228th Street and 135th Avenue, there were 7 injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "228th Street and 135th Avenue"
 }

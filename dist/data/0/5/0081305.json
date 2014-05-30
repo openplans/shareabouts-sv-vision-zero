@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "0",
+  "B_KSI": "0",
+  "B_Sev": "0",
+  "MV_KSI": "0",
+  "M_Fat": "0",
+  "M_Inj": "0",
+  "M_Sev": "0",
   "NodeID_1": "0081305",
-  "intersection": "Grand Central Eb En North Shore Tower and Grnd Cntrl Pkwy Service Road South"
+  "P_Fat": "0",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "Grand Central En North Shore Tower",
+  "P_Inj": "0",
+  "P_KSI": "0",
+  "P_Sev": "0",
+  "borough": "$borough",
+  "intersection": "Grand Central En North Shore Tower at Grand Central Eb En North Shore Tower and Grnd Cntrl Pkwy Service Road South"
 }

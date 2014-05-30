@@ -14,7 +14,6 @@
   "P_Inj": "5",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Guy R Brewer Boulevard is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At Guy R Brewer Boulevard and 108th Avenue, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Guy R Brewer Boulevard and 108th Avenue"
 }
