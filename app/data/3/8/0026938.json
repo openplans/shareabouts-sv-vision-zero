@@ -14,7 +14,6 @@
   "P_Inj": "5",
   "P_KSI": "1",
   "P_Sev": "0",
-  "hcc_text": "Rochester Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Rochester Avenue and Atlantic Avenue, there were 2 deaths and severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Rochester Avenue and Atlantic Avenue"
 }

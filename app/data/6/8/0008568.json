@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Slosson Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Staten Island)",
-  "info": "At Slosson Avenue at Staten Island Exwy Wb Exit 12 and Reon Avenue, there were 3 injuries in crashes between 2008 and 2012.", 
+  "borough": "Staten Island",
   "intersection": "Slosson Avenue at Staten Island Exwy Wb Exit 12 and Reon Avenue"
 }

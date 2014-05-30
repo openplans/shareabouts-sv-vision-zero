@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "139th Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At 139th Street and 87th Road, there were 3 injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "139th Street and 87th Road"
 }

@@ -10,11 +10,10 @@
   "NodeID_1": "0044356",
   "P_Fat": "0",
   "P_HCC_CLASS": "Middle Third",
-  "P_HCC_STREETNAME": "Fort Washington Avenue", 
+  "P_HCC_STREETNAME": "Fort Washington Avenue",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Fort Washington Avenue is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "",
+  "borough": "Manhattan",
   "intersection": "Fort Washington Avenue at Margaret Corbin Plaza and Cabrini Boulevard"
 }

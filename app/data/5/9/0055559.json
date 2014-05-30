@@ -14,7 +14,6 @@
   "P_Inj": "17",
   "P_KSI": "3",
   "P_Sev": "3",
-  "hcc_text": "Main Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At Main Street and Booth Memorial Avenue, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Main Street and Booth Memorial Avenue"
 }

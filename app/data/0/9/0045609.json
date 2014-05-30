@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "45th Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At 45th Avenue and 72nd Street, there was one injury in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "45th Avenue and 72nd Street"
 }

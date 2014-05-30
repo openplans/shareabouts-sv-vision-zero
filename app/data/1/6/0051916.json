@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Seventh Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At Seventh Avenue and 130th Street, there were 3 injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Seventh Avenue and 130th Street"
 }

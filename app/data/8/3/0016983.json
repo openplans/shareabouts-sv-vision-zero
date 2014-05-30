@@ -14,7 +14,6 @@
   "P_Inj": "4",
   "P_KSI": "3",
   "P_Sev": "3",
-  "hcc_text": "Jerome Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Jerome Avenue and East 18th Street, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Jerome Avenue and East 18th Street"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "12",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "West Broadway is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At West Broadway at Broome Street and Watts Street, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "West Broadway at Broome Street and Watts Street"
 }

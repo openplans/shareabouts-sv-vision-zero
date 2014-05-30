@@ -14,7 +14,6 @@
   "P_Inj": "24",
   "P_KSI": "4",
   "P_Sev": "4",
-  "hcc_text": "Parsons Boulevard is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At Parsons Boulevard and Archer Avenue, there were 5 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Parsons Boulevard and Archer Avenue"
 }

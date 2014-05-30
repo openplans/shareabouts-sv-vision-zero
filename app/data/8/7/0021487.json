@@ -14,7 +14,6 @@
   "P_Inj": "24",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Ninth Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At Ninth Avenue and West 57th Street, there were 5 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Ninth Avenue and West 57th Street"
 }

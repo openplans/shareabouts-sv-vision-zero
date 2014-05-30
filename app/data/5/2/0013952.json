@@ -14,7 +14,6 @@
   "P_Inj": "13",
   "P_KSI": "3",
   "P_Sev": "2",
-  "hcc_text": "Fourth Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Fourth Avenue and 39th Street, there were 3 deaths and severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Fourth Avenue and 39th Street"
 }

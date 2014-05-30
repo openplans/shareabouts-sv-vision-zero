@@ -14,7 +14,6 @@
   "P_Inj": "6",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "East 138th Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At East 138th Street at Bruckner Exwy Eb En East 138th Street and Bruckner Boulevard, there were 8 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "East 138th Street at Bruckner Exwy Eb En East 138th Street and Bruckner Boulevard"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "3",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "146th Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At 146th Street and 60th Avenue, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "146th Street and 60th Avenue"
 }

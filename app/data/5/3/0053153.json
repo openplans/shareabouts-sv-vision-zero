@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "0",
+  "B_KSI": "0",
+  "B_Sev": "0",
+  "MV_KSI": "4",
+  "M_Fat": "1",
+  "M_Inj": "96",
+  "M_Sev": "3",
   "NodeID_1": "0053153",
+  "P_Fat": "0",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "Brush Avenue",
+  "P_Inj": "3",
+  "P_KSI": "0",
+  "P_Sev": "0",
+  "borough": "$borough",
   "intersection": "Brush Avenue at Union Port Branch, Bruckner Boulevard Eb and Bruckner Boulevard Wb"
 }

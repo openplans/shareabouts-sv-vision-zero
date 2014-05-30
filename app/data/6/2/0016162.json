@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "2",
   "P_Sev": "1",
-  "hcc_text": "Madison Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Madison Street and Jackson Street, there were 2 deaths and severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Madison Street and Jackson Street"
 }

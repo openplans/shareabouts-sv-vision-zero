@@ -14,7 +14,6 @@
   "P_Inj": "7",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Madison Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At Madison Avenue at Harlem River Dr Nb Exit 21, Madison Avenue Br and East 135th Street, there were 74 injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Madison Avenue at Harlem River Dr Nb Exit 21, Madison Avenue Br and East 135th Street"
 }

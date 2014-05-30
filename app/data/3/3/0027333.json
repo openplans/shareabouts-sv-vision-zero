@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Broadway is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Broadway and Ellery Street, there were 2 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Broadway and Ellery Street"
 }

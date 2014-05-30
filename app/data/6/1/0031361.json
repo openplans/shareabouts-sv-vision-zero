@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Eldert Lane is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At Eldert Lane at Ridgewood Avenue, 90th Avenue and Rockaway Boulevard, there were 6 injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Eldert Lane at Ridgewood Avenue, 90th Avenue and Rockaway Boulevard"
 }

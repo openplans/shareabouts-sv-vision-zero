@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Osgood Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Staten Island)",
-  "info": "At Osgood Avenue and Park Hill Circle, there were 4 injuries in crashes between 2008 and 2012.", 
+  "borough": "Staten Island",
   "intersection": "Osgood Avenue and Park Hill Circle"
 }

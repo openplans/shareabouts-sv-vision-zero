@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Avenue B is in the middle third in Brooklyn for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Avenue B and East 92nd Street, there were 9 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Avenue B and East 92nd Street"
 }

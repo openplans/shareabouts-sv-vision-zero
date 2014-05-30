@@ -14,7 +14,6 @@
   "P_Inj": "15",
   "P_KSI": "8",
   "P_Sev": "7",
-  "hcc_text": "Grand Concourse is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At Grand Concourse and East 170th Street, there were 13 deaths and severe injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Grand Concourse and East 170th Street"
 }

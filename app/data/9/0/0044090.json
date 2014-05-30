@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Jerome Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At Jerome Avenue and East 171st Street, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Jerome Avenue and East 171st Street"
 }

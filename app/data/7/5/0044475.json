@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Academy Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At Academy Street and Post Avenue, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Academy Street and Post Avenue"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "26",
   "P_KSI": "3",
   "P_Sev": "3",
-  "hcc_text": "Avenue H is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Avenue H at Flatbush Avenue and East 31st Street, there were 4 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Avenue H at Flatbush Avenue and East 31st Street"
 }

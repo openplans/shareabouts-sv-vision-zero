@@ -14,7 +14,6 @@
   "P_Inj": "18",
   "P_KSI": "3",
   "P_Sev": "3",
-  "hcc_text": "East 23rd Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At East 23rd Street and Park Avenue South, there were 6 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "East 23rd Street and Park Avenue South"
 }

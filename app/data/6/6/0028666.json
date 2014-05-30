@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Avenue L is in the middle third in Brooklyn for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Avenue L and East 88th Street, there were 2 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Avenue L and East 88th Street"
 }

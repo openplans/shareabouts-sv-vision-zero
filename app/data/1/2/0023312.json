@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "West 95th Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At West 95th Street at Riverside Drive, Henry Hudson Parkway Sb Exit 11 and Riverside Dr (Upper), there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "West 95th Street at Riverside Drive, Henry Hudson Parkway Sb Exit 11 and Riverside Dr (Upper)"
 }

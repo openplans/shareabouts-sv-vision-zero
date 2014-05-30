@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Central Park West is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Central Park West and West 70th Street, there was one injury in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Central Park West and West 70th Street"
 }

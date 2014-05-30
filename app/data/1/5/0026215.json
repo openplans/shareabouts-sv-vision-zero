@@ -14,7 +14,6 @@
   "P_Inj": "21",
   "P_KSI": "4",
   "P_Sev": "4",
-  "hcc_text": "Church Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Church Avenue and Utica Avenue, there were 5 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Church Avenue and Utica Avenue"
 }

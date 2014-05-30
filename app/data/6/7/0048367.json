@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "East 174th Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At East 174th Street and Ward Avenue, there were 4 injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "East 174th Street and Ward Avenue"
 }

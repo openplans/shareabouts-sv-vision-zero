@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "35th Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At 35th Avenue at Francis Lewis Boulevard and Crocheron Avenue, there were 4 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "35th Avenue at Francis Lewis Boulevard and Crocheron Avenue"
 }

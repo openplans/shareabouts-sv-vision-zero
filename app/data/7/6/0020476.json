@@ -10,11 +10,10 @@
   "NodeID_1": "0020476",
   "P_Fat": "0",
   "P_HCC_CLASS": "Middle Third",
-  "P_HCC_STREETNAME": "Center Street", 
+  "P_HCC_STREETNAME": "Center Street",
   "P_Inj": "7",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Center Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Center Street and Walker Street, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Center Street and Walker Street"
 }

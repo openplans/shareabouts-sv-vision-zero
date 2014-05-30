@@ -10,11 +10,10 @@
   "NodeID_1": "0020475",
   "P_Fat": "0",
   "P_HCC_CLASS": "Middle Third",
-  "P_HCC_STREETNAME": "Center Street", 
+  "P_HCC_STREETNAME": "Center Street",
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Center Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Center Street and White Street, there were 3 injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Center Street and White Street"
 }

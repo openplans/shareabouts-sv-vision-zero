@@ -14,7 +14,6 @@
   "P_Inj": "9",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Tillary Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Tillary Street and Adams Street, there were 10 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Tillary Street and Adams Street"
 }

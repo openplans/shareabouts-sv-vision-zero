@@ -14,7 +14,6 @@
   "P_Inj": "15",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "Second Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At Second Avenue and East 79th Street, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Second Avenue and East 79th Street"
 }

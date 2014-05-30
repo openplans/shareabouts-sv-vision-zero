@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Zerega Avenue is in the middle third in the Bronx for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Zerega Avenue and Randall Avenue, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Zerega Avenue and Randall Avenue"
 }

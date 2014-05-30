@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "St. Nicholas Avenue is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At St. Nicholas Avenue at West 193rd Street and Fort George Avenue, there were 7 injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "St. Nicholas Avenue at West 193rd Street and Fort George Avenue"
 }

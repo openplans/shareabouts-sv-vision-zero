@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "Clove Road is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Staten Island)",
-  "info": "At Clove Road and Martha Street, there were 2 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Staten Island",
   "intersection": "Clove Road and Martha Street"
 }

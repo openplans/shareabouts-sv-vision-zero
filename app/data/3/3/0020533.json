@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "3",
+  "B_KSI": "2",
+  "B_Sev": "2",
+  "MV_KSI": "0",
+  "M_Fat": "0",
+  "M_Inj": "0",
+  "M_Sev": "0",
   "NodeID_1": "0020533",
+  "P_Fat": "0",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "West 3rd Street",
+  "P_Inj": "1",
+  "P_KSI": "0",
+  "P_Sev": "0",
+  "borough": "$borough",
   "intersection": "West 3rd Street and Thompson Street"
 }

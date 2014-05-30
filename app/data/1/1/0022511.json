@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "East 46th Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At East 46th Street and Vanderbilt Avenue, there were 6 injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "East 46th Street and Vanderbilt Avenue"
 }

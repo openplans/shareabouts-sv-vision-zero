@@ -14,7 +14,6 @@
   "P_Inj": "14",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "Canal Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At Canal Street and Lafayette Street, there were 2 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Canal Street and Lafayette Street"
 }

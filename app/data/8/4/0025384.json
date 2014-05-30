@@ -10,11 +10,10 @@
   "NodeID_1": "0025384",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Avenue P", 
+  "P_HCC_STREETNAME": "Avenue P",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Avenue P is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)", 
-  "info": "At Avenue P and Marine Parkway, there were 2 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Avenue P and Marine Parkway"
 }

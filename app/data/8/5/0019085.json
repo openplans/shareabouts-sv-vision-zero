@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Marcy Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Marcy Avenue and Hancock Street, there were 5 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Marcy Avenue and Hancock Street"
 }

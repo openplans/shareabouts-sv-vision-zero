@@ -14,7 +14,6 @@
   "P_Inj": "7",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Bushwick Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Bushwick Avenue and Cooper Street, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Bushwick Avenue and Cooper Street"
 }

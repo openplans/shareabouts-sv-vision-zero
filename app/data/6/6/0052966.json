@@ -10,11 +10,10 @@
   "NodeID_1": "0052966",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "St. Peter's Avenue", 
+  "P_HCC_STREETNAME": "St. Peter's Avenue",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "St. Peter's Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)", 
-  "info": "",
+  "borough": "the Bronx",
   "intersection": "St. Peter's Avenue and St. Raymond's Avenue"
 }
