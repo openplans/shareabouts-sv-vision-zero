@@ -1,14 +1,15 @@
 {{#if name}}
-  <a href="#" class="shareabouts-auth-button button"><img class="shareabouts-auth-avatar" src="{{avatar_url}}"><small>{{name}}</small></a>
+  <a href="#" class="shareabouts-auth-button"><img class="shareabouts-auth-avatar" src="{{avatar_url}}"><small class="caret">&#9660;</small></a>
 
   <div class="shareabouts-auth-menu is-exposed">
-    <a class="shareabouts-auth-logout-button" href="#">Logout</a>
+    <p><span class="nobreak">Signed in as</span> <span class="nobreak"><strong>{{name}}</strong></span></p>
+    <a class="shareabouts-auth-logout-button" href="#"><small>SIGN OUT</small></a>
   </div>
 {{else}}
-  <a href="#" class="shareabouts-auth-button button"><img class="shareabouts-auth-avatar" src="images/user-50.png"><small>Sign In</small></a>
+  <a href="#" class="shareabouts-auth-button"><img class="shareabouts-auth-avatar" src="styles/images/user-anon.png"><small>Sign In</small></a>
 
   <div class="shareabouts-auth-menu is-exposed">
-    <a class="shareabouts-auth-twitter-button" href="#">Twitter</a>
-    <a class="shareabouts-auth-facebook-button" href="#">Facebook</a>
+    <a class="shareabouts-auth-twitter-button button btn-block" href="#">Twitter</a>
+    <a class="shareabouts-auth-facebook-button button btn-block" href="#">Facebook</a>
   </div>
 {{/if}}
