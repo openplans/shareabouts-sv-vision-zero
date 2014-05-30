@@ -1,10 +1,12 @@
 Generating intersection data files
 ==================================
 
-Assuming the data is in a CSV file calledTo regenerate the intersection data files, run:
+Starting from the raw intersection data file (*IntersectionsFlatData.txt*),
+first add the descriptions:
 
-    # Get rid of unneeded columns, and convert to a big JSON file
-    csvcut --not-columns BORO,STREET1,STREET2,STREET3,STREET3,X,Y \
-        intersection_data.txt | csvjson > intersection_data.json
-    # Split into many tiny JSON files
-    ./generate_intersection_files.py
+    python clean_intersection_data.py
+
+Assuming the data is in a CSV file called intersection-data.txt, to regenerate
+the intersection data files, run:
+
+    python generate_intersection_files.py
