@@ -14,7 +14,6 @@
   "P_Inj": "13",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Central Park West is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Central Park West at West 96th Street and 97 St Transverse, there were 2 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Central Park West at West 96th Street and 97 St Transverse"
 }

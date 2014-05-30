@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "1",
+  "B_KSI": "1",
+  "B_Sev": "1",
+  "MV_KSI": "1",
+  "M_Fat": "0",
+  "M_Inj": "1",
+  "M_Sev": "1",
   "NodeID_1": "0010995",
+  "P_Fat": "0",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "Sylvaton Terrace",
+  "P_Inj": "0",
+  "P_KSI": "0",
+  "P_Sev": "0",
+  "borough": "$borough",
   "intersection": "Sylvaton Terrace and Edgewater Street"
 }

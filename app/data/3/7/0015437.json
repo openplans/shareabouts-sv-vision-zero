@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "3",
+  "B_KSI": "0",
+  "B_Sev": "0",
+  "MV_KSI": "1",
+  "M_Fat": "0",
+  "M_Inj": "25",
+  "M_Sev": "1",
   "NodeID_1": "0015437",
-  "intersection": "Fdr Dr Entry Ramp at Fdr Drive Northbound Exit 2, Pearl Street, Frankfort Street, Dover Street and Bk Branch En Ramp"
+  "P_Fat": "0",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "Fdr Dr Entry Ramp",
+  "P_Inj": "7",
+  "P_KSI": "0",
+  "P_Sev": "0",
+  "borough": "$borough",
+  "intersection": "Fdr Dr Entry Ramp at Fdr Drive Northbound Exit 2, Pearl Street and Frankfort Street"
 }

@@ -10,11 +10,10 @@
   "NodeID_1": "0024404",
   "P_Fat": "0",
   "P_HCC_CLASS": "Middle Third",
-  "P_HCC_STREETNAME": "Fort Washington Avenue", 
+  "P_HCC_STREETNAME": "Fort Washington Avenue",
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Fort Washington Avenue is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Fort Washington Avenue and West 163rd Street, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Fort Washington Avenue and West 163rd Street"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "4",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "East 183rd Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At East 183rd Street and Webster Avenue, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "East 183rd Street and Webster Avenue"
 }

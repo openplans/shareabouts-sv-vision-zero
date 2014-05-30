@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "62nd Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At 62nd Avenue at Grnd Cntrl Parkway En Eb and Grnd Cntrl Pkwy Service Road West, there were 8 injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "62nd Avenue at Grnd Cntrl Parkway En Eb and Grnd Cntrl Pkwy Service Road West"
 }

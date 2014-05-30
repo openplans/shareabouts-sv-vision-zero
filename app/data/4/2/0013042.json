@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Stillwell Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Stillwell Avenue and Bay 50th Street, there were 7 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Stillwell Avenue and Bay 50th Street"
 }

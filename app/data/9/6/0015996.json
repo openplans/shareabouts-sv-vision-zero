@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Gold Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Gold Street and Concord Street, there were 2 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Gold Street and Concord Street"
 }

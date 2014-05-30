@@ -14,7 +14,6 @@
   "P_Inj": "5",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Decatur Street is in the middle third in Brooklyn for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Decatur Street and Stuyvesant Avenue, there were 8 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Decatur Street and Stuyvesant Avenue"
 }

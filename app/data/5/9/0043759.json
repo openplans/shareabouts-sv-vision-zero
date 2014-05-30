@@ -10,11 +10,10 @@
   "NodeID_1": "0043759",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top 10%",
-  "P_HCC_STREETNAME": "Macombs Dam Branch", 
+  "P_HCC_STREETNAME": "Macombs Dam Branch",
   "P_Inj": "3",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Macombs Dam Branch is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)", 
-  "info": "At Macombs Dam Branch at East 162nd Street and Jerome Avenue, there were 28 injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Macombs Dam Branch at East 162nd Street and Jerome Avenue"
 }

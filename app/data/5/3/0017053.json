@@ -14,7 +14,6 @@
   "P_Inj": "6",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Avenue Z is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Avenue Z and Ocean Avenue, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Avenue Z and Ocean Avenue"
 }

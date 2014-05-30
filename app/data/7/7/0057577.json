@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "0",
+  "B_KSI": "0",
+  "B_Sev": "0",
+  "MV_KSI": "0",
+  "M_Fat": "0",
+  "M_Inj": "5",
+  "M_Sev": "0",
   "NodeID_1": "0057577",
-  "intersection": "Bruckner Boulevard Eb and Wilkinson Avenue"
+  "P_Fat": "1",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "Bruckner Boulevard",
+  "P_Inj": "1",
+  "P_KSI": "1",
+  "P_Sev": "0",
+  "borough": "$borough",
+  "intersection": "Bruckner Boulevard at Bruckner Boulevard Eb and Wilkinson Avenue"
 }

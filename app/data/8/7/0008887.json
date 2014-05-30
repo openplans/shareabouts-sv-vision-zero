@@ -14,7 +14,6 @@
   "P_Inj": "7",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "Victory Boulevard is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Staten Island)",
-  "info": "At Victory Boulevard and Clove Road, there were 5 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Staten Island",
   "intersection": "Victory Boulevard and Clove Road"
 }

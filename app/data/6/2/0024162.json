@@ -14,7 +14,6 @@
   "P_Inj": "5",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "West 124th Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At West 124th Street at St. Nicholas Avenue and Manhattan Avenue, there were 2 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "West 124th Street at St. Nicholas Avenue and Manhattan Avenue"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "13",
   "P_KSI": "1",
   "P_Sev": "0",
-  "hcc_text": "Fulton Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Fulton Street and Crescent Street, there was 1 death in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Fulton Street and Crescent Street"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "3",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Kissena Boulevard is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At Kissena Boulevard and Beech Avenue, there were 6 injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Kissena Boulevard and Beech Avenue"
 }

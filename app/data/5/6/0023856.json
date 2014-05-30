@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "West 101st Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At West 101st Street and West End Avenue, there were 13 injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "West 101st Street and West End Avenue"
 }

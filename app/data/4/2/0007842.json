@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "1",
   "P_Sev": "0",
-  "hcc_text": "Lincoln Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Staten Island)",
-  "info": "At Lincoln Avenue and Richmond Road, there was 1 death in crashes between 2008 and 2012.", 
+  "borough": "Staten Island",
   "intersection": "Lincoln Avenue and Richmond Road"
 }

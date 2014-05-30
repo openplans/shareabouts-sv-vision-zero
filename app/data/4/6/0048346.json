@@ -14,7 +14,6 @@
   "P_Inj": "4",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Southern Boulevard is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At Southern Boulevard and East 183rd Street, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Southern Boulevard and East 183rd Street"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Shore Parkway is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Shore Parkway at Belt Parkway Wb En West 2nd Street and West 2nd Street, there were 16 injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Shore Parkway at Belt Parkway Wb En West 2nd Street and West 2nd Street"
 }

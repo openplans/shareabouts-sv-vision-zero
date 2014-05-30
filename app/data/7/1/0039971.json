@@ -14,7 +14,6 @@
   "P_Inj": "10",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Francis Lewis Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At Francis Lewis Boulevard and Linden Boulevard, there were 2 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Francis Lewis Boulevard and Linden Boulevard"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "4",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "139th Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At 139th Street and 86th Avenue, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "139th Street and 86th Avenue"
 }

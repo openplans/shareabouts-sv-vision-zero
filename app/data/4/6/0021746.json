@@ -14,7 +14,6 @@
   "P_Inj": "3",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "West 79th Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At West 79th Street at Riverside Drive, Henry Hudson Parkway Nb Exit 10 East and Henry Hudson Parkway Nb En West 79 Wb, there were 2 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "West 79th Street at Riverside Drive, Henry Hudson Parkway Nb Exit 10 East and Henry Hudson Parkway Nb En West 79 Wb"
 }

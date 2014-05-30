@@ -14,7 +14,6 @@
   "P_Inj": "11",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "Forest Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Staten Island)",
-  "info": "At Forest Avenue and Broadway, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Staten Island",
   "intersection": "Forest Avenue and Broadway"
 }

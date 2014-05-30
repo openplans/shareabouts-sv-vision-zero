@@ -14,7 +14,6 @@
   "P_Inj": "18",
   "P_KSI": "4",
   "P_Sev": "4",
-  "hcc_text": "Fulton Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Fulton Street and Brooklyn Avenue, there were 5 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Fulton Street and Brooklyn Avenue"
 }

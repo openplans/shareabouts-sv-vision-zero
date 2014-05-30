@@ -14,7 +14,6 @@
   "P_Inj": "15",
   "P_KSI": "5",
   "P_Sev": "5",
-  "hcc_text": "East 34th Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At East 34th Street and First Avenue, there were 6 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "East 34th Street and First Avenue"
 }

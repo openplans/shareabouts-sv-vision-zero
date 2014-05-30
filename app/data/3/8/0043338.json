@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Amsterdam Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At Amsterdam Avenue and West 159th Street, there were 11 injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Amsterdam Avenue and West 159th Street"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "12",
   "P_KSI": "3",
   "P_Sev": "3",
-  "hcc_text": "Harlem River Driveway is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At Harlem River Driveway at West 155th Street, St. Nicholas Place and Edgecombe Avenue, there were 6 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Harlem River Driveway at West 155th Street, St. Nicholas Place and Edgecombe Avenue"
 }

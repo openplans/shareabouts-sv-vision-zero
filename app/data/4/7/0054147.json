@@ -14,7 +14,6 @@
   "P_Inj": "4",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "East 222nd Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At East 222nd Street and Bronx Boulevard, there were 3 severe injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "East 222nd Street and Bronx Boulevard"
 }

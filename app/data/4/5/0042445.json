@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Lenox Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "At Lenox Avenue and West 131st Street, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Lenox Avenue and West 131st Street"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "3",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Beverly Road is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Beverly Road and East 54th Street, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Beverly Road and East 54th Street"
 }

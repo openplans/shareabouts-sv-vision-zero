@@ -14,7 +14,6 @@
   "P_Inj": "5",
   "P_KSI": "2",
   "P_Sev": "1",
-  "hcc_text": "Decatur Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "At Decatur Avenue and East Fordham Road, there were 3 deaths and severe injuries in crashes between 2008 and 2012.", 
+  "borough": "the Bronx",
   "intersection": "Decatur Avenue and East Fordham Road"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "3",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Edgecombe Avenue is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "At Edgecombe Avenue at West 142nd Street and Bradhurst Avenue, there were 8 injuries in crashes between 2008 and 2012.", 
+  "borough": "Manhattan",
   "intersection": "Edgecombe Avenue at West 142nd Street and Bradhurst Avenue"
 }

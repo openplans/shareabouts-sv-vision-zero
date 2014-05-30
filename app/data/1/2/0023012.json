@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Jackson Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At Jackson Avenue at 11th Street and Pulaski Branch, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Jackson Avenue at 11th Street and Pulaski Branch"
 }

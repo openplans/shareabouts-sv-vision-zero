@@ -10,11 +10,10 @@
   "NodeID_1": "0015481",
   "P_Fat": "0",
   "P_HCC_CLASS": "Middle Third",
-  "P_HCC_STREETNAME": "Center Street", 
+  "P_HCC_STREETNAME": "Center Street",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Center Street is in the middle third in Manhattan for pedestrian deaths and serious injuries per mile.", 
-  "info": "",
+  "borough": "Manhattan",
   "intersection": "Center Street and Duane Street"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "6",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Blake Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "At Blake Avenue and Mother Gaston Boulevard, there were 2 deaths and severe injuries in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "Blake Avenue and Mother Gaston Boulevard"
 }

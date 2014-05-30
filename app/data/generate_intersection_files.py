@@ -16,6 +16,7 @@ BASEDIR = dirname(__file__)
 
 def write_intersection_file(data):
     nodeid = data['NodeID_1']
+    exclude_keys = {'BORO', 'STREET1', 'STREET2', 'STREET3', 'STREET4', 'X', 'Y'}
 
     # Split the files into separate folders so that there's not more than 1000
     # or so files per folder.
@@ -26,6 +27,10 @@ def write_intersection_file(data):
     except OSError:
         pass
 
+    for key in list(data.keys()):
+        if key in exclude_keys:
+            del data[key]
+
     with open(pathjoin(path, nodeid + '.json'), 'w') as intersection_file:
         json.dump(data, intersection_file, indent=2, sort_keys=True)
 
@@ -35,27 +40,17 @@ if __name__ == '__main__':
 
     # Load the intersection names CSV file
     with open(pathjoin(BASEDIR, 'intersection-names.txt')) as intersection_names:
-        reader = csv.reader(intersection_names)
-        header = None
+        reader = csv.DictReader(intersection_names)
         for row in reader:
-            if header is None:
-                header = row
-                continue
-
-            key = row[0]
-            intersections[key] = dict(zip(header, row))
+            key = row['NodeID_1']
+            intersections[key] = row
 
     # Update the intersection data with the crash data json file
-    with open(pathjoin(BASEDIR, 'intersection_data.json')) as intersections_file:
-        data = json.load(intersections_file)
-        if isinstance(data, dict):
-            data_iter = data.values()
-        else:
-            data_iter = data
-
-        for elem in data_iter:
-            key = elem['NodeID_1']
-            intersections[key].update(elem)
+    with open(pathjoin(BASEDIR, 'intersection-data.txt')) as intersections_file:
+        reader = csv.DictReader(intersections_file)
+        for row in reader:
+            key = row['NodeID_1']
+            intersections[key].update(row)
 
     # Write the intersection files
     pool = Pool(processes=4)

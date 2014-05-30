@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Farmers Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "At Farmers Boulevard and Jordan Avenue, there were 3 injuries in crashes between 2008 and 2012.", 
+  "borough": "Queens",
   "intersection": "Farmers Boulevard and Jordan Avenue"
 }

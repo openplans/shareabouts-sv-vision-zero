@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "East 7th Street is in the middle third in Brooklyn for pedestrian deaths and serious injuries per mile.", 
-  "info": "At East 7th Street and Avenue R, there was 1 severe injury in crashes between 2008 and 2012.", 
+  "borough": "Brooklyn",
   "intersection": "East 7th Street and Avenue R"
 }
