@@ -63,8 +63,9 @@ var Shareabouts = Shareabouts || {};
     }
   })
 
-  // ==========
+  // =====================================================================
   // The following were translated from Python. The original script is at:
+  // https://gist.github.com/fitnr/ef8c05e9e5a854bb7fba
 
   function write_highcrash(street, borough, class_) {
     // TODO: precompile these templates with all the rest.
