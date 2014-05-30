@@ -6,7 +6,8 @@ var Shareabouts = Shareabouts || {};
   Swag.registerHelpers();
 
   var preventIntersectionClick = false,
-      streetviewVisible = false;
+      streetviewVisible = false,
+      currentUser;
 
   // http://mir.aculo.us/2011/03/09/little-helpers-a-tweet-sized-javascript-templating-engine/
   var t = function t(s,d){
@@ -366,6 +367,7 @@ var Shareabouts = Shareabouts || {};
       newPlaceInfoWindow: {
         content: '<strong>Drag me to the spot where the issue occurs.</strong>'
       },
+      currentUser: currentUser,
 
       templates: NS.Templates
     });
@@ -763,6 +765,28 @@ var Shareabouts = Shareabouts || {};
         .focus()
         .get(0).scrollIntoView();
     });
+
+
+    NS.auth = new Shareabouts.Auth({
+      apiRoot: 'http://data.shareabouts.org/api/v2/',
+      successPage: 'success.html',
+      errorPage: 'error.html'
+    });
+
+    $(NS.auth).on('authsuccess', function(evt, data) {
+      currentUser = data;
+      if (data) {
+        console.log('you just logged in!', evt, data);
+      } else {
+        console.log('you just logged out!', evt);
+      }
+
+      if (NS.streetview) {
+        NS.streetview.setUser(data);
+      }
+    });
+
+    NS.auth.initUser();
 
     // Init the router so we can link to places.
     NS.router = new NS.Router();
