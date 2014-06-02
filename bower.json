@@ -13,7 +13,8 @@
     "spin.js": "~2.0.1",
     "jqxdomainrequest": "https://github.com/MoonScript/jQuery-ajaxTransport-XDomainRequest.git#v1.0.2",
     "backbone.marionette": "~1.8.5",
-    "wax": "https://github.com/mapbox/wax.git#~6.4.2"
+    "wax": "https://github.com/mapbox/wax.git#~6.4.2",
+    "reqwest": "https://github.com/ded/reqwest.git#0.6.2"
   },
   "devDependencies": {}
 }
