@@ -73,7 +73,7 @@ var Shareabouts = Shareabouts || {};
     var middle = "{{street}} is in the {{class}} in {{borough}} for pedestrian deaths and serious injuries per mile.";
     var template;
 
-    if (class_ === '' || class_ === ' ' || class === undefined) {
+    if (class_ === '' || class_ === ' ' || class_ === undefined) {
       return "";
     }
 
