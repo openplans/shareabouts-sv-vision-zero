@@ -339,6 +339,7 @@ var Shareabouts = Shareabouts || {};
     // Get the intersection data file
     $.ajax({
       url: getIntersectionFileUrl(intersectionId),
+      dataType: 'json',
       success: function(intersection) {
         var html = NS.Templates['intersection-detail'](intersection);
         $('.shareabouts-intersection-detail').html(html);
