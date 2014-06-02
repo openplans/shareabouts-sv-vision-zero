@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "59th Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "",
-  "intersection": "59th Avenue and College Point Boulevard"
+  "borough": "Queens",
+  "intersection": "59th Avenue and College Pt Boulevard"
 }

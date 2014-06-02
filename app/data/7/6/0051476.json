@@ -10,11 +10,10 @@
   "NodeID_1": "0051476",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "College Point Boulevard",
+  "P_HCC_STREETNAME": "College Pt Boulevard",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "College Point Boulevard is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There was one injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "College Point Boulevard and King Road"
+  "borough": "Queens",
+  "intersection": "College Pt Boulevard and King Road"
 }

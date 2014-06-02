@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "23rd Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "",
+  "borough": "Queens",
   "intersection": "23rd Street and 29th Avenue"
 }

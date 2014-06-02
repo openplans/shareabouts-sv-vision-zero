@@ -14,7 +14,6 @@
   "P_Inj": "12",
   "P_KSI": "2",
   "P_Sev": "0",
-  "hcc_text": "Union Turnpike is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There were 3 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Queens",
   "intersection": "Union Turnpike and Springfield Boulevard"
 }

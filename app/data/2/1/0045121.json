@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "0",
+  "B_KSI": "0",
+  "B_Sev": "0",
+  "MV_KSI": "0",
+  "M_Fat": "0",
+  "M_Inj": "3",
+  "M_Sev": "0",
   "NodeID_1": "0045121",
-  "intersection": "Lie Eb En Maurice Avenue at Borden Avenue and 60th Street"
+  "P_Fat": "0",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "Lie En Maurice Avenue",
+  "P_Inj": "0",
+  "P_KSI": "0",
+  "P_Sev": "0",
+  "borough": "$borough",
+  "intersection": "Lie En Maurice Avenue at Lie Eb En Maurice Avenue, Borden Avenue and 60th Street"
 }

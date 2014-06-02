@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Central Park West is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Central Park West at West 90th Street and C Point West 90 Appr"
+  "borough": "Manhattan",
+  "intersection": "Central Park West at West 90th Street and Creek P West 90 Appr"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "6",
   "P_KSI": "3",
   "P_Sev": "3",
-  "hcc_text": "Central Park West is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 3 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Central Park West at West 81st Street and 79th Street Transverse"
+  "borough": "Manhattan",
+  "intersection": "Central Park West at West 81st Street and 79 St Transverse"
 }

@@ -10,11 +10,10 @@
   "NodeID_1": "0051370",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Northern Boulevard Service Road North",
+  "P_HCC_STREETNAME": "Northern Blvd Service Road North",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Northern Boulevard Service Road North is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "",
-  "intersection": "Northern Boulevard Service Road North at Whitestone Expressway Sb En Northern B, Northern Boulevard Service Road South and Northern Boulevard"
+  "borough": "Queens",
+  "intersection": "Northern Blvd Service Road North at Whitestone Exwy Sb En Northern B, Northern Blvd Service Road South and Northern Boulevard"
 }

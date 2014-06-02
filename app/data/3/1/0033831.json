@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Lefferts Boulevard is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "",
-  "intersection": "Lefferts Boulevard and South Conduit Avenue En Lefferts Boulevard"
+  "borough": "Queens",
+  "intersection": "Lefferts Boulevard and South Conduit Avenue En Lefferts Blvd"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "West 97th Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "West 97th Street at Riverside Drive and Riverside Drive (Upper)"
+  "borough": "Manhattan",
+  "intersection": "West 97th Street at Riverside Drive and Riverside Dr (Upper)"
 }

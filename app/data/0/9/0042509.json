@@ -14,7 +14,6 @@
   "P_Inj": "4",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Madison Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Manhattan",
   "intersection": "Madison Avenue and East 132nd Street"
 }

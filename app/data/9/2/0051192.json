@@ -10,11 +10,10 @@
   "NodeID_1": "0051192",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Northern Boulevard Service Road South",
+  "P_HCC_STREETNAME": "Northern Blvd Service Road South",
   "P_Inj": "1",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Northern Boulevard Service Road South is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There were 6 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Northern Boulevard Service Road South at 126th Street and Grand Central Parkway Eb Exit 9 East"
+  "borough": "Queens",
+  "intersection": "Northern Blvd Service Road South at 126th Street and Grand Central Parkway Eb Exit 9 East"
 }

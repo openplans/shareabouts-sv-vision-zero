@@ -10,11 +10,10 @@
   "NodeID_1": "0020493",
   "P_Fat": "0",
   "P_HCC_CLASS": "Middle Third",
-  "P_HCC_STREETNAME": "Centre Street",
+  "P_HCC_STREETNAME": "Center Street",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Centre Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "",
-  "intersection": "Centre Street and Howard Street"
+  "borough": "Manhattan",
+  "intersection": "Center Street and Howard Street"
 }

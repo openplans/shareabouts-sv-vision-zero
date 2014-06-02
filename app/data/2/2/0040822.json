@@ -10,11 +10,10 @@
   "NodeID_1": "0040822",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Hunters Point Avenue",
+  "P_HCC_STREETNAME": "Hunters Pt Avenue",
   "P_Inj": "1",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Hunters Point Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Hunters Point Avenue and 34th Street"
+  "borough": "Queens",
+  "intersection": "Hunters Pt Avenue and 34th Street"
 }

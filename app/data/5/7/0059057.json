@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Union Turnpike is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There was one injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Union Turnpike at Clearview Expressway Sb En Union Turnpike and Clearview Expressway Sb Exit 2"
+  "borough": "Queens",
+  "intersection": "Union Turnpike at Clearview Exwy Sb En Union Turnpike and Clearview Exwy Sb Exit 2"
 }

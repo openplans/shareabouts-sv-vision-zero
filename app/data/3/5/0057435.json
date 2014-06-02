@@ -10,11 +10,10 @@
   "NodeID_1": "0057435",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Lane Salle Avenue",
+  "P_HCC_STREETNAME": "La Salle Avenue",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Lane Salle Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Lane Salle Avenue and Gillespie Avenue"
+  "borough": "the Bronx",
+  "intersection": "La Salle Avenue and Gillespie Avenue"
 }

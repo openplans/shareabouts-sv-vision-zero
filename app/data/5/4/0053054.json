@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Cross Bx Service Road North is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There were 2 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Cross Bx Service Road North at Union Port Bridge, Bruckner Boulevard Wb and Bruckner Boulevard Eb"
+  "borough": "the Bronx",
+  "intersection": "Cross Bx Service Road North at Union Port Branch, Bruckner Boulevard Wb and Bruckner Boulevard Eb"
 }

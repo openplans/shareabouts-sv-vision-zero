@@ -14,7 +14,6 @@
   "P_Inj": "3",
   "P_KSI": "1",
   "P_Sev": "0",
-  "hcc_text": "Central Park West is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Central Park West at West 77th Street and C Point West 77 Appr"
+  "borough": "Manhattan",
+  "intersection": "Central Park West at West 77th Street and Creek P West 77 Appr"
 }

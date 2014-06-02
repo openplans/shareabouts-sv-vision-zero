@@ -14,7 +14,6 @@
   "P_Inj": "9",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "East 57th Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Manhattan",
   "intersection": "East 57th Street and Lexington Avenue"
 }

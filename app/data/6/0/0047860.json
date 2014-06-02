@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Webster Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There was one injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Webster Avenue at Cross Bx Expressway Nb Exit 2 B and Cross Bx Service Road South"
+  "borough": "the Bronx",
+  "intersection": "Webster Avenue at Cross Bx Exwy Nb Exit 2 B and Cross Bx Service Road South"
 }

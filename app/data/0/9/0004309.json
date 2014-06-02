@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "0",
+  "B_KSI": "0",
+  "B_Sev": "0",
+  "MV_KSI": "0",
+  "M_Fat": "0",
+  "M_Inj": "0",
+  "M_Sev": "0",
   "NodeID_1": "0004309",
+  "P_Fat": "0",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "Tennyson Drive",
+  "P_Inj": "0",
+  "P_KSI": "0",
+  "P_Sev": "0",
+  "borough": "$borough",
   "intersection": "Tennyson Drive and Groton Street"
 }

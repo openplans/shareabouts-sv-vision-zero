@@ -14,7 +14,6 @@
   "P_Inj": "9",
   "P_KSI": "3",
   "P_Sev": "3",
-  "hcc_text": "Fulton Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "There were 3 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Brooklyn",
   "intersection": "Fulton Street and Throop Avenue"
 }

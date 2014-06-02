@@ -10,11 +10,10 @@
   "NodeID_1": "0013980",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top 10%",
-  "P_HCC_STREETNAME": "Ft Hamilton Parkway",
+  "P_HCC_STREETNAME": "Fort Hamilton Parkway",
   "P_Inj": "5",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Ft Hamilton Parkway is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Ft Hamilton Parkway and 54th Street"
+  "borough": "Brooklyn",
+  "intersection": "Fort Hamilton Parkway and 54th Street"
 }

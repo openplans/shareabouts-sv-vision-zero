@@ -10,11 +10,10 @@
   "NodeID_1": "0034955",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Van Wyck Expressway Service Road West",
+  "P_HCC_STREETNAME": "Van Wyck Exwy Service Road West",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Van Wyck Expressway Service Road West is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "",
-  "intersection": "Van Wyck Expressway Service Road West and Van Wyck Expressway Sb En Liberty Avenue"
+  "borough": "Queens",
+  "intersection": "Van Wyck Exwy Service Road West and Van Wyck Exwy Sb En Liberty Avenue"
 }

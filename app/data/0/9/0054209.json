@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Webster Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "",
-  "intersection": "Webster Avenue at Bx River Parkway Sb En Webster Avenue and Bx River Parkway Sb Exit 10"
+  "borough": "the Bronx",
+  "intersection": "Webster Avenue at Bx River Pkwy Sb En Webster Avenue and Bx River Parkway Sb Exit 10"
 }

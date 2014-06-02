@@ -14,7 +14,6 @@
   "P_Inj": "13",
   "P_KSI": "2",
   "P_Sev": "2",
-  "hcc_text": "Tillary Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "There were 6 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Brooklyn",
   "intersection": "Tillary Street and Jay Street"
 }

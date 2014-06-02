@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "101st Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There were 8 injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Queens",
   "intersection": "101st Avenue and 106th Street"
 }

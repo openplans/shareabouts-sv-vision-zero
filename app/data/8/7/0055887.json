@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "153rd Street is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Queens",
   "intersection": "153rd Street and 35th Avenue"
 }

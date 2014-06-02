@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "East 182nd Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There were 4 injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "the Bronx",
   "intersection": "East 182nd Street and Grote Street"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Pelham Parkway North is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "the Bronx",
   "intersection": "Pelham Parkway North and Bronxwood Avenue"
 }

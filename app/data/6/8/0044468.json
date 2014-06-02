@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Amsterdam Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "",
-  "intersection": "Amsterdam Avenue and Ft George Avenue"
+  "borough": "Manhattan",
+  "intersection": "Amsterdam Avenue and Fort George Avenue"
 }

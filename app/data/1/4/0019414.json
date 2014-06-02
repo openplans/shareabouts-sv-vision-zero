@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "1",
+  "B_KSI": "0",
+  "B_Sev": "0",
+  "MV_KSI": "1",
+  "M_Fat": "0",
+  "M_Inj": "2",
+  "M_Sev": "1",
   "NodeID_1": "0019414",
+  "P_Fat": "0",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "South 11th Street",
+  "P_Inj": "0",
+  "P_KSI": "0",
+  "P_Sev": "0",
+  "borough": "$borough",
   "intersection": "South 11th Street and Kent Avenue"
 }

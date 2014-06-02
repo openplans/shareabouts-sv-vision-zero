@@ -10,11 +10,10 @@
   "NodeID_1": "0053149",
   "P_Fat": "0",
   "P_HCC_CLASS": "Middle Third",
-  "P_HCC_STREETNAME": "Hutch River Parkway Service Road",
+  "P_HCC_STREETNAME": "Hutch River Pkwy Service Road",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Hutch River Parkway Service Road is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "",
-  "intersection": "Hutch River Parkway Service Road and Bruckner Boulevard Eb"
+  "borough": "the Bronx",
+  "intersection": "Hutch River Pkwy Service Road and Bruckner Boulevard Eb"
 }

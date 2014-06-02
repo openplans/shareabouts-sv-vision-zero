@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "East 116th Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "",
-  "intersection": "East 116th Street at Fdr Drive Sb En East 116th Street and Fdr Drive Southbound Exit 16"
+  "borough": "Manhattan",
+  "intersection": "East 116th Street at Fdr Dr Sb En East 116th Street and Fdr Drive Southbound Exit 16"
 }

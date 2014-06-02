@@ -14,7 +14,6 @@
   "P_Inj": "16",
   "P_KSI": "6",
   "P_Sev": "5",
-  "hcc_text": "Rockaway Parkway is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "There were 9 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Brooklyn",
   "intersection": "Rockaway Parkway and Rutland Road"
 }

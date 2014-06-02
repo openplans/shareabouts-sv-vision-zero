@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "East 175th Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "",
-  "intersection": "East 175th Street and Cross Bx Expressway Wb Exit 3"
+  "borough": "the Bronx",
+  "intersection": "East 175th Street and Cross Bx Exwy Wb Exit 3"
 }

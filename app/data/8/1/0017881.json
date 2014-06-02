@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "East 5th Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "There was 1 death caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "East 5th Street and Ft Hamilton Parkway"
+  "borough": "Brooklyn",
+  "intersection": "East 5th Street and Fort Hamilton Parkway"
 }

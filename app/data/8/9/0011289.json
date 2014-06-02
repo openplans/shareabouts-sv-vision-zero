@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Van Duzer Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Staten Island)",
-  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Van Duzer Street at Van Duzer Street Ex and Street Julian Place"
+  "borough": "Staten Island",
+  "intersection": "Van Duzer Street at Van Duzer St Ex and St. Julian Place"
 }

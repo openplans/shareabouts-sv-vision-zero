@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Second Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 8 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Second Avenue at Harlem River Drv Nb En East 126th Street, Rfk Bridge Exit Ramp and East 126th Street"
+  "borough": "Manhattan",
+  "intersection": "Second Avenue at Harlem River Drv Nb En East 126th Street, Rfk Branch Exit Ramp and East 126th Street"
 }

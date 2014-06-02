@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Burke Avenue is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
+  "borough": "the Bronx",
   "intersection": "Burke Avenue and Bronxwood Avenue"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "East 129th Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "",
-  "intersection": "East 129th Street at Third Avenue Bridge Appr and Harlem River Drv Sb En Third Avenue Bridge"
+  "borough": "Manhattan",
+  "intersection": "East 129th Street at Third Avenue Br Appr and Harlem River Drv Sb En Third Avenue Br"
 }

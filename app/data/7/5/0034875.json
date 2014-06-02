@@ -10,11 +10,10 @@
   "NodeID_1": "0034875",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Van Wyck Expressway Service Road West",
+  "P_HCC_STREETNAME": "Van Wyck Exwy Service Road West",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Van Wyck Expressway Service Road West is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There were 8 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Van Wyck Expressway Service Road West at Van Wyck Expressway Sb En Atlantic Avenue and 95th Avenue"
+  "borough": "Queens",
+  "intersection": "Van Wyck Exwy Service Road West at Van Wyck Exwy Sb En Atlantic Avenue and 95th Avenue"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "Park Avenue is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There was 1 severe injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Park Avenue at Harlem River Drive Sb En Prk Avenue and East 132nd Street"
+  "borough": "Manhattan",
+  "intersection": "Park Avenue at Harlem River Dr Sb En Prk Avenue and East 132nd Street"
 }

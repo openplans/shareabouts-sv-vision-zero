@@ -10,11 +10,10 @@
   "NodeID_1": "0020475",
   "P_Fat": "0",
   "P_HCC_CLASS": "Middle Third",
-  "P_HCC_STREETNAME": "Centre Street",
+  "P_HCC_STREETNAME": "Center Street",
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Centre Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 3 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Centre Street and White Street"
+  "borough": "Manhattan",
+  "intersection": "Center Street and White Street"
 }

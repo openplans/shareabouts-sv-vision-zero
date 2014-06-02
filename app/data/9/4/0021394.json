@@ -14,7 +14,6 @@
   "P_Inj": "3",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Avenue Of The Americas is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 21 injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Manhattan",
   "intersection": "Avenue Of The Americas and West 35th Street"
 }

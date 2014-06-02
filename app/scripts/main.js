@@ -274,8 +274,8 @@ var Shareabouts = Shareabouts || {};
         }
       }
     ],
-    mapStyle: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}],
-    datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz-dev/places',
+    mapStyle: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ece2d9"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"off"}]}],
+    datasetUrl: 'http://data.shareabouts.org/api/v2/admin/datasets/vz-dev/places',
   };
 
   NS.Router = Backbone.Router.extend({
@@ -339,6 +339,7 @@ var Shareabouts = Shareabouts || {};
     // Get the intersection data file
     $.ajax({
       url: getIntersectionFileUrl(intersectionId),
+      dataType: 'json',
       success: function(intersection) {
         var html = NS.Templates['intersection-detail'](intersection);
         $('.shareabouts-intersection-detail').html(html);
@@ -688,11 +689,62 @@ var Shareabouts = Shareabouts || {};
         $target.removeClass('is-open');
 
         if (value === 'other') {
+          $('.type-instructions').addClass('is-hidden');
           $('.other-type-instructions').removeClass('is-hidden');
           $('#place-description').prop('required', true);
           $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'bike') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.bike-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'yield') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.yield-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'longcross') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.longcross-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'speeding') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.speeding-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'visibility') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.visibility-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'jaywalking') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.jaywalking-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'redlight') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.redlight-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'longwait') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.longwait-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'doublepark') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.doublepark-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
+        } else if (value === 'notime') {
+          $('.type-instructions').addClass('is-hidden');
+          $('.notime-type-instructions').removeClass('is-hidden');
+          $('#place-description').prop('required', true);
+          $('label[for="place-description"] small').addClass('is-hidden'); // the '(optional)' text
         } else {
-          $('.other-type-instructions').addClass('is-hidden');
+          $('.type-instructions').addClass('is-hidden');
           $('#place-description').prop('required', false);
           $('label[for="place-description"] small').removeClass('is-hidden'); // the '(optional)' text
         }

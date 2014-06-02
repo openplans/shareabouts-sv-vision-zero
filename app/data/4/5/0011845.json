@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "79th Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "79th Street at Gowanus Expressway Wb En Ft Hamilton Point, Seventh Avenue and Ft Hamilton Parkway"
+  "borough": "Brooklyn",
+  "intersection": "79th Street at Gowanus Exwy Wb En Fort Hamilton P, Seventh Avenue and Fort Hamilton Parkway"
 }

@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Commonwealth Boulevard is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There were 8 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Commonwealth Boulevard at 72nd Avenue and Grnd Cntrl Parkway Service Road North"
+  "borough": "Queens",
+  "intersection": "Commonwealth Boulevard at 72nd Avenue and Grnd Cntrl Pkwy Service Road North"
 }

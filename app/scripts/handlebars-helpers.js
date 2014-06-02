@@ -43,4 +43,135 @@ var Shareabouts = Shareabouts || {};
     }
   });
 
+  Handlebars.registerHelper('intersection_info', function() {
+    return format_intersection_data(this);
+  });
+
+  Handlebars.registerHelper('if_crash_data', function(options) {
+    if (this['P_Inj'] != 0 ||
+        this['B_Inj'] != 0 ||
+        this['M_Inj'] != 0 ||
+        this['P_Sev'] != 0 ||
+        this['B_Sev'] != 0 ||
+        this['M_Sev'] != 0 ||
+        this['P_Fat'] != 0 ||
+        this['B_Fat'] != 0 ||
+        this['M_Fat'] != 0) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+  })
+
+  // =====================================================================
+  // The following were translated from Python. The original script is at:
+  // https://gist.github.com/fitnr/ef8c05e9e5a854bb7fba
+
+  function write_highcrash(street, borough, class_, undefined) {
+    // TODO: precompile these templates with all the rest.
+    var highcrash = "{{street}} is a pedestrian high crash corridor ({{class}} for pedestrian deaths and serious injuries per mile in {{borough}})";
+    var middle = "{{street}} is in the {{class}} in {{borough}} for pedestrian deaths and serious injuries per mile.";
+    var template;
+
+    if (class_ === '' || class_ === ' ' || class_ === undefined) {
+      return "";
+    }
+
+    context = {
+      "street": street,
+      "class": class_.toLowerCase(),
+      "borough": borough
+    }
+
+    if (context['class'].indexOf('top') > -1) {
+      template = Handlebars.compile(highcrash);
+    } else {
+      template = Handlebars.compile(middle);
+    }
+
+    return template(context);
+  }
+
+
+  function write_stats(intersection, fatal, injuries, severe) {
+    var deaths, conjuct;
+
+    var phrase = "At {{intersection}} between 2008 and 2012, traffic crashes caused{{deaths}}{{conjuct}}{{injuries}}{{severe}}."
+    var severe_clause = ""
+
+    // Do nothing
+    if (fatal === 0 && injuries === 0) {
+      return '';
+    }
+
+    // fatalities
+    if (fatal == 0) {
+      deaths = "";
+    } else if (fatal === 1) {
+      deaths = " one death";
+    } else {
+      deaths = " " + fatal + " deaths";
+    }
+
+    if (fatal > 0 && injuries > 0){
+      conjuct = " and";
+    } else {
+      conjuct = "";
+    }
+
+    // injuries
+    if (injuries === 0) {
+      injuries = severe_clause = "";
+    }
+
+    else if (injuries === 1) {
+      injuries = " one injury";
+
+      if (severe === 1) {
+        severe_clause = ", which was severe";
+      }
+
+    } else {
+      injuries = " " + injuries + " injuries"
+
+      if (severe === 0) {
+        ;
+      } else if (severe === injuries) {
+        severe_clause = ", all of which were severe";
+      } else {
+        severe_clause = ", " + severe + " of which were severe";
+      }
+    }
+
+    // TODO: precompile this template with all the rest.
+    var template = Handlebars.compile(phrase);
+    return template({
+      intersection: intersection,
+      deaths: deaths,
+      conjuct: conjuct,
+      injuries: injuries,
+      severe: severe_clause
+    });
+  }
+
+
+  function format_intersection_data(data) {
+    var mainstreet = data['P_HCC_STREETNAME'];
+    var intersection = data['intersection']
+    var borough = data['borough'];
+    var class_ = data['P_HCC_CLASS'];
+
+    // Is this a high crash corridor? write the text
+    var hcc_text = write_highcrash(mainstreet, borough, class_)
+
+    // Set injury numbers
+    var severe = parseInt(data['P_Sev']) + parseInt(data['B_Sev']) + parseInt(data['M_Sev'])
+    var fatal = parseInt(data['P_Fat']) + parseInt(data['B_Fat']) + parseInt(data['M_Fat'])
+    var injuries = parseInt(data['P_Inj']) + parseInt(data['B_Inj']) + parseInt(data['M_Inj'])
+
+    var info = write_stats(intersection, fatal, injuries, severe)
+
+    return info + ' ' + hcc_text
+  }
+
 }(Shareabouts));

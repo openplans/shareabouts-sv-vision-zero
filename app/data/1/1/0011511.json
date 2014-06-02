@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Fourth Avenue is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "There were 34 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Fourth Avenue at Belt Parkway Eb En Fourth Avenue, Belt Parkway Westbound Exit 2, Belt Parkway Wb En Fourth Avenue and Belt Parkway Eastbound Exit 2"
+  "borough": "Brooklyn",
+  "intersection": "Fourth Avenue at Belt Pkwy Eb En Fourth Avenue, Belt Parkway Westbound Exit 2, Belt Pkwy Wb En Fourth Avenue and Belt Parkway Eastbound Exit 2"
 }

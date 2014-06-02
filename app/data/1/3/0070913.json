@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Cross Bx Service Road North is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "",
-  "intersection": "Cross Bx Service Road North and Cross Bx Expressway Sb En White Plains"
+  "borough": "the Bronx",
+  "intersection": "Cross Bx Service Road North and Cross Bx Exwy Sb En White Plains"
 }

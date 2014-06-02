@@ -10,11 +10,10 @@
   "NodeID_1": "0055145",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Hor Harding Expressway Service Road North",
+  "P_HCC_STREETNAME": "Hor Harding Exwy Service Road North",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Hor Harding Expressway Service Road North is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "",
-  "intersection": "Hor Harding Expressway Service Road North and 157th Street"
+  "borough": "Queens",
+  "intersection": "Hor Harding Exwy Service Road North and 157th Street"
 }

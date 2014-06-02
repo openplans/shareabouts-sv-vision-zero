@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Amboy Road is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Staten Island)",
-  "info": "There were 18 injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Staten Island",
   "intersection": "Amboy Road and Tysens Lane"
 }

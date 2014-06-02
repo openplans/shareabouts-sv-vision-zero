@@ -10,11 +10,10 @@
   "NodeID_1": "0064793",
   "P_Fat": "0",
   "P_HCC_CLASS": "Top Third",
-  "P_HCC_STREETNAME": "Avenue Street John",
+  "P_HCC_STREETNAME": "Avenue St John",
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Avenue Street John is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "",
-  "intersection": "Avenue Street John and Prospect Avenue"
+  "borough": "the Bronx",
+  "intersection": "Avenue St John and Prospect Avenue"
 }

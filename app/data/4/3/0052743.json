@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Cross Bx Service Road North is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There was one injury caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Cross Bx Service Road North at Cross Bx Expressway Sb En Ellis Avenue and Ellis Avenue"
+  "borough": "the Bronx",
+  "intersection": "Cross Bx Service Road North at Cross Bx Exwy Sb En Ellis Avenue and Ellis Avenue"
 }

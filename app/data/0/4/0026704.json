@@ -14,7 +14,6 @@
   "P_Inj": "21",
   "P_KSI": "5",
   "P_Sev": "5",
-  "hcc_text": "Eastern Parkway is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "There were 5 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Brooklyn",
   "intersection": "Eastern Parkway and Kingston Avenue"
 }

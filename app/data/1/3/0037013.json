@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "South Road is a pedestrian high crash corridor (top 10% for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There was one injury caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Queens",
   "intersection": "South Road and 156th Street"
 }

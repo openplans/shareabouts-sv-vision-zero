@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "West 140th Street is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "",
-  "intersection": "West 140th Street at Street Nicholas Terrace and Convent Avenue"
+  "borough": "Manhattan",
+  "intersection": "West 140th Street at St. Nicholas Terrace and Convent Avenue"
 }

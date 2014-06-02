@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Croes Avenue is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "There were 30 injuries caused by traffic crashes here between 2009 and 2012.",
-  "intersection": "Croes Avenue at Cross Bx Expressway Nb En Harrod Avenue and Cross Bx Service Road South"
+  "borough": "the Bronx",
+  "intersection": "Croes Avenue at Cross Bx Exwy Nb En Harrod Avenue and Cross Bx Service Road South"
 }

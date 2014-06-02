@@ -14,7 +14,6 @@
   "P_Inj": "5",
   "P_KSI": "1",
   "P_Sev": "1",
-  "hcc_text": "West 124th Street is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 2 deaths and severe injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Manhattan",
   "intersection": "West 124th Street at St. Nicholas Avenue and Manhattan Avenue"
 }

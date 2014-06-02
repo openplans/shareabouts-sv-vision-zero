@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Jerome Avenue is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in the Bronx)",
-  "info": "",
-  "intersection": "Jerome Avenue at Cross Bx Expressway Sb En Jerome Avenue and Cross Bx Expressway Wb Exit 2 A"
+  "borough": "the Bronx",
+  "intersection": "Jerome Avenue at Cross Bx Exwy Sb En Jerome Avenue and Cross Bx Exwy Wb Exit 2 A"
 }

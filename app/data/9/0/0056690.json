@@ -14,7 +14,6 @@
   "P_Inj": "1",
   "P_KSI": "1",
   "P_Sev": "0",
-  "hcc_text": "17th Road is a pedestrian high crash corridor (top third for pedestrian deaths and serious injuries per mile in Queens)",
-  "info": "There was 1 death caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Queens",
   "intersection": "17th Road and Francis Lewis Boulevard"
 }

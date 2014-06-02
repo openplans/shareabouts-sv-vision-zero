@@ -1,4 +1,19 @@
 {
+  "B_Fat": "0",
+  "B_Inj": "3",
+  "B_KSI": "0",
+  "B_Sev": "0",
+  "MV_KSI": "2",
+  "M_Fat": "0",
+  "M_Inj": "22",
+  "M_Sev": "2",
   "NodeID_1": "0054680",
+  "P_Fat": "0",
+  "P_HCC_CLASS": "",
+  "P_HCC_STREETNAME": "Park Drive East",
+  "P_Inj": "0",
+  "P_KSI": "0",
+  "P_Sev": "0",
+  "borough": "$borough",
   "intersection": "Park Drive East at 69th Road and Jewel Avenue"
 }

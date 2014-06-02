@@ -14,7 +14,6 @@
   "P_Inj": "0",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "St. John's Place is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Brooklyn)",
-  "info": "",
-  "intersection": "St. John's Place and Street Charles Place"
+  "borough": "Brooklyn",
+  "intersection": "St. John's Place and St. Charles Place"
 }

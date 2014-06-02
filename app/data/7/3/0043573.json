@@ -14,7 +14,6 @@
   "P_Inj": "2",
   "P_KSI": "0",
   "P_Sev": "0",
-  "hcc_text": "Audubon Avenue is a pedestrian high crash corridor (middle third for pedestrian deaths and serious injuries per mile in Manhattan)",
-  "info": "There were 3 injuries caused by traffic crashes here between 2009 and 2012.",
+  "borough": "Manhattan",
   "intersection": "Audubon Avenue and West 174th Street"
 }
