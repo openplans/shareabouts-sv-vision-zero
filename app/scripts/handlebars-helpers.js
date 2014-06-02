@@ -68,9 +68,8 @@ var Shareabouts = Shareabouts || {};
   // https://gist.github.com/fitnr/ef8c05e9e5a854bb7fba
 
   function write_highcrash(street, borough, class_, undefined) {
-    // TODO: precompile these templates with all the rest.
+    // TODO: precompile this template with all the rest.
     var highcrash = "{{street}} is a pedestrian high crash corridor ({{class}} for pedestrian deaths and serious injuries per mile in {{borough}})";
-    var middle = "{{street}} is in the {{class}} in {{borough}} for pedestrian deaths and serious injuries per mile.";
     var template;
 
     if (class_ === '' || class_ === ' ' || class_ === undefined) {
@@ -86,7 +85,7 @@ var Shareabouts = Shareabouts || {};
     if (context['class'].indexOf('top') > -1) {
       template = Handlebars.compile(highcrash);
     } else {
-      template = Handlebars.compile(middle);
+      return "";
     }
 
     return template(context);
@@ -157,21 +156,13 @@ var Shareabouts = Shareabouts || {};
 
   function format_intersection_data(data) {
     var mainstreet = data['P_HCC_STREETNAME'];
-    var intersection = data['intersection']
     var borough = data['borough'];
     var class_ = data['P_HCC_CLASS'];
 
     // Is this a high crash corridor? write the text
     var hcc_text = write_highcrash(mainstreet, borough, class_)
 
-    // Set injury numbers
-    var severe = parseInt(data['P_Sev']) + parseInt(data['B_Sev']) + parseInt(data['M_Sev'])
-    var fatal = parseInt(data['P_Fat']) + parseInt(data['B_Fat']) + parseInt(data['M_Fat'])
-    var injuries = parseInt(data['P_Inj']) + parseInt(data['B_Inj']) + parseInt(data['M_Inj'])
-
-    var info = write_stats(intersection, fatal, injuries, severe)
-
-    return info + ' ' + hcc_text
+    return hcc_text
   }
 
 }(Shareabouts));
