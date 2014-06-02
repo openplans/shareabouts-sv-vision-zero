@@ -789,6 +789,12 @@ var Shareabouts = Shareabouts || {};
         .get(0).scrollIntoView();
     });
 
+    // Init auth menu toggle
+    $(document).on('click', '.shareabouts-auth-button', function(evt) {
+      evt.preventDefault();
+      $('.shareabouts-auth-menu').toggleClass('is-exposed');
+    });
+
 
     NS.auth = new Shareabouts.Auth({
       apiRoot: 'http://data.shareabouts.org/api/v2/',
