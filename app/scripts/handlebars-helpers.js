@@ -67,13 +67,13 @@ var Shareabouts = Shareabouts || {};
   // The following were translated from Python. The original script is at:
   // https://gist.github.com/fitnr/ef8c05e9e5a854bb7fba
 
-  function write_highcrash(street, borough, class_) {
+  function write_highcrash(street, borough, class_, undefined) {
     // TODO: precompile these templates with all the rest.
     var highcrash = "{{street}} is a pedestrian high crash corridor ({{class}} for pedestrian deaths and serious injuries per mile in {{borough}})";
     var middle = "{{street}} is in the {{class}} in {{borough}} for pedestrian deaths and serious injuries per mile.";
     var template;
 
-    if (class_ === '' || class_ === ' ') {
+    if (class_ === '' || class_ === ' ' || class_ === undefined) {
       return "";
     }
 
