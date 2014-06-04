@@ -510,7 +510,6 @@ var Shareabouts = Shareabouts || {};
             if (obj.e.type === 'click' && !preventIntersectionClick) {
               // If not a double click
               if (obj.e.detail === 1) {
-                console.log('intersection click');
                 loadStreetView([obj.data.YCOORD, obj.data.XCOORD], obj.data.NodeID_1);
               }
             }
