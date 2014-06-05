@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0063465",
-  "intersection": "Fairbanks Avenue"
+  "NodeID_1": "0063465", 
+  "intersection": "Fairbanks Avenue", 
+  "lat": "40.555534", 
+  "lng": "-74.121564"
 }

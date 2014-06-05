@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058435",
-  "intersection": "Ridge Place and Park Drive"
+  "NodeID_1": "0058435", 
+  "intersection": "Ridge Place and Park Drive", 
+  "lat": "40.886998", 
+  "lng": "-73.808945"
 }

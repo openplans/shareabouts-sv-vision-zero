@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0003863",
-  "intersection": "Wolkoff Lane"
+  "NodeID_1": "0003863", 
+  "intersection": "Wolkoff Lane", 
+  "lat": "40.622089", 
+  "lng": "-74.165431"
 }

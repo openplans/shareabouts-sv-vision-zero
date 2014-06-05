@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0045919",
-  "intersection": "Claremont Terrace"
+  "NodeID_1": "0045919", 
+  "intersection": "Claremont Terrace", 
+  "lat": "40.741204", 
+  "lng": "-73.879321"
 }

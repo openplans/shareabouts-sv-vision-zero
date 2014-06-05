@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000046",
-  "intersection": "Craig Avenue and Federal Court"
+  "NodeID_1": "0000046", 
+  "intersection": "Craig Avenue and Federal Court", 
+  "lat": "40.500876", 
+  "lng": "-74.249928"
 }

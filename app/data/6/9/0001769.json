@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0001769",
-  "intersection": "Victory Boulevard"
+  "NodeID_1": "0001769", 
+  "intersection": "Victory Boulevard", 
+  "lat": "40.585318", 
+  "lng": "-74.203641"
 }

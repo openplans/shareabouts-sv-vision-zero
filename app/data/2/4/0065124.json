@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0065124",
-  "intersection": "Terrace Court"
+  "NodeID_1": "0065124", 
+  "intersection": "Terrace Court", 
+  "lat": "40.710143", 
+  "lng": "-73.894027"
 }

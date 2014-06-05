@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0071605",
-  "intersection": "Bayside Lane and St. Edward Lane"
+  "NodeID_1": "0071605", 
+  "intersection": "Bayside Lane and St. Edward Lane", 
+  "lat": "40.513233", 
+  "lng": "-74.204600"
 }

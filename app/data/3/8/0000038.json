@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000038",
-  "intersection": "Moon Avenue and Billop Avenue"
+  "NodeID_1": "0000038", 
+  "intersection": "Moon Avenue and Billop Avenue", 
+  "lat": "40.497878", 
+  "lng": "-74.249842"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000314",
-  "intersection": "Robinson Beach and Joline Lane"
+  "NodeID_1": "0000314", 
+  "intersection": "Robinson Beach and Joline Lane", 
+  "lat": "40.501629", 
+  "lng": "-74.235372"
 }

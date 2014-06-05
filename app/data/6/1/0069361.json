@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0069361",
-  "intersection": "Wooddale Avenue"
+  "NodeID_1": "0069361", 
+  "intersection": "Wooddale Avenue", 
+  "lat": "40.598053", 
+  "lng": "-74.101264"
 }

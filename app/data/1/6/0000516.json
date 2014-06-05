@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000516",
-  "intersection": "Carlin Street"
+  "NodeID_1": "0000516", 
+  "intersection": "Carlin Street", 
+  "lat": "40.539710", 
+  "lng": "-74.232210"
 }

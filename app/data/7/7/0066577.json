@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0066577",
-  "intersection": "92nd Street"
+  "NodeID_1": "0066577", 
+  "intersection": "92nd Street", 
+  "lat": "40.686487", 
+  "lng": "-73.849991"
 }

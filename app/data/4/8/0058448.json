@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058448",
-  "intersection": "Park Drive and Beech Tree Lane"
+  "NodeID_1": "0058448", 
+  "intersection": "Park Drive and Beech Tree Lane", 
+  "lat": "40.884352", 
+  "lng": "-73.799375"
 }

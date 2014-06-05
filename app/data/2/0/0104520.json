@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0104520",
-  "intersection": "Unnamed Street and 172nd Street"
+  "NodeID_1": "0104520", 
+  "intersection": "Unnamed Street and 172nd Street", 
+  "lat": "40.719838", 
+  "lng": "-73.794591"
 }

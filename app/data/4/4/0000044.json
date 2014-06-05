@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000044",
-  "intersection": "Federal Court and Canter Avenue"
+  "NodeID_1": "0000044", 
+  "intersection": "Federal Court and Canter Avenue", 
+  "lat": "40.500471", 
+  "lng": "-74.250710"
 }

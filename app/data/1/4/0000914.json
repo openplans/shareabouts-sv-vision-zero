@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000914",
-  "intersection": "Norman Street and Clay Pit Road"
+  "NodeID_1": "0000914", 
+  "intersection": "Norman Street and Clay Pit Road", 
+  "lat": "40.540503", 
+  "lng": "-74.225134"
 }

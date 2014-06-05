@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0067882",
-  "intersection": "Francis Place"
+  "NodeID_1": "0067882", 
+  "intersection": "Francis Place", 
+  "lat": "40.601542", 
+  "lng": "-74.100451"
 }

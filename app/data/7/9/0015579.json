@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0015579",
-  "intersection": "Fdr Drive Southbound Exit 2"
+  "NodeID_1": "0015579", 
+  "intersection": "Fdr Drive Southbound Exit 2", 
+  "lat": "40.708473", 
+  "lng": "-73.999191"
 }

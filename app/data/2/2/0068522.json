@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0068522",
-  "intersection": "Patterson Avenue"
+  "NodeID_1": "0068522", 
+  "intersection": "Patterson Avenue", 
+  "lat": "40.574867", 
+  "lng": "-74.087844"
 }

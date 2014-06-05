@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0005556",
-  "intersection": "Gunda Street"
+  "NodeID_1": "0005556", 
+  "intersection": "Gunda Street", 
+  "lat": "40.592442", 
+  "lng": "-74.142531"
 }

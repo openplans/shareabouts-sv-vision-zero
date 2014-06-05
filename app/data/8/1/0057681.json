@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0057681",
-  "intersection": "Waterbury Avenue"
+  "NodeID_1": "0057681", 
+  "intersection": "Waterbury Avenue", 
+  "lat": "40.837175", 
+  "lng": "-73.818334"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0024892",
-  "intersection": "Losee Terrace and Stanton Road"
+  "NodeID_1": "0024892", 
+  "intersection": "Losee Terrace and Stanton Road", 
+  "lat": "40.585537", 
+  "lng": "-73.936634"
 }

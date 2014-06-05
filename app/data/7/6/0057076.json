@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0057076",
-  "intersection": "Acorn Place and Indian Trail"
+  "NodeID_1": "0057076", 
+  "intersection": "Acorn Place and Indian Trail", 
+  "lat": "40.812054", 
+  "lng": "-73.807991"
 }

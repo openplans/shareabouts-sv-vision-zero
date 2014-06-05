@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0042188",
-  "intersection": "Astoria Park South"
+  "NodeID_1": "0042188", 
+  "intersection": "Astoria Park South", 
+  "lat": "40.776899", 
+  "lng": "-73.928277"
 }

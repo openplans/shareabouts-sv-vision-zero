@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0064317",
-  "intersection": "Gertland Place and Park Drive"
+  "NodeID_1": "0064317", 
+  "intersection": "Gertland Place and Park Drive", 
+  "lat": "40.887916", 
+  "lng": "-73.812605"
 }

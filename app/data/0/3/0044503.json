@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0044503",
-  "intersection": "West Tremont Avenue"
+  "NodeID_1": "0044503", 
+  "intersection": "West Tremont Avenue", 
+  "lat": "40.854215", 
+  "lng": "-73.921136"
 }

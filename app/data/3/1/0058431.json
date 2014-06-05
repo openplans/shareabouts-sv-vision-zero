@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058431",
-  "intersection": "Terrace Place and Park Drive"
+  "NodeID_1": "0058431", 
+  "intersection": "Terrace Place and Park Drive", 
+  "lat": "40.887298", 
+  "lng": "-73.810089"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0066813",
-  "intersection": "Hadley Avenue and Dodgewood Road"
+  "NodeID_1": "0066813", 
+  "intersection": "Hadley Avenue and Dodgewood Road", 
+  "lat": "40.894245", 
+  "lng": "-73.912733"
 }

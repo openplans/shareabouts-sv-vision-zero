@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0103479",
-  "intersection": "Stewart Avenue"
+  "NodeID_1": "0103479", 
+  "intersection": "Stewart Avenue", 
+  "lat": "40.631541", 
+  "lng": "-74.017176"
 }

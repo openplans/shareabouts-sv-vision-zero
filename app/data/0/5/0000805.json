@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000805",
-  "intersection": "Broken Shell Road and Johnston Terrace"
+  "NodeID_1": "0000805", 
+  "intersection": "Broken Shell Road and Johnston Terrace", 
+  "lat": "40.513282", 
+  "lng": "-74.199168"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0003291",
-  "intersection": "Bates Avenue"
+  "NodeID_1": "0003291", 
+  "intersection": "Bates Avenue", 
+  "lat": "40.598493", 
+  "lng": "-74.188913"
 }

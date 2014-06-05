@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0033428",
-  "intersection": "Walton Road"
+  "NodeID_1": "0033428", 
+  "intersection": "Walton Road", 
+  "lat": "40.606228", 
+  "lng": "-73.816698"
 }

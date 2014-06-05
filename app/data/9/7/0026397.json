@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0026397",
-  "intersection": "Avenue D and East 59th Street"
+  "NodeID_1": "0026397", 
+  "intersection": "Avenue D and East 59th Street", 
+  "lat": "40.642672", 
+  "lng": "-73.920674"
 }

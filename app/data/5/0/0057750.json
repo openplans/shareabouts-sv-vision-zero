@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0057750",
-  "intersection": "Bay Shore Avenue"
+  "NodeID_1": "0057750", 
+  "intersection": "Bay Shore Avenue", 
+  "lat": "40.844091", 
+  "lng": "-73.816610"
 }

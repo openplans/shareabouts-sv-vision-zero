@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0061901",
-  "intersection": "Cloverdale Lane"
+  "NodeID_1": "0061901", 
+  "intersection": "Cloverdale Lane", 
+  "lat": "40.746279", 
+  "lng": "-73.747592"
 }

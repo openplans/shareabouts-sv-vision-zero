@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0041205",
-  "intersection": "58th Drive"
+  "NodeID_1": "0041205", 
+  "intersection": "58th Drive", 
+  "lat": "40.719671", 
+  "lng": "-73.909293"
 }

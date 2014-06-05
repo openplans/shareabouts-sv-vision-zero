@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0061617",
-  "intersection": "X Isle Parkway En Sb"
+  "NodeID_1": "0061617", 
+  "intersection": "X Isle Parkway En Sb", 
+  "lat": "40.740791", 
+  "lng": "-73.728239"
 }

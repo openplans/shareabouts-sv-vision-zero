@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0031000",
-  "intersection": "Sheridan Avenue"
+  "NodeID_1": "0031000", 
+  "intersection": "Sheridan Avenue", 
+  "lat": "40.659754", 
+  "lng": "-73.862374"
 }

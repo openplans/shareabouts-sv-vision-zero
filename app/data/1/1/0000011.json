@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000011",
-  "intersection": "Canter Avenue"
+  "NodeID_1": "0000011", 
+  "intersection": "Canter Avenue", 
+  "lat": "40.502518", 
+  "lng": "-74.252725"
 }

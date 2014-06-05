@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0015467",
-  "intersection": "Bk Branch Exit Ramp"
+  "NodeID_1": "0015467", 
+  "intersection": "Bk Branch Exit Ramp", 
+  "lat": "40.711548", 
+  "lng": "-74.002669"
 }

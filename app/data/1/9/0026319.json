@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0026319",
-  "intersection": "Kingsway Place"
+  "NodeID_1": "0026319", 
+  "intersection": "Kingsway Place", 
+  "lat": "40.640418", 
+  "lng": "-73.921687"
 }

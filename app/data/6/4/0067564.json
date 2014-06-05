@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0067564",
-  "intersection": "Fine Boulevard"
+  "NodeID_1": "0067564", 
+  "intersection": "Fine Boulevard", 
+  "lat": "40.608501", 
+  "lng": "-74.112523"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0028569",
-  "intersection": "Rockaway Parkway"
+  "NodeID_1": "0028569", 
+  "intersection": "Rockaway Parkway", 
+  "lat": "40.629274", 
+  "lng": "-73.884657"
 }

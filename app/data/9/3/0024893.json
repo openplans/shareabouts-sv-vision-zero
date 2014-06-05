@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0024893",
-  "intersection": "Stanton Road"
+  "NodeID_1": "0024893", 
+  "intersection": "Stanton Road", 
+  "lat": "40.584831", 
+  "lng": "-73.936499"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0063779",
-  "intersection": "Reynolds Avenue"
+  "NodeID_1": "0063779", 
+  "intersection": "Reynolds Avenue", 
+  "lat": "40.823382", 
+  "lng": "-73.810407"
 }

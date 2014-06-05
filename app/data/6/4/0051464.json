@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0051464",
-  "intersection": "Delong Street"
+  "NodeID_1": "0051464", 
+  "intersection": "Delong Street", 
+  "lat": "40.755497", 
+  "lng": "-73.836429"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0069034",
-  "intersection": "Milford Avenue"
+  "NodeID_1": "0069034", 
+  "intersection": "Milford Avenue", 
+  "lat": "40.607525", 
+  "lng": "-74.099970"
 }
