@@ -57,7 +57,7 @@
             <div class="map-instruction"><strong>Zoom in and select an intersection.</strong></div>
           </div>
           <div class="shareabouts-legend">
-            <p>We're gathering feedback on these safety conditions:</p>
+            <p>To share an issue, please zoom in and select an intersection. <span class="nobreak">We're gathering</span> feedback on these safety conditions:</p>
             <ul class="place-type-list unstyled-list">
               <li class="place-type-li"><img src="styles/images/icon-notime.png">&nbsp;<strong>Not enough time to cross</strong> <span class="place-type-description">Pedestrians don’t have enough time to cross the street during the “Walk” signal.</span></li>
               <li class="place-type-li"><img src="styles/images/icon-doublepark.png">&nbsp;<strong>Double parking</strong> <span class="place-type-description">Many vehicles are parked in moving lanes.</span></li>
@@ -102,6 +102,8 @@
     <script src="bower_components/backbone.marionette/lib/backbone.marionette.js"></script>
     <script src="bower_components/gatekeeper/gatekeeper.js"></script>
     <script src="bower_components/wax/dist/wax.g.js"></script>
+    <!-- Updated version to support IE10. Override the version in wax.g.js -->
+    <script src="bower_components/reqwest/reqwest.js"></script>
     <script src="bower_components/jqxdomainrequest/jQuery.XDomainRequest.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
     <script src="bower_components/swag/lib/swag.js"></script>
