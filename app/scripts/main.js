@@ -280,7 +280,8 @@ var Shareabouts = Shareabouts || {};
 
   NS.Router = Backbone.Router.extend({
     routes: {
-      ':id': 'showPlace'
+      ':id': 'showPlace',
+      'intersection/:id': 'showIntersection'
     },
 
     showPlace: function(id) {
@@ -312,6 +313,25 @@ var Shareabouts = Shareabouts || {};
           self.navigate('', {replace: true});
         }
       });
+    },
+
+    showIntersection: function(id) {
+      var self = this;
+
+      // Get the intersection data file
+      $.ajax({
+        url: getIntersectionFileUrl(id),
+        dataType: 'json',
+        success: function(intersection) {
+          // Show the street view
+          loadStreetView([parseFloat(intersection.lat), parseFloat(intersection.lng)], id);
+        },
+        error: function() {
+          // No place found for this id, clear the id from the url. No history.
+          self.navigate('', {replace: true});
+        }
+      });
+
     }
   });
 
@@ -423,6 +443,9 @@ var Shareabouts = Shareabouts || {};
 
     // Remove the summary info window from the map
     NS.summaryWindow.close();
+
+    // Update the url
+    NS.router.navigate('intersection/'+intersectionId);
   }
 
   function resetMap(map, options) {
