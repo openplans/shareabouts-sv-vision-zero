@@ -1,6 +1,6 @@
 {
   "name": "shareabouts-sv-vision-zero",
-  "version": "1.1.1",
+  "version": "1.1.1b",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
