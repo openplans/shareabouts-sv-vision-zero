@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0077372",
-  "intersection": "Cypress Avenue"
+  "NodeID_1": "0077372", 
+  "intersection": "Cypress Avenue", 
+  "lat": "40.801144", 
+  "lng": "-73.917034"
 }

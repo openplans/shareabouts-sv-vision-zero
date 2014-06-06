@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000010",
-  "intersection": "Wards Pt Avenue"
+  "NodeID_1": "0000010", 
+  "intersection": "Wards Pt Avenue", 
+  "lat": "40.502353", 
+  "lng": "-74.253489"
 }

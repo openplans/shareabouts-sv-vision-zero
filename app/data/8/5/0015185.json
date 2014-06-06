@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0015185",
-  "intersection": "Washington Street and Cedar Street"
+  "NodeID_1": "0015185", 
+  "intersection": "Washington Street and Cedar Street", 
+  "lat": "40.710056", 
+  "lng": "-74.013672"
 }

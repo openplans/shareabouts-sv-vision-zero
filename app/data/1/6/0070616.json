@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0070616",
-  "intersection": "Irwin Avenue"
+  "NodeID_1": "0070616", 
+  "intersection": "Irwin Avenue", 
+  "lat": "40.887434", 
+  "lng": "-73.902471"
 }

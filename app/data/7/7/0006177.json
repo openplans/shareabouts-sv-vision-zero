@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0006177",
-  "intersection": "Hooker Place"
+  "NodeID_1": "0006177", 
+  "intersection": "Hooker Place", 
+  "lat": "40.632264", 
+  "lng": "-74.148068"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058419",
-  "intersection": "Split Rock Road and Park Drive"
+  "NodeID_1": "0058419", 
+  "intersection": "Split Rock Road and Park Drive", 
+  "lat": "40.888226", 
+  "lng": "-73.813729"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0043180",
-  "intersection": "Hegney Place"
+  "NodeID_1": "0043180", 
+  "intersection": "Hegney Place", 
+  "lat": "40.818631", 
+  "lng": "-73.911937"
 }

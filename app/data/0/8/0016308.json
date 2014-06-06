@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0016308",
-  "intersection": "Sea Breeze Court"
+  "NodeID_1": "0016308", 
+  "intersection": "Sea Breeze Court", 
+  "lat": "40.577729", 
+  "lng": "-73.952535"
 }

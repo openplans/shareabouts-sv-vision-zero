@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0070188",
-  "intersection": "Stillwells Place"
+  "NodeID_1": "0070188", 
+  "intersection": "Stillwells Place", 
+  "lat": "40.636357", 
+  "lng": "-73.901021"
 }

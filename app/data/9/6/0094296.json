@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0094296",
-  "intersection": "Drumgoole Road West"
+  "NodeID_1": "0094296", 
+  "intersection": "Drumgoole Road West", 
+  "lat": "40.559680", 
+  "lng": "-74.173513"
 }

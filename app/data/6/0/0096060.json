@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0096060",
-  "intersection": "Mosholu Parkway Southbound Exit"
+  "NodeID_1": "0096060", 
+  "intersection": "Mosholu Parkway Southbound Exit", 
+  "lat": "40.885083", 
+  "lng": "-73.887129"
 }

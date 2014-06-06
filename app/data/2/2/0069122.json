@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0069122",
-  "intersection": "Everett Avenue"
+  "NodeID_1": "0069122", 
+  "intersection": "Everett Avenue", 
+  "lat": "40.590078", 
+  "lng": "-73.930224"
 }

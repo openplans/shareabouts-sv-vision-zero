@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0071869",
-  "intersection": "Riverside Drive"
+  "NodeID_1": "0071869", 
+  "intersection": "Riverside Drive", 
+  "lat": "40.795560", 
+  "lng": "-73.804939"
 }

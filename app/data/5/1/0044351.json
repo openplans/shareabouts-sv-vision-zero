@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0044351",
-  "intersection": "Chittenden Avenue"
+  "NodeID_1": "0044351", 
+  "intersection": "Chittenden Avenue", 
+  "lat": "40.858962", 
+  "lng": "-73.935801"
 }

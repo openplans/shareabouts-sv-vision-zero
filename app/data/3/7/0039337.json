@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0039337",
-  "intersection": "Francis Lewis Boulevard and North Conduit Avenue"
+  "NodeID_1": "0039337", 
+  "intersection": "Francis Lewis Boulevard and North Conduit Avenue", 
+  "lat": "40.666270", 
+  "lng": "-73.736258"
 }

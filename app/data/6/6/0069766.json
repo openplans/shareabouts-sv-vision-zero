@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0069766",
-  "intersection": "North Conduit Avenue"
+  "NodeID_1": "0069766", 
+  "intersection": "North Conduit Avenue", 
+  "lat": "40.666270", 
+  "lng": "-73.738429"
 }

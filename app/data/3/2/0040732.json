@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0040732",
-  "intersection": "Bqe Eb En Vandervoort Avenue and Bqe Westbound Exit 34"
+  "NodeID_1": "0040732", 
+  "intersection": "Bqe Eb En Vandervoort Avenue and Bqe Westbound Exit 34", 
+  "lat": "40.725368", 
+  "lng": "-73.933135"
 }

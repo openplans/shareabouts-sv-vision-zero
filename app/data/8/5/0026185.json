@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0026185",
-  "intersection": "Harwood Place"
+  "NodeID_1": "0026185", 
+  "intersection": "Harwood Place", 
+  "lat": "40.636153", 
+  "lng": "-73.930665"
 }

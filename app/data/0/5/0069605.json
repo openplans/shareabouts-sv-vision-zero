@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0069605",
-  "intersection": "131st Avenue"
+  "NodeID_1": "0069605", 
+  "intersection": "131st Avenue", 
+  "lat": "40.678690", 
+  "lng": "-73.764319"
 }

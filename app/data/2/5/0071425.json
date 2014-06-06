@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0071425",
-  "intersection": "Sound View Street"
+  "NodeID_1": "0071425", 
+  "intersection": "Sound View Street", 
+  "lat": "40.825657", 
+  "lng": "-73.808826"
 }

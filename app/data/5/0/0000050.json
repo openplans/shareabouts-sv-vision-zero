@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000050",
-  "intersection": "Mc Donald Court and Surf Avenue"
+  "NodeID_1": "0000050", 
+  "intersection": "Mc Donald Court and Surf Avenue", 
+  "lat": "40.499440", 
+  "lng": "-74.249347"
 }

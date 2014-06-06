@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0004021",
-  "intersection": "Omaha Street and Catherine Place"
+  "NodeID_1": "0004021", 
+  "intersection": "Omaha Street and Catherine Place", 
+  "lat": "40.639663", 
+  "lng": "-74.178972"
 }

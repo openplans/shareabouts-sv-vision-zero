@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0033169",
-  "intersection": "Ruland Place"
+  "NodeID_1": "0033169", 
+  "intersection": "Ruland Place", 
+  "lat": "40.587927", 
+  "lng": "-73.812634"
 }

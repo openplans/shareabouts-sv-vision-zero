@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0097988",
-  "intersection": "Grnd Cntrl Pkwy Service Road South"
+  "NodeID_1": "0097988", 
+  "intersection": "Grnd Cntrl Pkwy Service Road South", 
+  "lat": "40.740558", 
+  "lng": "-73.737113"
 }

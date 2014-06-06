@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0066547",
-  "intersection": "Nugent Avenue"
+  "NodeID_1": "0066547", 
+  "intersection": "Nugent Avenue", 
+  "lat": "40.577803", 
+  "lng": "-74.091691"
 }

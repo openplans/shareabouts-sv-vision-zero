@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0047057",
-  "intersection": "Steinway Street"
+  "NodeID_1": "0047057", 
+  "intersection": "Steinway Street", 
+  "lat": "40.781302", 
+  "lng": "-73.895748"
 }

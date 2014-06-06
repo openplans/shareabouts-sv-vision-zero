@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0021975",
-  "intersection": "Metropolitan Avenue"
+  "NodeID_1": "0021975", 
+  "intersection": "Metropolitan Avenue", 
+  "lat": "40.718455", 
+  "lng": "-73.966484"
 }

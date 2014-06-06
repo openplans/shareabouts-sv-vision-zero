@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0103037",
-  "intersection": "Brookside Avenue"
+  "NodeID_1": "0103037", 
+  "intersection": "Brookside Avenue", 
+  "lat": "40.625175", 
+  "lng": "-74.122344"
 }

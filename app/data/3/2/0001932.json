@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0001932",
-  "intersection": "Arbutus Avenue"
+  "NodeID_1": "0001932", 
+  "intersection": "Arbutus Avenue", 
+  "lat": "40.520055", 
+  "lng": "-74.178237"
 }

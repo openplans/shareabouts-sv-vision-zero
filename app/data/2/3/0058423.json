@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058423",
-  "intersection": "Split Rock Road"
+  "NodeID_1": "0058423", 
+  "intersection": "Split Rock Road", 
+  "lat": "40.888678", 
+  "lng": "-73.813651"
 }

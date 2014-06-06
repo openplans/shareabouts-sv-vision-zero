@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0014461",
-  "intersection": "De Graw Street"
+  "NodeID_1": "0014461", 
+  "intersection": "De Graw Street", 
+  "lat": "40.686663", 
+  "lng": "-74.005525"
 }

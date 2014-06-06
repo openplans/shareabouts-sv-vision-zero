@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0060266",
-  "intersection": "Jordan Drive"
+  "NodeID_1": "0060266", 
+  "intersection": "Jordan Drive", 
+  "lat": "40.785688", 
+  "lng": "-73.786806"
 }

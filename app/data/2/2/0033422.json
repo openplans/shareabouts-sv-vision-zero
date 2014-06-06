@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0033422",
-  "intersection": "Walton Road and Essex Court"
+  "NodeID_1": "0033422", 
+  "intersection": "Walton Road and Essex Court", 
+  "lat": "40.606200", 
+  "lng": "-73.816948"
 }

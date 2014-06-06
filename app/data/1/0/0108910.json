@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0108910",
-  "intersection": "46th Avenue"
+  "NodeID_1": "0108910", 
+  "intersection": "46th Avenue", 
+  "lat": "40.754561", 
+  "lng": "-73.782175"
 }

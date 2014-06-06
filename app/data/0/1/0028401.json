@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0028401",
-  "intersection": "Arkansas Drive"
+  "NodeID_1": "0028401", 
+  "intersection": "Arkansas Drive", 
+  "lat": "40.606089", 
+  "lng": "-73.906009"
 }

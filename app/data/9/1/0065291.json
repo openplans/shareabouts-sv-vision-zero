@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0065291",
-  "intersection": "Truckelmans Lane"
+  "NodeID_1": "0065291", 
+  "intersection": "Truckelmans Lane", 
+  "lat": "40.644191", 
+  "lng": "-73.898011"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0027623",
-  "intersection": "Ten Eyck Street"
+  "NodeID_1": "0027623", 
+  "intersection": "Ten Eyck Street", 
+  "lat": "40.712928", 
+  "lng": "-73.930650"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0040807",
-  "intersection": "Scott Avenue"
+  "NodeID_1": "0040807", 
+  "intersection": "Scott Avenue", 
+  "lat": "40.727841", 
+  "lng": "-73.930723"
 }

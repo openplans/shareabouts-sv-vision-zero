@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0106713",
-  "intersection": "North Henry Street"
+  "NodeID_1": "0106713", 
+  "intersection": "North Henry Street", 
+  "lat": "40.736224", 
+  "lng": "-73.944316"
 }

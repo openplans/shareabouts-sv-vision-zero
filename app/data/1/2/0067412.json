@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0067412",
-  "intersection": "Mason Avenue"
+  "NodeID_1": "0067412", 
+  "intersection": "Mason Avenue", 
+  "lat": "40.587366", 
+  "lng": "-74.086199"
 }

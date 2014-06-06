@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0028946",
-  "intersection": "Georgia Avenue"
+  "NodeID_1": "0028946", 
+  "intersection": "Georgia Avenue", 
+  "lat": "40.650964", 
+  "lng": "-73.887153"
 }

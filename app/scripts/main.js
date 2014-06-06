@@ -6,7 +6,8 @@ var Shareabouts = Shareabouts || {};
   Swag.registerHelpers();
 
   var preventIntersectionClick = false,
-      streetviewVisible = false;
+      streetviewVisible = false,
+      currentUser;
 
   // http://mir.aculo.us/2011/03/09/little-helpers-a-tweet-sized-javascript-templating-engine/
   var t = function t(s,d){
@@ -280,7 +281,8 @@ var Shareabouts = Shareabouts || {};
 
   NS.Router = Backbone.Router.extend({
     routes: {
-      ':id': 'showPlace'
+      ':id': 'showPlace',
+      'intersection/:id': 'showIntersection'
     },
 
     showPlace: function(id) {
@@ -312,6 +314,25 @@ var Shareabouts = Shareabouts || {};
           self.navigate('', {replace: true});
         }
       });
+    },
+
+    showIntersection: function(id) {
+      var self = this;
+
+      // Get the intersection data file
+      $.ajax({
+        url: getIntersectionFileUrl(id),
+        dataType: 'json',
+        success: function(intersection) {
+          // Show the street view
+          loadStreetView([parseFloat(intersection.lat), parseFloat(intersection.lng)], id);
+        },
+        error: function() {
+          // No place found for this id, clear the id from the url. No history.
+          self.navigate('', {replace: true});
+        }
+      });
+
     }
   });
 
@@ -367,6 +388,7 @@ var Shareabouts = Shareabouts || {};
       newPlaceInfoWindow: {
         content: '<strong>Drag me to the spot where the issue occurs.</strong>'
       },
+      currentUser: currentUser,
 
       templates: NS.Templates
     });
@@ -423,6 +445,9 @@ var Shareabouts = Shareabouts || {};
 
     // Remove the summary info window from the map
     NS.summaryWindow.close();
+
+    // Update the url
+    NS.router.navigate('intersection/'+intersectionId);
   }
 
   function resetMap(map, options) {
@@ -510,7 +535,6 @@ var Shareabouts = Shareabouts || {};
             if (obj.e.type === 'click' && !preventIntersectionClick) {
               // If not a double click
               if (obj.e.detail === 1) {
-                console.log('intersection click');
                 loadStreetView([obj.data.YCOORD, obj.data.XCOORD], obj.data.NodeID_1);
               }
             }
@@ -764,6 +788,34 @@ var Shareabouts = Shareabouts || {};
         .focus()
         .get(0).scrollIntoView();
     });
+
+    // Init auth menu toggle
+    $(document).on('click', '.shareabouts-auth-button', function(evt) {
+      evt.preventDefault();
+      $('.shareabouts-auth-menu').toggleClass('is-exposed');
+    });
+
+
+    NS.auth = new Shareabouts.Auth({
+      apiRoot: 'http://data.shareabouts.org/api/v2/',
+      successPage: 'success.html',
+      errorPage: 'error.html'
+    });
+
+    $(NS.auth).on('authsuccess', function(evt, data) {
+      currentUser = data;
+      if (data) {
+        console.log('you just logged in!', evt, data);
+      } else {
+        console.log('you just logged out!', evt);
+      }
+
+      if (NS.streetview) {
+        NS.streetview.setUser(data);
+      }
+    });
+
+    NS.auth.initUser();
 
     // Init the router so we can link to places.
     NS.router = new NS.Router();

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0065098",
-  "intersection": "Weatherly Place"
+  "NodeID_1": "0065098", 
+  "intersection": "Weatherly Place", 
+  "lat": "40.793960", 
+  "lng": "-73.843705"
 }

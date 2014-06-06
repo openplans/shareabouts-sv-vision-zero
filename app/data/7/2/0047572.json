@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0047572",
-  "intersection": "Story Avenue"
+  "NodeID_1": "0047572", 
+  "intersection": "Story Avenue", 
+  "lat": "40.820895", 
+  "lng": "-73.882902"
 }

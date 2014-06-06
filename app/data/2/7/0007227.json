@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0007227",
-  "intersection": "Adelaide Avenue"
+  "NodeID_1": "0007227", 
+  "intersection": "Adelaide Avenue", 
+  "lat": "40.558441", 
+  "lng": "-74.119159"
 }

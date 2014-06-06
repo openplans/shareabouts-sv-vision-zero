@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000042",
-  "intersection": "Moon Avenue and Mc Donald Court"
+  "NodeID_1": "0000042", 
+  "intersection": "Moon Avenue and Mc Donald Court", 
+  "lat": "40.499301", 
+  "lng": "-74.250266"
 }

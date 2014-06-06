@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000041",
-  "intersection": "Wards Pt Avenue and Federal Court"
+  "NodeID_1": "0000041", 
+  "intersection": "Wards Pt Avenue and Federal Court", 
+  "lat": "40.500151", 
+  "lng": "-74.251522"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0015384",
-  "intersection": "Baltic St Ex"
+  "NodeID_1": "0015384", 
+  "intersection": "Baltic St Ex", 
+  "lat": "40.688678", 
+  "lng": "-74.001786"
 }
