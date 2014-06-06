@@ -177,11 +177,11 @@ var Shareabouts = Shareabouts || {};
       {
         condition: '"{{location_type}}" == "other"',
         icon: {
-          url: 'styles/images/markers/marker-70x124-unknown.png',
+          url: 'styles/images/markers/marker-70x124-other.png',
           anchor: new google.maps.Point(35,103)
         },
         focusIcon: {
-          url: 'styles/images/markers/marker-76x127-unknown-focused.png',
+          url: 'styles/images/markers/marker-76x127-other-focused.png',
           anchor: new google.maps.Point(38,106)
 
         }
@@ -269,7 +269,7 @@ var Shareabouts = Shareabouts || {};
       {
         condition: '"{{location_type}}" == "other"',
         icon: {
-          url: 'styles/images/markers/icon-dot-unknown.png',
+          url: 'styles/images/markers/icon-dot-other.png',
           anchor: new google.maps.Point(16, 16)
         }
       }
