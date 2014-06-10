@@ -9,6 +9,17 @@ var Shareabouts = Shareabouts || {};
     return placeType ? (placeType.label || typeName) : '';
   });
 
+  Handlebars.registerHelper('user_token', function(typeName) {
+    return NS.auth.getUserToken();
+  });
+
+  Handlebars.registerHelper('has_user_submitted', function(collection, options) {
+    var userToken = NS.auth.getUserToken(),
+        userSubmission = _.find(collection, function(model) { return model.user_token === userToken; });
+
+    return (!!userSubmission ? options.fn(this) : options.inverse(this));
+  })
+
   Handlebars.registerHelper('window_location', function(place_id) {
     return window.location;
   });
