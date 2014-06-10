@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0047638",
-  "intersection": "Viele Avenue"
+  "NodeID_1": "0047638", 
+  "intersection": "Viele Avenue", 
+  "lat": "40.807907", 
+  "lng": "-73.877361"
 }

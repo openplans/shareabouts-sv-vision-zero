@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058443",
-  "intersection": "Park Drive"
+  "NodeID_1": "0058443", 
+  "intersection": "Park Drive", 
+  "lat": "40.885416", 
+  "lng": "-73.803287"
 }

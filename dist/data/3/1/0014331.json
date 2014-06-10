@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0014331",
-  "intersection": "Clinton Wharf"
+  "NodeID_1": "0014331", 
+  "intersection": "Clinton Wharf", 
+  "lat": "40.681341", 
+  "lng": "-74.014390"
 }

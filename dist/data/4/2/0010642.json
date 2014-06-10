@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0010642",
-  "intersection": "Osgood Avenue and Chestnut Avenue"
+  "NodeID_1": "0010642", 
+  "intersection": "Osgood Avenue and Chestnut Avenue", 
+  "lat": "40.614396", 
+  "lng": "-74.076655"
 }

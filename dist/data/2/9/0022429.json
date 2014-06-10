@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0022429",
-  "intersection": "Kingsland Avenue"
+  "NodeID_1": "0022429", 
+  "intersection": "Kingsland Avenue", 
+  "lat": "40.734585", 
+  "lng": "-73.946628"
 }

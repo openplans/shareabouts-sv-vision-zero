@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0044925",
-  "intersection": "Hadley Avenue"
+  "NodeID_1": "0044925", 
+  "intersection": "Hadley Avenue", 
+  "lat": "40.893880", 
+  "lng": "-73.913061"
 }

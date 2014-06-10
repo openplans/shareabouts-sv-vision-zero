@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058441",
-  "intersection": "Edgemere Street"
+  "NodeID_1": "0058441", 
+  "intersection": "Edgemere Street", 
+  "lat": "40.886829", 
+  "lng": "-73.806380"
 }

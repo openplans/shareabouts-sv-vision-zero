@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0069508",
-  "intersection": "Beach 74th Street"
+  "NodeID_1": "0069508", 
+  "intersection": "Beach 74th Street", 
+  "lat": "40.590420", 
+  "lng": "-73.802198"
 }

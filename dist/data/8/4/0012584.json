@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0012584",
-  "intersection": "West 16th Street and Bowery"
+  "NodeID_1": "0012584", 
+  "intersection": "West 16th Street and Bowery", 
+  "lat": "40.574694", 
+  "lng": "-73.983212"
 }

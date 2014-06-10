@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0079099",
-  "intersection": "Cross Bx Exwy Nb En Jerome Avenue"
+  "NodeID_1": "0079099", 
+  "intersection": "Cross Bx Exwy Nb En Jerome Avenue", 
+  "lat": "40.845033", 
+  "lng": "-73.912411"
 }

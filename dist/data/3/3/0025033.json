@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0025033",
-  "intersection": "Plumb 1st Street"
+  "NodeID_1": "0025033", 
+  "intersection": "Plumb 1st Street", 
+  "lat": "40.589038", 
+  "lng": "-73.930988"
 }

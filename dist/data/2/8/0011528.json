@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0011528",
-  "intersection": "Barwell Terrace"
+  "NodeID_1": "0011528", 
+  "intersection": "Barwell Terrace", 
+  "lat": "40.615004", 
+  "lng": "-74.033556"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0065385",
-  "intersection": "Santa Monica Lane"
+  "NodeID_1": "0065385", 
+  "intersection": "Santa Monica Lane", 
+  "lat": "40.535305", 
+  "lng": "-74.211881"
 }

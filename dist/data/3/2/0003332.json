@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0003332",
-  "intersection": "Quimby Avenue"
+  "NodeID_1": "0003332", 
+  "intersection": "Quimby Avenue", 
+  "lat": "40.600324", 
+  "lng": "-74.185824"
 }

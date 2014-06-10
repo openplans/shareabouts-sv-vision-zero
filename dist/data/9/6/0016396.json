@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0016396",
-  "intersection": "Sheepshead Bay Road"
+  "NodeID_1": "0016396", 
+  "intersection": "Sheepshead Bay Road", 
+  "lat": "40.578821", 
+  "lng": "-73.974453"
 }

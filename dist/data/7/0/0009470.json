@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0009470",
-  "intersection": "Penbroke Avenue"
+  "NodeID_1": "0009470", 
+  "intersection": "Penbroke Avenue", 
+  "lat": "40.635640", 
+  "lng": "-74.099239"
 }

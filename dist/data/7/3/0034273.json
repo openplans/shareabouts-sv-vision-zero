@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0034273",
-  "intersection": "Van Wyck Exwy Nb En Rockaway Blv"
+  "NodeID_1": "0034273", 
+  "intersection": "Van Wyck Exwy Nb En Rockaway Blv", 
+  "lat": "40.677538", 
+  "lng": "-73.803121"
 }

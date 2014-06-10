@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0032963",
-  "intersection": "Hollyhurst Court"
+  "NodeID_1": "0032963", 
+  "intersection": "Hollyhurst Court", 
+  "lat": "40.582994", 
+  "lng": "-73.821871"
 }

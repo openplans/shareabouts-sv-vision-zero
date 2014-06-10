@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0048517",
-  "intersection": "Van Nest Avenue"
+  "NodeID_1": "0048517", 
+  "intersection": "Van Nest Avenue", 
+  "lat": "40.838691", 
+  "lng": "-73.873410"
 }

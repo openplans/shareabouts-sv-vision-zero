@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0100487",
-  "intersection": "Shore Parkway and Belt Pkwy Wb En Coney Is Avenue"
+  "NodeID_1": "0100487", 
+  "intersection": "Shore Parkway and Belt Pkwy Wb En Coney Is Avenue", 
+  "lat": "40.584243", 
+  "lng": "-73.961301"
 }

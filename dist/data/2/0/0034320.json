@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0034320",
-  "intersection": "Van Wyck Exwy Sb En North Conduit Avenue"
+  "NodeID_1": "0034320", 
+  "intersection": "Van Wyck Exwy Sb En North Conduit Avenue", 
+  "lat": "40.667132", 
+  "lng": "-73.801673"
 }

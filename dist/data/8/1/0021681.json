@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0021681",
-  "intersection": "79 St. Boat Basin"
+  "NodeID_1": "0021681", 
+  "intersection": "79 St. Boat Basin", 
+  "lat": "40.785922", 
+  "lng": "-73.985081"
 }

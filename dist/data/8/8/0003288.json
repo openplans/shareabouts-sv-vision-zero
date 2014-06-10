@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0003288",
-  "intersection": "Ridgeway Avenue"
+  "NodeID_1": "0003288", 
+  "intersection": "Ridgeway Avenue", 
+  "lat": "40.598176", 
+  "lng": "-74.190039"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0108921",
-  "intersection": "Shoals Lane and Tennyson Drive"
+  "NodeID_1": "0108921", 
+  "intersection": "Shoals Lane and Tennyson Drive", 
+  "lat": "40.541290", 
+  "lng": "-74.143131"
 }

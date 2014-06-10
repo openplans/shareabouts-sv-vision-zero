@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0033105",
-  "intersection": "Church Road and East Twelfth Road"
+  "NodeID_1": "0033105", 
+  "intersection": "Church Road and East Twelfth Road", 
+  "lat": "40.604259", 
+  "lng": "-73.818269"
 }

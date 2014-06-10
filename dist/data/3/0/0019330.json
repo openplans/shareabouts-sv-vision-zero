@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0019330",
-  "intersection": "Division Avenue"
+  "NodeID_1": "0019330", 
+  "intersection": "Division Avenue", 
+  "lat": "40.707029", 
+  "lng": "-73.969131"
 }

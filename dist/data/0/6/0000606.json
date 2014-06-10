@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000606",
-  "intersection": "Bartow Avenue"
+  "NodeID_1": "0000606", 
+  "intersection": "Bartow Avenue", 
+  "lat": "40.510052", 
+  "lng": "-74.226391"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0025070",
-  "intersection": "Bijou Avenue"
+  "NodeID_1": "0025070", 
+  "intersection": "Bijou Avenue", 
+  "lat": "40.594549", 
+  "lng": "-73.930885"
 }

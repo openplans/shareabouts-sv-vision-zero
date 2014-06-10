@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0016272",
-  "intersection": "Brighton 15th Street"
+  "NodeID_1": "0016272", 
+  "intersection": "Brighton 15th Street", 
+  "lat": "40.575391", 
+  "lng": "-73.955110"
 }

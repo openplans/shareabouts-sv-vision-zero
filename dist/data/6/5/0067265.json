@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0067265",
-  "intersection": "Filbert Avenue"
+  "NodeID_1": "0067265", 
+  "intersection": "Filbert Avenue", 
+  "lat": "40.580518", 
+  "lng": "-74.092902"
 }

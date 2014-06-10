@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0069567",
-  "intersection": "Oceana Drive East"
+  "NodeID_1": "0069567", 
+  "intersection": "Oceana Drive East", 
+  "lat": "40.576645", 
+  "lng": "-73.957324"
 }

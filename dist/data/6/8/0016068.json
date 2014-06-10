@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0016068",
-  "intersection": "Navy Street and Lafayette Street"
+  "NodeID_1": "0016068", 
+  "intersection": "Navy Street and Lafayette Street", 
+  "lat": "40.690980", 
+  "lng": "-73.979708"
 }

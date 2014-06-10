@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0016140",
-  "intersection": "Little Street and John Street"
+  "NodeID_1": "0016140", 
+  "intersection": "Little Street and John Street", 
+  "lat": "40.704176", 
+  "lng": "-73.979603"
 }

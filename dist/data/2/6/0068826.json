@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0068826",
-  "intersection": "Albemarle Road"
+  "NodeID_1": "0068826", 
+  "intersection": "Albemarle Road", 
+  "lat": "40.646821", 
+  "lng": "-73.964333"
 }

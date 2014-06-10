@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0016556",
-  "intersection": "Athlone Court"
+  "NodeID_1": "0016556", 
+  "intersection": "Athlone Court", 
+  "lat": "40.580452", 
+  "lng": "-73.964984"
 }

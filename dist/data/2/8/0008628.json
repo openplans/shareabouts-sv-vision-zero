@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0008628",
-  "intersection": "Tillman Street"
+  "NodeID_1": "0008628", 
+  "intersection": "Tillman Street", 
+  "lat": "40.605843", 
+  "lng": "-74.113708"
 }

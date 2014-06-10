@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0071103",
-  "intersection": "Ramona Avenue"
+  "NodeID_1": "0071103", 
+  "intersection": "Ramona Avenue", 
+  "lat": "40.534899", 
+  "lng": "-74.214951"
 }

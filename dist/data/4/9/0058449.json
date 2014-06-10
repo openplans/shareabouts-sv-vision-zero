@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058449",
-  "intersection": "Beech Tree Lane"
+  "NodeID_1": "0058449", 
+  "intersection": "Beech Tree Lane", 
+  "lat": "40.885069", 
+  "lng": "-73.799302"
 }

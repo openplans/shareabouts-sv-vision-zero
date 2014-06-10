@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0003290",
-  "intersection": "Bates Avenue and Ridgeway Avenue"
+  "NodeID_1": "0003290", 
+  "intersection": "Bates Avenue and Ridgeway Avenue", 
+  "lat": "40.598004", 
+  "lng": "-74.189081"
 }

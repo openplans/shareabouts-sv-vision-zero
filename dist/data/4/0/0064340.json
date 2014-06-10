@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0064340",
-  "intersection": "Angelina Court"
+  "NodeID_1": "0064340", 
+  "intersection": "Angelina Court", 
+  "lat": "40.628694", 
+  "lng": "-74.147397"
 }

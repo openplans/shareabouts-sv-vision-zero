@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0009335",
-  "intersection": "Markham Road"
+  "NodeID_1": "0009335", 
+  "intersection": "Markham Road", 
+  "lat": "40.639102", 
+  "lng": "-74.115944"
 }

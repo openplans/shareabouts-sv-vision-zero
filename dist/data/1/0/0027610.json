@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0027610",
-  "intersection": "Meserole Street"
+  "NodeID_1": "0027610", 
+  "intersection": "Meserole Street", 
+  "lat": "40.710259", 
+  "lng": "-73.929322"
 }

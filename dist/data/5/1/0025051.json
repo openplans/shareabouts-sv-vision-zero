@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0025051",
-  "intersection": "Ira Court"
+  "NodeID_1": "0025051", 
+  "intersection": "Ira Court", 
+  "lat": "40.592007", 
+  "lng": "-73.930105"
 }

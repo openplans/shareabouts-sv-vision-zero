@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0066067",
-  "intersection": "Oceana Drive West at Oceana Terrace and Oceana Drive East"
+  "NodeID_1": "0066067", 
+  "intersection": "Oceana Drive West at Oceana Terrace and Oceana Drive East", 
+  "lat": "40.577358", 
+  "lng": "-73.958160"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0067466",
-  "intersection": "Dawson Place"
+  "NodeID_1": "0067466", 
+  "intersection": "Dawson Place", 
+  "lat": "40.596294", 
+  "lng": "-74.087382"
 }

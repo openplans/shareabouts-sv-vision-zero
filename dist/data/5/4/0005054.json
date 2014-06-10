@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0005054",
-  "intersection": "St. Andrew's Road"
+  "NodeID_1": "0005054", 
+  "intersection": "St. Andrew's Road", 
+  "lat": "40.574882", 
+  "lng": "-74.134231"
 }

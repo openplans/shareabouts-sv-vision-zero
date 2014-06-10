@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0048257",
-  "intersection": "Watson Avenue"
+  "NodeID_1": "0048257", 
+  "intersection": "Watson Avenue", 
+  "lat": "40.825290", 
+  "lng": "-73.884563"
 }

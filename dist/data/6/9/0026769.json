@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0026769",
-  "intersection": "St. Mark's Avenue"
+  "NodeID_1": "0026769", 
+  "intersection": "St. Mark's Avenue", 
+  "lat": "40.674601", 
+  "lng": "-73.938298"
 }

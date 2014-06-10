@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0013968",
-  "intersection": "Marginal Street and 31st Street"
+  "NodeID_1": "0013968", 
+  "intersection": "Marginal Street and 31st Street", 
+  "lat": "40.660168", 
+  "lng": "-74.007628"
 }

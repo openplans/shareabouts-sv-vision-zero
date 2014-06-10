@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0067164",
-  "intersection": "City Boulevard"
+  "NodeID_1": "0067164", 
+  "intersection": "City Boulevard", 
+  "lat": "40.623562", 
+  "lng": "-74.103534"
 }

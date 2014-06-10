@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0025370",
-  "intersection": "National Drive"
+  "NodeID_1": "0025370", 
+  "intersection": "National Drive", 
+  "lat": "40.604481", 
+  "lng": "-73.908813"
 }

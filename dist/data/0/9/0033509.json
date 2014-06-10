@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0033509",
-  "intersection": "Bayview Avenue"
+  "NodeID_1": "0033509", 
+  "intersection": "Bayview Avenue", 
+  "lat": "40.656018", 
+  "lng": "-73.832294"
 }
