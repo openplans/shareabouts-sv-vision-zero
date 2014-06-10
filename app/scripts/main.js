@@ -447,7 +447,9 @@ var Shareabouts = Shareabouts || {};
     NS.summaryWindow.close();
 
     // Update the url
-    NS.router.navigate('intersection/'+intersectionId);
+    if (!lookAtPlaceModel) {
+      NS.router.navigate('intersection/'+intersectionId);
+    }
   }
 
   function resetMap(map, options) {
