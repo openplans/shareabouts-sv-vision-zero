@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0038441",
-  "intersection": "148th Drive and 235th Street"
+  "NodeID_1": "0038441", 
+  "intersection": "148th Drive and 235th Street", 
+  "lat": "40.653238", 
+  "lng": "-73.748270"
 }

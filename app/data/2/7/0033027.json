@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0033027",
-  "intersection": "Morgan Court"
+  "NodeID_1": "0033027", 
+  "intersection": "Morgan Court", 
+  "lat": "40.583959", 
+  "lng": "-73.819738"
 }

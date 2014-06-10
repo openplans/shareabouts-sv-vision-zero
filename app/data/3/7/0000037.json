@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000037",
-  "intersection": "Moon Avenue and Nichols Court"
+  "NodeID_1": "0000037", 
+  "intersection": "Moon Avenue and Nichols Court", 
+  "lat": "40.498565", 
+  "lng": "-74.250033"
 }

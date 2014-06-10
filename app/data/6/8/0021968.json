@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0021968",
-  "intersection": "Grand Street"
+  "NodeID_1": "0021968", 
+  "intersection": "Grand Street", 
+  "lat": "40.716550", 
+  "lng": "-73.967755"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0060675",
-  "intersection": "William Avenue"
+  "NodeID_1": "0060675", 
+  "intersection": "William Avenue", 
+  "lat": "40.843612", 
+  "lng": "-73.787425"
 }

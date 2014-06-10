@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0069537",
-  "intersection": "Gaynor Street"
+  "NodeID_1": "0069537", 
+  "intersection": "Gaynor Street", 
+  "lat": "40.532247", 
+  "lng": "-74.219499"
 }

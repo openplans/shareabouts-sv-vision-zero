@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0003654",
-  "intersection": "Bloomfield Road and 5th Street"
+  "NodeID_1": "0003654", 
+  "intersection": "Bloomfield Road and 5th Street", 
+  "lat": "40.618456", 
+  "lng": "-74.184113"
 }

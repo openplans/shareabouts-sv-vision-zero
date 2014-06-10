@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0004035",
-  "intersection": "Holland Avenue"
+  "NodeID_1": "0004035", 
+  "intersection": "Holland Avenue", 
+  "lat": "40.633739", 
+  "lng": "-74.171132"
 }

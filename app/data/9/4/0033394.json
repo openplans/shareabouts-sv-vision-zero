@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0033394",
-  "intersection": "Essex Court and Church Road"
+  "NodeID_1": "0033394", 
+  "intersection": "Essex Court and Church Road", 
+  "lat": "40.606132", 
+  "lng": "-73.818224"
 }

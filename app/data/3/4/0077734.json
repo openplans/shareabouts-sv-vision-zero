@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0077734",
-  "intersection": "Burchell Avenue"
+  "NodeID_1": "0077734", 
+  "intersection": "Burchell Avenue", 
+  "lat": "40.595899", 
+  "lng": "-73.803691"
 }

@@ -52,6 +52,14 @@ if __name__ == '__main__':
             key = row['NodeID_1']
             intersections[key].update(row)
 
+    # Update the intersection data with the crash data json file
+    with open(pathjoin(BASEDIR, 'intersections_wgs84.csv')) as intersections_file:
+        reader = csv.DictReader(intersections_file)
+        for row in reader:
+            key = row['NodeID_1']
+            lat_lng = {'lat': row.get('YCOORD'), 'lng': row.get('XCOORD')}
+            intersections[key].update(lat_lng)
+
     # Write the intersection files
     pool = Pool(processes=4)
     pool.map(write_intersection_file, intersections.values())

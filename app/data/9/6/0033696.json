@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0033696",
-  "intersection": "Belt Parkway Westbound Exit 17 West"
+  "NodeID_1": "0033696", 
+  "intersection": "Belt Parkway Westbound Exit 17 West", 
+  "lat": "40.666466", 
+  "lng": "-73.835049"
 }

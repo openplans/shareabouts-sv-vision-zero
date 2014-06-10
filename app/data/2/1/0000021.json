@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000021",
-  "intersection": "Amboy Road"
+  "NodeID_1": "0000021", 
+  "intersection": "Amboy Road", 
+  "lat": "40.507781", 
+  "lng": "-74.255209"
 }

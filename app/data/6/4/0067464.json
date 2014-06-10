@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0067464",
-  "intersection": "Davis Avenue"
+  "NodeID_1": "0067464", 
+  "intersection": "Davis Avenue", 
+  "lat": "40.622051", 
+  "lng": "-74.106864"
 }

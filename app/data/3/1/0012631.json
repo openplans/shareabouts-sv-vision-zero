@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0012631",
-  "intersection": "Sunset Court"
+  "NodeID_1": "0012631", 
+  "intersection": "Sunset Court", 
+  "lat": "40.578810", 
+  "lng": "-74.011502"
 }

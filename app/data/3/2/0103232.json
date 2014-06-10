@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0103232",
-  "intersection": "Lacombe Avenue"
+  "NodeID_1": "0103232", 
+  "intersection": "Lacombe Avenue", 
+  "lat": "40.814446", 
+  "lng": "-73.865951"
 }

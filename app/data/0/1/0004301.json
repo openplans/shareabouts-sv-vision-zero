@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0004301",
-  "intersection": "Winchester Avenue"
+  "NodeID_1": "0004301", 
+  "intersection": "Winchester Avenue", 
+  "lat": "40.534076", 
+  "lng": "-74.150244"
 }

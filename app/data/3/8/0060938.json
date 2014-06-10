@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0060938",
-  "intersection": "Roosevelt Avenue"
+  "NodeID_1": "0060938", 
+  "intersection": "Roosevelt Avenue", 
+  "lat": "40.884291", 
+  "lng": "-73.796282"
 }

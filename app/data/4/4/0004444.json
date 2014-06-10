@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0004444",
-  "intersection": "Morris Place"
+  "NodeID_1": "0004444", 
+  "intersection": "Morris Place", 
+  "lat": "40.542106", 
+  "lng": "-74.143075"
 }

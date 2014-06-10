@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0097507",
-  "intersection": "Mde Service Road"
+  "NodeID_1": "0097507", 
+  "intersection": "Mde Service Road", 
+  "lat": "40.898657", 
+  "lng": "-73.879491"
 }

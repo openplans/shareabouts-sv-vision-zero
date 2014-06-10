@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0033310",
-  "intersection": "Bayfield Avenue"
+  "NodeID_1": "0033310", 
+  "intersection": "Bayfield Avenue", 
+  "lat": "40.598733", 
+  "lng": "-73.801788"
 }

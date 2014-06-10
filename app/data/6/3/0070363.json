@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0070363",
-  "intersection": "Heenan Avenue"
+  "NodeID_1": "0070363", 
+  "intersection": "Heenan Avenue", 
+  "lat": "40.542918", 
+  "lng": "-74.188376"
 }

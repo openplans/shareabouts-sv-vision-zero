@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0047146",
-  "intersection": "Grand Central Parkway Eb En 94th Street"
+  "NodeID_1": "0047146", 
+  "intersection": "Grand Central Parkway Eb En 94th Street", 
+  "lat": "40.771315", 
+  "lng": "-73.876627"
 }

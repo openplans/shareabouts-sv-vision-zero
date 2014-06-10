@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0037108",
-  "intersection": "Clayton Road"
+  "NodeID_1": "0037108", 
+  "intersection": "Clayton Road", 
+  "lat": "40.702688", 
+  "lng": "-73.794825"
 }

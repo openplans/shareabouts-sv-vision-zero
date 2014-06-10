@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0031310",
-  "intersection": "Grant Avenue"
+  "NodeID_1": "0031310", 
+  "intersection": "Grant Avenue", 
+  "lat": "40.673399", 
+  "lng": "-73.864820"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0067620",
-  "intersection": "Christopher Avenue"
+  "NodeID_1": "0067620", 
+  "intersection": "Christopher Avenue", 
+  "lat": "40.671410", 
+  "lng": "-73.906287"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0051375",
-  "intersection": "Van Wyck Exwy Sb En Northern Blv and Van Wyck Exwy Sb En Astoria Boulevard"
+  "NodeID_1": "0051375", 
+  "intersection": "Van Wyck Exwy Sb En Northern Blv and Van Wyck Exwy Sb En Astoria Boulevard", 
+  "lat": "40.762529", 
+  "lng": "-73.839847"
 }

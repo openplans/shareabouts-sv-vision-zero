@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0067807",
-  "intersection": "Chestnut Avenue"
+  "NodeID_1": "0067807", 
+  "intersection": "Chestnut Avenue", 
+  "lat": "40.614396", 
+  "lng": "-74.076370"
 }

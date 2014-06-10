@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000043",
-  "intersection": "Moon Avenue and Clermont Court"
+  "NodeID_1": "0000043", 
+  "intersection": "Moon Avenue and Clermont Court", 
+  "lat": "40.500113", 
+  "lng": "-74.251382"
 }

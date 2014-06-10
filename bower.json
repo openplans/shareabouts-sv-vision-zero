@@ -6,7 +6,7 @@
     "jquery": "2.1.0",
     "foundation": "~5.2.2",
     "leaflet-0.7.2": "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.2.zip",
-    "shareabouts-js": "https://github.com/openplans/shareabouts.js.git#no-auth",
+    "shareabouts-js": "https://github.com/openplans/shareabouts.js.git#07325b1ecd2616757c02400d56339d102d31c258",
     "swag": "~0.7.0",
     "handlebars": "~1.3.0",
     "moment": "~2.6.0",

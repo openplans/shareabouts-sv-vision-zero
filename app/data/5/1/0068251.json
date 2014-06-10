@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0068251",
-  "intersection": "Pavillion Hill Terrace"
+  "NodeID_1": "0068251", 
+  "intersection": "Pavillion Hill Terrace", 
+  "lat": "40.637735", 
+  "lng": "-74.078751"
 }

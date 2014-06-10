@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0027782",
-  "intersection": "Gardner Avenue"
+  "NodeID_1": "0027782", 
+  "intersection": "Gardner Avenue", 
+  "lat": "40.710481", 
+  "lng": "-73.924746"
 }

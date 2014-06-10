@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058354",
-  "intersection": "Hutchinson Avenue"
+  "NodeID_1": "0058354", 
+  "intersection": "Hutchinson Avenue", 
+  "lat": "40.882382", 
+  "lng": "-73.821752"
 }

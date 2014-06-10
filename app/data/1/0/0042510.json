@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0042510",
-  "intersection": "West 134th Street"
+  "NodeID_1": "0042510", 
+  "intersection": "West 134th Street", 
+  "lat": "40.812616", 
+  "lng": "-73.939440"
 }

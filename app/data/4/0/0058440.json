@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058440",
-  "intersection": "Edgemere Street and Park Drive"
+  "NodeID_1": "0058440", 
+  "intersection": "Edgemere Street and Park Drive", 
+  "lat": "40.886397", 
+  "lng": "-73.806596"
 }

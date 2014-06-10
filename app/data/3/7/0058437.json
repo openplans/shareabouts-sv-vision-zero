@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058437",
-  "intersection": "Ridge Place"
+  "NodeID_1": "0058437", 
+  "intersection": "Ridge Place", 
+  "lat": "40.887481", 
+  "lng": "-73.808721"
 }

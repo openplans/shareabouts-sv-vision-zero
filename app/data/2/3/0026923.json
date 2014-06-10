@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0026923",
-  "intersection": "Beaver Place"
+  "NodeID_1": "0026923", 
+  "intersection": "Beaver Place", 
+  "lat": "40.674005", 
+  "lng": "-73.925942"
 }

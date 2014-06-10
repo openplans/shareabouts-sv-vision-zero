@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0003305",
-  "intersection": "Pearson Street"
+  "NodeID_1": "0003305", 
+  "intersection": "Pearson Street", 
+  "lat": "40.589589", 
+  "lng": "-74.186577"
 }

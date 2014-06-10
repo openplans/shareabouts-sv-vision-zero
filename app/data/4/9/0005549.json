@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0005549",
-  "intersection": "Ashworth Avenue"
+  "NodeID_1": "0005549", 
+  "intersection": "Ashworth Avenue", 
+  "lat": "40.590037", 
+  "lng": "-74.144004"
 }

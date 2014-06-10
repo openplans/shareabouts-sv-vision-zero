@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0040804",
-  "intersection": "Laurel Hill Boulevard"
+  "NodeID_1": "0040804", 
+  "intersection": "Laurel Hill Boulevard", 
+  "lat": "40.728729", 
+  "lng": "-73.931315"
 }

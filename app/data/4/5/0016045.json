@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0016045",
-  "intersection": "Grove Place"
+  "NodeID_1": "0016045", 
+  "intersection": "Grove Place", 
+  "lat": "40.688525", 
+  "lng": "-73.981489"
 }

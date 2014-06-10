@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0009969",
-  "intersection": "Reynaud Street"
+  "NodeID_1": "0009969", 
+  "intersection": "Reynaud Street", 
+  "lat": "40.587709", 
+  "lng": "-74.072390"
 }

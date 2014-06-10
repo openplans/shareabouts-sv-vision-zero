@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0009590",
-  "intersection": "Desoto Street"
+  "NodeID_1": "0009590", 
+  "intersection": "Desoto Street", 
+  "lat": "40.637834", 
+  "lng": "-74.089297"
 }

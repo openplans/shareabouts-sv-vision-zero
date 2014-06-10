@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0007709",
-  "intersection": "Nugent Avenue and Stobe Avenue"
+  "NodeID_1": "0007709", 
+  "intersection": "Nugent Avenue and Stobe Avenue", 
+  "lat": "40.578006", 
+  "lng": "-74.091492"
 }

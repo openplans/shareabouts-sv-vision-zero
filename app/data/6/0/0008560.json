@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0008560",
-  "intersection": "Staten Isl Exwy Eb En Slosson Avenue"
+  "NodeID_1": "0008560", 
+  "intersection": "Staten Isl Exwy Eb En Slosson Avenue", 
+  "lat": "40.610839", 
+  "lng": "-74.116939"
 }

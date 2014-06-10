@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0104278",
-  "intersection": "South End Avenue"
+  "NodeID_1": "0104278", 
+  "intersection": "South End Avenue", 
+  "lat": "40.711890", 
+  "lng": "-74.015639"
 }

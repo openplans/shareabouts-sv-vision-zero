@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0052129",
-  "intersection": "Stanton Court"
+  "NodeID_1": "0052129", 
+  "intersection": "Stanton Court", 
+  "lat": "40.809823", 
+  "lng": "-73.856431"
 }

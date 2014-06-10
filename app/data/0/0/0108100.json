@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0108100",
-  "intersection": "Hunts Pt Avenue"
+  "NodeID_1": "0108100", 
+  "intersection": "Hunts Pt Avenue", 
+  "lat": "40.801977", 
+  "lng": "-73.871756"
 }

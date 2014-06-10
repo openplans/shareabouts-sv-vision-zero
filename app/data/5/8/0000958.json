@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0000958",
-  "intersection": "Hargold Avenue"
+  "NodeID_1": "0000958", 
+  "intersection": "Hargold Avenue", 
+  "lat": "40.532864", 
+  "lng": "-74.222045"
 }

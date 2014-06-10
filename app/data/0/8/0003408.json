@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0003408",
-  "intersection": "Crane Street"
+  "NodeID_1": "0003408", 
+  "intersection": "Crane Street", 
+  "lat": "40.602290", 
+  "lng": "-74.177071"
 }

@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0058428",
-  "intersection": "Park Drive and Peace Street"
+  "NodeID_1": "0058428", 
+  "intersection": "Park Drive and Peace Street", 
+  "lat": "40.887659", 
+  "lng": "-73.811445"
 }

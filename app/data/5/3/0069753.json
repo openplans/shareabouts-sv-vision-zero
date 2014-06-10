@@ -1,4 +1,6 @@
 {
-  "NodeID_1": "0069753",
-  "intersection": "Sheffield Avenue"
+  "NodeID_1": "0069753", 
+  "intersection": "Sheffield Avenue", 
+  "lat": "40.651006", 
+  "lng": "-73.886107"
 }
