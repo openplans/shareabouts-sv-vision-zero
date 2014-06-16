@@ -4,6 +4,15 @@ var Shareabouts = Shareabouts || {};
 
 (function(NS) {
 
+  Handlebars.registerHelper('nl_to_br', function(str) {
+    if (str) {
+      str = Handlebars.Utils.escapeExpression(str);
+      return new Handlebars.SafeString(str.replace(/\r?\n|\r/g, '<br>'));
+    } else {
+      return str;
+    }
+  });
+
   Handlebars.registerHelper('place_type_label', function(typeName) {
     var placeType = NS.Config.placeTypes[typeName];
     return placeType ? (placeType.label || typeName) : '';
