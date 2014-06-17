@@ -488,7 +488,15 @@ var Shareabouts = Shareabouts || {};
         summaryWindow = new google.maps.InfoWindow({
           disableAutoPan: true
         }),
-        summaryWindowTid;
+        summaryWindowTid,
+        autocomplete = new google.maps.places.Autocomplete(
+          document.getElementById('shareabouts-map-search'), {
+            bounds: new google.maps.LatLngBounds(
+              new google.maps.LatLng(40.742380, -74.006524),
+              new google.maps.LatLng(40.765787, -73.964896)),
+            componentRestrictions: {country: 'us'},
+            types: ['geocode']
+          });
 
     // Make these accessible outside of this function
     NS.map = map;
@@ -547,6 +555,23 @@ var Shareabouts = Shareabouts || {};
           }
         });
     });
+
+    // Listen for autocomplete selection
+    google.maps.event.addListener(autocomplete, 'place_changed', function() {
+      var place = autocomplete.getPlace();
+      if (!place.geometry) {
+        return;
+      }
+
+      // If the place has a geometry, then present it on a map.
+      if (place.geometry.viewport) {
+        map.fitBounds(place.geometry.viewport);
+      } else {
+        map.setCenter(place.geometry.location);
+        map.setZoom(16);
+      }
+    });
+
 
     // Change the map instructions based on the zoom level
     // Decide if we should switch to vector markers

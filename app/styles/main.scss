@@ -677,6 +677,43 @@ $small-map-height: 200px;
   }
 
 
+  /* =Neighborhood Search
+  -------------------------------------------------------------- */
+
+  .shareabouts-location-map-container .shareabouts-map-search {
+    display: none; 
+  }
+  .shareabouts-location-map-container.active .shareabouts-map-search {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    margin-top: 6px;
+    background-color: #eee;
+    background-color: rgba(240, 240, 240, 0.9);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    @media screen and (min-width: $med-screen) {
+      display: block;
+    }
+    input {
+      display: block;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+      border: 3px solid transparent;
+      background-color: transparent;
+      line-height: 1.5;
+    }
+    input:focus {
+      background-color: #fff;
+    }
+  }
+
+
   /* =The Legend
   -------------------------------------------------------------- */
 
@@ -926,7 +963,7 @@ $small-map-height: 200px;
     background-image: url(images/heart.png);
   }
   .user-support:hover label {
-    background-color: #93b7c9;
+    background-color: #f26522;
   }
   .support-count {}
   .social {
