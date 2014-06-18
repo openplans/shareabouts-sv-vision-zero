@@ -831,12 +831,6 @@ var Shareabouts = Shareabouts || {};
 
     $(NS.auth).on('authsuccess', function(evt, data) {
       currentUser = data;
-      if (data) {
-        console.log('you just logged in!', evt, data);
-      } else {
-        console.log('you just logged out!', evt);
-      }
-
       if (NS.streetview) {
         NS.streetview.setUser(data);
       }
