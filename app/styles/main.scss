@@ -1150,3 +1150,19 @@ $small-map-height: 200px;
     margin-bottom: -60px;
   }
 }
+
+.shareabouts-close-button {
+  @media screen and (max-width: $med-screen) {
+    position: relative;
+    top: 0.25em;
+  }
+}
+@media screen and (max-width: $med-screen) {
+  .shareabouts-close-button:after {
+    content: 'CLOSE';
+    font-size: 0.5em;
+    margin-left: 0.375em;
+    position: relative;
+    top: -0.125em;
+  }
+}
