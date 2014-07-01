@@ -5,7 +5,9 @@ var Shareabouts = Shareabouts || {};
 (function(NS, $, console) {
   Swag.registerHelpers();
 
-  var preventIntersectionClick = false,
+  var minVectorZoom = 16,
+      maxVectorZoom = 19,
+      preventIntersectionClick = false,
       streetviewVisible = false,
       currentUser;
 
@@ -282,7 +284,9 @@ var Shareabouts = Shareabouts || {};
   NS.Router = Backbone.Router.extend({
     routes: {
       ':id': 'showPlace',
-      'intersection/:id': 'showIntersection'
+      'intersection/:id': 'showIntersection',
+      'filter/:locationType': 'filterPlaces',
+      '': 'filterPlaces'
     },
 
     showPlace: function(id) {
@@ -332,7 +336,31 @@ var Shareabouts = Shareabouts || {};
           self.navigate('', {replace: true});
         }
       });
+    },
 
+    filterPlaces: function(locationType) {
+      console.log(locationType);
+
+
+      if (!locationType && NS.filter) {
+        NS.filter = null;
+        NS.mapPlaceCollection.reset();
+        resetPlaces();
+
+        if (NS.map.overlayMapTypes.getLength() === 1) {
+          NS.map.overlayMapTypes.insertAt(1, NS.placeOverlay);
+        }
+      }
+
+      if (locationType) {
+        NS.filter = {'location_type': locationType};
+        NS.mapPlaceCollection.reset();
+        resetPlaces();
+
+        if (NS.map.overlayMapTypes.getLength() === 2) {
+          NS.map.overlayMapTypes.removeAt(1);
+        }
+      }
     }
   });
 
@@ -468,11 +496,29 @@ var Shareabouts = Shareabouts || {};
     centerFunc(options.center);
   }
 
+  function resetPlaces() {
+    var zoom = NS.map.getZoom(),
+        center = NS.map.getCenter();
+
+    if (zoom < minVectorZoom) {
+      // Zoomed out... clear the collection/map
+      NS.mapPlaceCollection.reset();
+    } else {
+      // Apply the attribute filter if it exists
+      var data = _.extend({
+        near: center.lat()+','+center.lng(),
+        distance_lt: '800m'
+      }, NS.filter);
+
+      // Zoomed in... get some places
+      NS.mapPlaceCollection.fetchAllPages({
+        data: data
+      });
+    }
+  }
+
   function initMap() {
-    var minVectorZoom = 16,
-        maxVectorZoom = 19,
-        mapPlaceCollection = new NS.PlaceCollection(),
-        map = new google.maps.Map($('.shareabouts-location-map').get(0), {
+    var map = new google.maps.Map($('.shareabouts-location-map').get(0), {
           center: new google.maps.LatLng(40.7210690835, -73.9981985092),
           zoom: 14,
           minZoom: 11,
@@ -500,10 +546,11 @@ var Shareabouts = Shareabouts || {};
 
     // Make these accessible outside of this function
     NS.map = map;
+    NS.mapPlaceCollection = new NS.PlaceCollection();
     NS.summaryWindow = summaryWindow;
 
     // This has to be set directly, not via the options
-    mapPlaceCollection.url = NS.Config.datasetUrl;
+    NS.mapPlaceCollection.url = NS.Config.datasetUrl;
 
     // Bind zoom-in/out to our custom buttons
     $('.shareabouts-zoom-in').click(function(evt) {
@@ -534,7 +581,8 @@ var Shareabouts = Shareabouts || {};
     // Interactive tile layer hosted on mapbox.com. NOTE: wax is a DEPRECATED
     // library, but still better for styling+interactivity than Fusion Tables.
     wax.tilejson('http://a.tiles.mapbox.com/v3/openplans.vision-zero-places.json', function(tilejson) {
-      map.overlayMapTypes.push(new wax.g.connector(tilejson));
+      NS.placeOverlay = new wax.g.connector(tilejson);
+      map.overlayMapTypes.push(NS.placeOverlay);
       wax.g.interaction()
         .map(map)
         .tilejson(tilejson)
@@ -572,47 +620,15 @@ var Shareabouts = Shareabouts || {};
       }
     });
 
-
     // Change the map instructions based on the zoom level
     // Decide if we should switch to vector markers
-    google.maps.event.addListener(map, 'zoom_changed', function() {
-      var zoom = map.getZoom(),
-          center = map.getCenter();
-      // $('.zoom-in-msg').toggleClass('is-hidden', (zoom >= 15));
-
-      if (zoom < minVectorZoom) {
-        // Zoomed out... clear the collection/map
-        mapPlaceCollection.reset();
-      } else {
-        // Zoomed in... get some places
-        mapPlaceCollection.fetchAllPages({
-          data: {
-            near: center.lat()+','+center.lng(),
-            distance_lt: '800m'
-          }
-        });
-      }
-    });
+    google.maps.event.addListener(map, 'zoom_changed', resetPlaces);
 
     // Fetch places for this new area
-    google.maps.event.addListener(map, 'dragend', function() {
-      var zoom = map.getZoom(),
-          center = map.getCenter();
-
-      if (zoom >= minVectorZoom) {
-        // console.log('fetch places for', map.getBounds().toString());
-
-        mapPlaceCollection.fetchAllPages({
-          data: {
-            near: center.lat()+','+center.lng(),
-            distance_lt: '800m'
-          }
-        });
-      }
-    });
+    google.maps.event.addListener(map, 'dragend', resetPlaces);
 
     // On model add, put a new styled marker on the map
-    mapPlaceCollection.on('add', function(model, collection) {
+    NS.mapPlaceCollection.on('add', function(model, collection) {
       var geom = model.get('geometry'),
           position = new google.maps.LatLng(geom.coordinates[1], geom.coordinates[0]),
           styleRule = getStyleRule(model.toJSON(), NS.Config.mapPlaceStyles),
@@ -685,7 +701,7 @@ var Shareabouts = Shareabouts || {};
     });
 
     // The collection was cleared, so clear the markers from the map and cache
-    mapPlaceCollection.on('reset', function() {
+    NS.mapPlaceCollection.on('reset', function() {
       _.each(markers, function(marker, key) {
         // from the map
         marker.setMap(null);
