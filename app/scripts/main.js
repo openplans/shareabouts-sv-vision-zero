@@ -826,7 +826,7 @@ var Shareabouts = Shareabouts || {};
     $(document).on('click', '.shareabouts-fullscreen-button', function(evt) {
       evt.preventDefault();
       $('body').toggleClass('shareabouts-fullscreen');
-      google.maps.event.trigger(map, 'resize');
+      google.maps.event.trigger(NS.map, 'resize');
     });
 
     NS.auth = new Shareabouts.Auth({
