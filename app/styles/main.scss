@@ -35,6 +35,50 @@ $small-map-height: 200px;
     @media screen and (min-height: 1675px) { height: 1450px; }
     @media screen and (min-height: 1725px) { height: 1500px; }
     @media screen and (min-height: 1725px) { height: 1500px; }
+    body.shareabouts-fullscreen & {
+      position: fixed;
+      height: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 !important;
+      z-index: 9999;
+      background-color: #fff;
+    }
+  }
+
+  .shareabouts-fullscreen-button {
+    position: absolute;
+    bottom: 26px;
+    right: 18em;
+    margin-right: 10px;
+    z-index: 1;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    display: none !important;
+    @media screen and (min-width: $med-screen) {
+      display: block !important;
+    }
+    img.shareabouts-fullscreen-btn-exit {
+      display: none;
+    }
+    body.shareabouts-fullscreen & {
+      img.shareabouts-fullscreen-btn-exit {
+        display: block;
+      }
+      img.shareabouts-fullscreen-btn-enter {
+        display: none;
+      }
+    }
+  }
+  .shareabouts-streetview-container.active + .shareabouts-fullscreen-button {
+//    display: none !important;
+right: 40%;
   }
 
 
