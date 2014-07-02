@@ -339,27 +339,32 @@ var Shareabouts = Shareabouts || {};
     },
 
     filterPlaces: function(locationType) {
-      console.log(locationType);
-
-
+      // No current filter, but there was one previously
       if (!locationType && NS.filter) {
         NS.filter = null;
         NS.mapPlaceCollection.reset();
         resetPlaces();
 
-        if (NS.map.overlayMapTypes.getLength() === 1) {
-          NS.map.overlayMapTypes.insertAt(1, NS.placeOverlay);
-        }
+        // Add the place raster layer
+        NS.map.overlayMapTypes.forEach(function(overlay) {
+          if (overlay.name === 'visionzero_places') {
+            overlay.setOpacity(1);
+          }
+        });
       }
 
+      // A filter is being set
       if (locationType) {
         NS.filter = {'location_type': locationType};
         NS.mapPlaceCollection.reset();
         resetPlaces();
 
-        if (NS.map.overlayMapTypes.getLength() === 2) {
-          NS.map.overlayMapTypes.removeAt(1);
-        }
+        // Remove the place raster layer
+        NS.map.overlayMapTypes.forEach(function(overlay) {
+          if (overlay.name === 'visionzero_places') {
+            overlay.setOpacity(0);
+          }
+        });
       }
     }
   });
@@ -564,6 +569,7 @@ var Shareabouts = Shareabouts || {};
 
     // Map layer with dangerous cooridors and crashes
     var crashDataMapType = new google.maps.ImageMapType({
+      name: 'visionzero_crashdata',
       getTileUrl: function(coord, zoom) {
         function getRandomInt (min, max) {
           return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -573,16 +579,39 @@ var Shareabouts = Shareabouts || {};
         return ['http://', subdomains[getRandomInt(0, 3)], '.tiles.mapbox.com/v3/openplans.i7opnbif/',
             zoom, '/', coord.x, '/', coord.y, '.png'].join('');
       },
-      tileSize: new google.maps.Size(256, 256)
+      tileSize: new google.maps.Size(256, 256),
+      // https://code.google.com/p/gmaps-api-issues/issues/detail?id=6191
+      maxZoom: 19,
+      minZoom: 15
     });
 
     map.overlayMapTypes.push(crashDataMapType);
 
+    // Map layer of places (min zoom levels)
+    var placesMapType = new google.maps.ImageMapType({
+      name: 'visionzero_places',
+      getTileUrl: function(coord, zoom) {
+        function getRandomInt (min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var subdomains = ['a', 'b', 'c', 'd'];
+        return ['http://', subdomains[getRandomInt(0, 3)], '.tiles.mapbox.com/v3/openplans.161VisionZeroPlaces/',
+            zoom, '/', coord.x, '/', coord.y, '.png'].join('');
+      },
+      tileSize: new google.maps.Size(256, 256),
+      // https://code.google.com/p/gmaps-api-issues/issues/detail?id=6191
+      maxZoom: 15,
+      minZoom: 11
+    });
+
+    map.overlayMapTypes.push(placesMapType);
+
     // Interactive tile layer hosted on mapbox.com. NOTE: wax is a DEPRECATED
     // library, but still better for styling+interactivity than Fusion Tables.
+    // NOTE, that despite the name, this is just the intersections now.
     wax.tilejson('http://a.tiles.mapbox.com/v3/openplans.vision-zero-places.json', function(tilejson) {
-      NS.placeOverlay = new wax.g.connector(tilejson);
-      map.overlayMapTypes.push(NS.placeOverlay);
+      map.overlayMapTypes.insertAt(1, new wax.g.connector(tilejson));
       wax.g.interaction()
         .map(map)
         .tilejson(tilejson)
