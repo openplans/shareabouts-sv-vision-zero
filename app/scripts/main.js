@@ -822,6 +822,12 @@ var Shareabouts = Shareabouts || {};
       $('.shareabouts-auth-menu').toggleClass('is-exposed');
     });
 
+    // Init fullscreen toggle
+    $(document).on('click', '.shareabouts-fullscreen-button', function(evt) {
+      evt.preventDefault();
+      $('body').toggleClass('shareabouts-fullscreen');
+      google.maps.event.trigger(NS.map, 'resize');
+    });
 
     NS.auth = new Shareabouts.Auth({
       apiRoot: 'http://data.shareabouts.org/api/v2/',
