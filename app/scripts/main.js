@@ -277,6 +277,19 @@ var Shareabouts = Shareabouts || {};
         }
       }
     ],
+    placeColors: {
+      'yield': '#fff200',
+      'visibility': '#87c440',
+      'other': '#ababab',
+      'speeding': '#ae4f9e',
+      'redlight': '#ed1c24',
+      'notime': '#000',
+      'longwait': '#f6891f',
+      'longcross': '#3062ae',
+      'jaywalking': '#ed1d8b',
+      'doublepark': '#2b8246',
+      'bike': '#00aeef',
+    },
     mapStyle: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ece2d9"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"off"}]}],
     datasetUrl: 'http://data.shareabouts.org/api/v2/admin/datasets/vz-dev/places',
   };
@@ -342,7 +355,6 @@ var Shareabouts = Shareabouts || {};
       // No current filter, but there was one previously
       if (!locationType && NS.filter) {
         NS.filter = null;
-        NS.mapPlaceCollection.reset();
         resetPlaces();
 
         // Add the place raster layer
@@ -356,8 +368,15 @@ var Shareabouts = Shareabouts || {};
       // A filter is being set
       if (locationType) {
         NS.filter = {'location_type': locationType};
-        NS.mapPlaceCollection.reset();
         resetPlaces();
+
+        // Remove old features
+        NS.map.data.forEach(function(feature) {
+          NS.map.data.remove(feature);
+        });
+
+        // Load new places
+        loadMinZoomPlaces();
 
         // Remove the place raster layer
         NS.map.overlayMapTypes.forEach(function(overlay) {
@@ -501,6 +520,47 @@ var Shareabouts = Shareabouts || {};
     centerFunc(options.center);
   }
 
+  function loadMinZoomPlaces(pageNum) {
+    var data = _.extend({}, NS.filter, {page: pageNum});
+
+    $.ajax({
+      url: NS.Config.datasetUrl,
+      dataType: 'json',
+      data: data,
+      success: function(geojson) {
+        var i;
+
+        NS.map.data.addGeoJson(geojson);
+
+        // if this is the first page and there are more than one
+        if (geojson.metadata.page === 1 && geojson.metadata.num_pages > 1) {
+          for(i=2; i<=geojson.metadata.num_pages; i++) {
+            loadMinZoomPlaces(i);
+          }
+        }
+      }
+    });
+  }
+
+  // Set the style rules for the data layer
+  function setMinZoomPlaceStyle(overrides) {
+    NS.map.data.setStyle(function(feature) {
+      var style = _.extend({
+        icon: {
+          clickable: false,
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 3,
+          fillColor: NS.Config.placeColors[feature.getProperty('location_type')],
+          fillOpacity: 0.8,
+          strokeColor: '#fff',
+          strokeWeight: 1
+        }
+      }, overrides);
+
+      return style;
+    });
+  }
+
   function resetPlaces() {
     var zoom = NS.map.getZoom(),
         center = NS.map.getCenter();
@@ -508,12 +568,20 @@ var Shareabouts = Shareabouts || {};
     if (zoom < minVectorZoom) {
       // Zoomed out... clear the collection/map
       NS.mapPlaceCollection.reset();
+
+      if (NS.filter) {
+        setMinZoomPlaceStyle({visible: true});
+      } else {
+        setMinZoomPlaceStyle({visible: false});
+      }
     } else {
       // Apply the attribute filter if it exists
       var data = _.extend({
         near: center.lat()+','+center.lng(),
         distance_lt: '800m'
       }, NS.filter);
+
+      setMinZoomPlaceStyle({visible: false});
 
       // Zoomed in... get some places
       NS.mapPlaceCollection.fetchAllPages({
@@ -566,6 +634,9 @@ var Shareabouts = Shareabouts || {};
       evt.preventDefault();
       map.setZoom(map.getZoom() - 1);
     });
+
+    // Set the style rules for the data layer
+    setMinZoomPlaceStyle();
 
     // Map layer with dangerous cooridors and crashes
     var crashDataMapType = new google.maps.ImageMapType({
@@ -738,7 +809,6 @@ var Shareabouts = Shareabouts || {};
         delete markers[key];
       });
     });
-
 
     // Exit button on Street View to dismiss it and return to the map
     $(document).on('click', '.close-streetview-button', function(evt) {
