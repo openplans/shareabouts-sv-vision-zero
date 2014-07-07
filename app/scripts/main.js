@@ -717,6 +717,11 @@ var Shareabouts = Shareabouts || {};
 
   // Ready set go!
   $(function() {
+    // Hide all of the interactivity
+    if (NS.readonly) {
+      $('body').addClass('shareabouts-readonly');
+    }
+
     // Init the map
     initMap();
 
