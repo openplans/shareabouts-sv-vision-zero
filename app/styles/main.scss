@@ -1187,6 +1187,37 @@ right: 40%;
     padding: 0.25em 0.5em;
   }
 
+  // Read Only - prevent data submissions
+  .shareabouts-readonly & {
+    .shareabouts-auth-container,
+    .shareabouts-add-button-container,
+    .reply-link,
+    .new_response {
+      display: none;
+    }
+    .support-region {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+      }
+      .btn {
+        background-color: #ccc;
+      }
+    }
+    #reply:after {
+      content: 'Comments are closed.';
+      color: #888;
+      display: block;
+      margin: 1.5em 0;
+    }
+  }
+
 }
 
 #main .shareabouts {
