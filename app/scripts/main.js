@@ -376,6 +376,8 @@ var Shareabouts = Shareabouts || {};
         });
 
         // Load new places
+        // NOTE: this is currently when the filter is set, regardless of
+        // current zoom level. May need refactoring.
         loadMinZoomPlaces();
 
         // Remove the place raster layer
@@ -808,6 +810,15 @@ var Shareabouts = Shareabouts || {};
         // from the cache
         delete markers[key];
       });
+    });
+
+    // A filter was applied to a non-empty collection, so remove the other
+    // markers individually
+    NS.mapPlaceCollection.on('remove', function(model, collection, options) {
+      if (markers[model.id]) {
+        markers[model.id].setMap(null);
+        delete markers[model.id];
+      }
     });
 
     // Exit button on Street View to dismiss it and return to the map
