@@ -299,7 +299,7 @@ var Shareabouts = Shareabouts || {};
       ':id': 'showPlace',
       'intersection/:id': 'showIntersection',
       'filter/:locationType': 'filterPlaces',
-      '': 'filterPlaces'
+      '': 'index'
     },
 
     showPlace: function(id) {
@@ -352,8 +352,31 @@ var Shareabouts = Shareabouts || {};
     },
 
     filterPlaces: function(locationType) {
+      $('.place-type-li[data-locationtype="'+locationType+'"]').addClass('active');
+      NS.filter = {'location_type': locationType};
+      resetPlaces();
+
+      // Remove old features
+      NS.map.data.forEach(function(feature) {
+        NS.map.data.remove(feature);
+      });
+
+      // Load new places
+      // NOTE: this is currently when the filter is set, regardless of
+      // current zoom level. May need refactoring.
+      loadMinZoomPlaces();
+
+      // Remove the place raster layer
+      NS.map.overlayMapTypes.forEach(function(overlay) {
+        if (overlay.name === 'visionzero_places') {
+          overlay.setOpacity(0);
+        }
+      });
+    },
+
+    index: function(locationType) {
       // No current filter, but there was one previously
-      if (!locationType && NS.filter) {
+      if (NS.filter) {
         NS.filter = null;
         resetPlaces();
 
@@ -361,29 +384,6 @@ var Shareabouts = Shareabouts || {};
         NS.map.overlayMapTypes.forEach(function(overlay) {
           if (overlay.name === 'visionzero_places') {
             overlay.setOpacity(1);
-          }
-        });
-      }
-
-      // A filter is being set
-      if (locationType) {
-        NS.filter = {'location_type': locationType};
-        resetPlaces();
-
-        // Remove old features
-        NS.map.data.forEach(function(feature) {
-          NS.map.data.remove(feature);
-        });
-
-        // Load new places
-        // NOTE: this is currently when the filter is set, regardless of
-        // current zoom level. May need refactoring.
-        loadMinZoomPlaces();
-
-        // Remove the place raster layer
-        NS.map.overlayMapTypes.forEach(function(overlay) {
-          if (overlay.name === 'visionzero_places') {
-            overlay.setOpacity(0);
           }
         });
       }
