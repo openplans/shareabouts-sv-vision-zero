@@ -964,6 +964,7 @@ var Shareabouts = Shareabouts || {};
       evt.preventDefault();
       $('body').toggleClass('shareabouts-fullscreen');
       google.maps.event.trigger(NS.map, 'resize');
+      google.maps.event.trigger(NS.streetview.panorama, 'resize');
     });
 
     // Init click events for location type filtering
