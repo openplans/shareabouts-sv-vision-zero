@@ -530,14 +530,20 @@ var Shareabouts = Shareabouts || {};
       dataType: 'json',
       data: data,
       success: function(geojson) {
-        var i;
+        var locationType,i;
 
-        NS.map.data.addGeoJson(geojson);
+        if (geojson.features.length > 0) {
+          locationType = geojson.features[0].properties.location_type;
+        }
 
-        // if this is the first page and there are more than one
-        if (geojson.metadata.page === 1 && geojson.metadata.num_pages > 1) {
-          for(i=2; i<=geojson.metadata.num_pages; i++) {
-            loadMinZoomPlaces(i);
+        if (locationType === NS.filter.location_type) {
+          NS.map.data.addGeoJson(geojson);
+
+          // if this is the first page and there are more than one
+          if (geojson.metadata.page === 1 && geojson.metadata.num_pages > 1) {
+            for(i=2; i<=geojson.metadata.num_pages; i++) {
+              loadMinZoomPlaces(i);
+            }
           }
         }
       }
@@ -958,6 +964,23 @@ var Shareabouts = Shareabouts || {};
       evt.preventDefault();
       $('body').toggleClass('shareabouts-fullscreen');
       google.maps.event.trigger(NS.map, 'resize');
+    });
+
+    // Init click events for location type filtering
+    $(document).on('click', '.place-type-li', function(evt) {
+      var $this = $(this),
+          locationType = $this.attr('data-locationtype'),
+          $links = $('.place-type-li');
+
+      $links.removeClass('active');
+
+      if (NS.filter && NS.filter.location_type === locationType) {
+        NS.router.navigate('/', {trigger: true});
+        return;
+      }
+
+      $this.addClass('active');
+      NS.router.navigate('filter/'+locationType, {trigger: true});
     });
 
     NS.auth = new Shareabouts.Auth({
