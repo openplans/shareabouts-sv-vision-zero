@@ -551,7 +551,7 @@ var Shareabouts = Shareabouts || {};
         icon: {
           clickable: false,
           path: google.maps.SymbolPath.CIRCLE,
-          scale: 3,
+          scale: 3.5,
           fillColor: NS.Config.placeColors[feature.getProperty('location_type')],
           fillOpacity: 0.8,
           strokeColor: '#fff',
@@ -683,7 +683,7 @@ var Shareabouts = Shareabouts || {};
     // Interactive tile layer hosted on mapbox.com. NOTE: wax is a DEPRECATED
     // library, but still better for styling+interactivity than Fusion Tables.
     // NOTE, that despite the name, this is just the intersections now.
-    wax.tilejson('http://a.tiles.mapbox.com/v3/openplans.vision-zero-places.json', function(tilejson) {
+    wax.tilejson('http://a.tiles.mapbox.com/v3/openplans.161VisionZeroIntersections.json', function(tilejson) {
       map.overlayMapTypes.insertAt(1, new wax.g.connector(tilejson));
       wax.g.interaction()
         .map(map)
