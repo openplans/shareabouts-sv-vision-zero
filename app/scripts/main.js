@@ -557,11 +557,11 @@ var Shareabouts = Shareabouts || {};
         icon: {
           clickable: false,
           path: google.maps.SymbolPath.CIRCLE,
-          scale: 3.5,
+          scale: 4,
           fillColor: NS.Config.placeColors[feature.getProperty('location_type')],
-          fillOpacity: 0.8,
+          fillOpacity: 0.9,
           strokeColor: '#fff',
-          strokeWeight: 1
+          strokeWeight: 0
         }
       }, overrides);
 
