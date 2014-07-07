@@ -5,7 +5,9 @@ var Shareabouts = Shareabouts || {};
 (function(NS, $, console) {
   Swag.registerHelpers();
 
-  var preventIntersectionClick = false,
+  var minVectorZoom = 16,
+      maxVectorZoom = 19,
+      preventIntersectionClick = false,
       streetviewVisible = false,
       currentUser;
 
@@ -275,6 +277,19 @@ var Shareabouts = Shareabouts || {};
         }
       }
     ],
+    placeColors: {
+      'yield': '#fff200',
+      'visibility': '#87c440',
+      'other': '#ababab',
+      'speeding': '#ae4f9e',
+      'redlight': '#ed1c24',
+      'notime': '#000',
+      'longwait': '#f6891f',
+      'longcross': '#3062ae',
+      'jaywalking': '#ed1d8b',
+      'doublepark': '#2b8246',
+      'bike': '#00aeef',
+    },
     mapStyle: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ece2d9"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"off"}]}],
     datasetUrl: 'http://data.shareabouts.org/api/v2/nycdot/datasets/vz/places'
   };
@@ -282,7 +297,9 @@ var Shareabouts = Shareabouts || {};
   NS.Router = Backbone.Router.extend({
     routes: {
       ':id': 'showPlace',
-      'intersection/:id': 'showIntersection'
+      'intersection/:id': 'showIntersection',
+      'filter/:locationType': 'filterPlaces',
+      '': 'index'
     },
 
     showPlace: function(id) {
@@ -332,7 +349,44 @@ var Shareabouts = Shareabouts || {};
           self.navigate('', {replace: true});
         }
       });
+    },
 
+    filterPlaces: function(locationType) {
+      $('.place-type-li[data-locationtype="'+locationType+'"]').addClass('active');
+      NS.filter = {'location_type': locationType};
+      resetPlaces();
+
+      // Remove old features
+      NS.map.data.forEach(function(feature) {
+        NS.map.data.remove(feature);
+      });
+
+      // Load new places
+      // NOTE: this is currently when the filter is set, regardless of
+      // current zoom level. May need refactoring.
+      loadMinZoomPlaces();
+
+      // Remove the place raster layer
+      NS.map.overlayMapTypes.forEach(function(overlay) {
+        if (overlay.name === 'visionzero_places') {
+          overlay.setOpacity(0);
+        }
+      });
+    },
+
+    index: function(locationType) {
+      // No current filter, but there was one previously
+      if (NS.filter) {
+        NS.filter = null;
+        resetPlaces();
+
+        // Add the place raster layer
+        NS.map.overlayMapTypes.forEach(function(overlay) {
+          if (overlay.name === 'visionzero_places') {
+            overlay.setOpacity(1);
+          }
+        });
+      }
     }
   });
 
@@ -468,11 +522,84 @@ var Shareabouts = Shareabouts || {};
     centerFunc(options.center);
   }
 
+  function loadMinZoomPlaces(pageNum) {
+    var data = _.extend({}, NS.filter, {page: pageNum});
+
+    $.ajax({
+      url: NS.Config.datasetUrl,
+      dataType: 'json',
+      data: data,
+      success: function(geojson) {
+        var locationType,i;
+
+        if (geojson.features.length > 0) {
+          locationType = geojson.features[0].properties.location_type;
+        }
+
+        if (locationType === NS.filter.location_type) {
+          NS.map.data.addGeoJson(geojson);
+
+          // if this is the first page and there are more than one
+          if (geojson.metadata.page === 1 && geojson.metadata.num_pages > 1) {
+            for(i=2; i<=geojson.metadata.num_pages; i++) {
+              loadMinZoomPlaces(i);
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // Set the style rules for the data layer
+  function setMinZoomPlaceStyle(overrides) {
+    NS.map.data.setStyle(function(feature) {
+      var style = _.extend({
+        icon: {
+          clickable: false,
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 5,
+          fillColor: NS.Config.placeColors[feature.getProperty('location_type')],
+          fillOpacity: 0.9,
+          strokeColor: '#fff',
+          strokeWeight: 1
+        }
+      }, overrides);
+
+      return style;
+    });
+  }
+
+  function resetPlaces() {
+    var zoom = NS.map.getZoom(),
+        center = NS.map.getCenter();
+
+    if (zoom < minVectorZoom) {
+      // Zoomed out... clear the collection/map
+      NS.mapPlaceCollection.reset();
+
+      if (NS.filter) {
+        setMinZoomPlaceStyle({visible: true});
+      } else {
+        setMinZoomPlaceStyle({visible: false});
+      }
+    } else {
+      // Apply the attribute filter if it exists
+      var data = _.extend({
+        near: center.lat()+','+center.lng(),
+        distance_lt: '800m'
+      }, NS.filter);
+
+      setMinZoomPlaceStyle({visible: false});
+
+      // Zoomed in... get some places
+      NS.mapPlaceCollection.fetchAllPages({
+        data: data
+      });
+    }
+  }
+
   function initMap() {
-    var minVectorZoom = 16,
-        maxVectorZoom = 19,
-        mapPlaceCollection = new NS.PlaceCollection(),
-        map = new google.maps.Map($('.shareabouts-location-map').get(0), {
+    var map = new google.maps.Map($('.shareabouts-location-map').get(0), {
           center: new google.maps.LatLng(40.7210690835, -73.9981985092),
           zoom: 14,
           minZoom: 11,
@@ -500,10 +627,11 @@ var Shareabouts = Shareabouts || {};
 
     // Make these accessible outside of this function
     NS.map = map;
+    NS.mapPlaceCollection = new NS.PlaceCollection();
     NS.summaryWindow = summaryWindow;
 
     // This has to be set directly, not via the options
-    mapPlaceCollection.url = NS.Config.datasetUrl;
+    NS.mapPlaceCollection.url = NS.Config.datasetUrl;
 
     // Bind zoom-in/out to our custom buttons
     $('.shareabouts-zoom-in').click(function(evt) {
@@ -515,8 +643,12 @@ var Shareabouts = Shareabouts || {};
       map.setZoom(map.getZoom() - 1);
     });
 
+    // Set the style rules for the data layer
+    setMinZoomPlaceStyle();
+
     // Map layer with dangerous cooridors and crashes
     var crashDataMapType = new google.maps.ImageMapType({
+      name: 'visionzero_crashdata',
       getTileUrl: function(coord, zoom) {
         function getRandomInt (min, max) {
           return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -526,15 +658,39 @@ var Shareabouts = Shareabouts || {};
         return ['http://', subdomains[getRandomInt(0, 3)], '.tiles.mapbox.com/v3/openplans.i7opnbif/',
             zoom, '/', coord.x, '/', coord.y, '.png'].join('');
       },
-      tileSize: new google.maps.Size(256, 256)
+      tileSize: new google.maps.Size(256, 256),
+      // https://code.google.com/p/gmaps-api-issues/issues/detail?id=6191
+      maxZoom: 19,
+      minZoom: 15
     });
 
     map.overlayMapTypes.push(crashDataMapType);
 
+    // Map layer of places (min zoom levels)
+    var placesMapType = new google.maps.ImageMapType({
+      name: 'visionzero_places',
+      getTileUrl: function(coord, zoom) {
+        function getRandomInt (min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var subdomains = ['a', 'b', 'c', 'd'];
+        return ['http://', subdomains[getRandomInt(0, 3)], '.tiles.mapbox.com/v3/openplans.161VisionZeroPlaces/',
+            zoom, '/', coord.x, '/', coord.y, '.png'].join('');
+      },
+      tileSize: new google.maps.Size(256, 256),
+      // https://code.google.com/p/gmaps-api-issues/issues/detail?id=6191
+      maxZoom: 15,
+      minZoom: 11
+    });
+
+    map.overlayMapTypes.push(placesMapType);
+
     // Interactive tile layer hosted on mapbox.com. NOTE: wax is a DEPRECATED
     // library, but still better for styling+interactivity than Fusion Tables.
-    wax.tilejson('http://a.tiles.mapbox.com/v3/openplans.vision-zero-places.json', function(tilejson) {
-      map.overlayMapTypes.push(new wax.g.connector(tilejson));
+    // NOTE, that despite the name, this is just the intersections now.
+    wax.tilejson('http://a.tiles.mapbox.com/v3/openplans.161VisionZeroIntersections.json', function(tilejson) {
+      map.overlayMapTypes.insertAt(1, new wax.g.connector(tilejson));
       wax.g.interaction()
         .map(map)
         .tilejson(tilejson)
@@ -572,47 +728,15 @@ var Shareabouts = Shareabouts || {};
       }
     });
 
-
     // Change the map instructions based on the zoom level
     // Decide if we should switch to vector markers
-    google.maps.event.addListener(map, 'zoom_changed', function() {
-      var zoom = map.getZoom(),
-          center = map.getCenter();
-      // $('.zoom-in-msg').toggleClass('is-hidden', (zoom >= 15));
-
-      if (zoom < minVectorZoom) {
-        // Zoomed out... clear the collection/map
-        mapPlaceCollection.reset();
-      } else {
-        // Zoomed in... get some places
-        mapPlaceCollection.fetchAllPages({
-          data: {
-            near: center.lat()+','+center.lng(),
-            distance_lt: '800m'
-          }
-        });
-      }
-    });
+    google.maps.event.addListener(map, 'zoom_changed', resetPlaces);
 
     // Fetch places for this new area
-    google.maps.event.addListener(map, 'dragend', function() {
-      var zoom = map.getZoom(),
-          center = map.getCenter();
-
-      if (zoom >= minVectorZoom) {
-        // console.log('fetch places for', map.getBounds().toString());
-
-        mapPlaceCollection.fetchAllPages({
-          data: {
-            near: center.lat()+','+center.lng(),
-            distance_lt: '800m'
-          }
-        });
-      }
-    });
+    google.maps.event.addListener(map, 'dragend', resetPlaces);
 
     // On model add, put a new styled marker on the map
-    mapPlaceCollection.on('add', function(model, collection) {
+    NS.mapPlaceCollection.on('add', function(model, collection) {
       var geom = model.get('geometry'),
           position = new google.maps.LatLng(geom.coordinates[1], geom.coordinates[0]),
           styleRule = getStyleRule(model.toJSON(), NS.Config.mapPlaceStyles),
@@ -685,7 +809,7 @@ var Shareabouts = Shareabouts || {};
     });
 
     // The collection was cleared, so clear the markers from the map and cache
-    mapPlaceCollection.on('reset', function() {
+    NS.mapPlaceCollection.on('reset', function() {
       _.each(markers, function(marker, key) {
         // from the map
         marker.setMap(null);
@@ -694,6 +818,14 @@ var Shareabouts = Shareabouts || {};
       });
     });
 
+    // A filter was applied to a non-empty collection, so remove the other
+    // markers individually
+    NS.mapPlaceCollection.on('remove', function(model, collection, options) {
+      if (markers[model.id]) {
+        markers[model.id].setMap(null);
+        delete markers[model.id];
+      }
+    });
 
     // Exit button on Street View to dismiss it and return to the map
     $(document).on('click', '.close-streetview-button', function(evt) {
@@ -717,6 +849,11 @@ var Shareabouts = Shareabouts || {};
 
   // Ready set go!
   $(function() {
+    // Hide all of the interactivity
+    if (NS.readonly) {
+      $('body').addClass('shareabouts-readonly');
+    }
+
     // Init the map
     initMap();
 
@@ -822,6 +959,29 @@ var Shareabouts = Shareabouts || {};
       $('.shareabouts-auth-menu').toggleClass('is-exposed');
     });
 
+    // Init fullscreen toggle
+    $(document).on('click', '.shareabouts-fullscreen-button', function(evt) {
+      evt.preventDefault();
+      $('body').toggleClass('shareabouts-fullscreen');
+      google.maps.event.trigger(NS.map, 'resize');
+    });
+
+    // Init click events for location type filtering
+    $(document).on('click', '.place-type-li', function(evt) {
+      var $this = $(this),
+          locationType = $this.attr('data-locationtype'),
+          $links = $('.place-type-li');
+
+      $links.removeClass('active');
+
+      if (NS.filter && NS.filter.location_type === locationType) {
+        NS.router.navigate('/', {trigger: true});
+        return;
+      }
+
+      $this.addClass('active');
+      NS.router.navigate('filter/'+locationType, {trigger: true});
+    });
 
     NS.auth = new Shareabouts.Auth({
       apiRoot: 'http://data.shareabouts.org/api/v2/',

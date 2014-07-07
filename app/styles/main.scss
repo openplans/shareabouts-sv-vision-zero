@@ -35,6 +35,50 @@ $small-map-height: 200px;
     @media screen and (min-height: 1675px) { height: 1450px; }
     @media screen and (min-height: 1725px) { height: 1500px; }
     @media screen and (min-height: 1725px) { height: 1500px; }
+    body.shareabouts-fullscreen & {
+      position: fixed;
+      height: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 !important;
+      z-index: 9999;
+      background-color: #fff;
+    }
+  }
+
+  .shareabouts-fullscreen-button {
+    position: absolute;
+    bottom: 26px;
+    right: 18em;
+    margin-right: 10px;
+    z-index: 1;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    display: none !important;
+    @media screen and (min-width: $med-screen) {
+      display: block !important;
+    }
+    img.shareabouts-fullscreen-btn-exit {
+      display: none;
+    }
+    body.shareabouts-fullscreen & {
+      img.shareabouts-fullscreen-btn-exit {
+        display: block;
+      }
+      img.shareabouts-fullscreen-btn-enter {
+        display: none;
+      }
+    }
+  }
+  .shareabouts-streetview-container.active + .shareabouts-fullscreen-button {
+//    display: none !important;
+right: 40%;
   }
 
 
@@ -366,6 +410,30 @@ $small-map-height: 200px;
       }
       .place-type-list {
         font-size: 0.875em;
+        .place-type-li {
+          cursor: pointer;
+        }
+        .active {
+          background-color: #f26522;
+          color: #fff;
+          box-shadow: inset 0 -3px 0 #fff, -3px -3px #f26522, 3px -3px #f26522;
+          img {
+            position: relative;
+            z-index: 20;
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            height: 1.75em;
+            width: 1.75em;
+            border-radius: 100%;
+            background: #fff;
+            box-shadow: 0 0 0 2px #fff;
+          }
+        }
       }
       .map-layer-list {
         margin-bottom: 0.5em;
@@ -762,7 +830,7 @@ $small-map-height: 200px;
     overflow: hidden;
     opacity: 0;
     position: absolute;
-    z-index: 2;
+    z-index: 30;
     top: 100%;
     right: 1em;
     bottom: auto;
@@ -777,6 +845,7 @@ $small-map-height: 200px;
     -webkit-transition: opacity .25s ease-in-out;
        -moz-transition: opacity .25s ease-in-out;
             transition: opacity .25s ease-in-out;
+    pointer-events: none;
   }
   .place-type-li:hover .place-type-description {
     height: auto;
@@ -1143,10 +1212,57 @@ $small-map-height: 200px;
     padding: 0.25em 0.5em;
   }
 
+  // Read Only - prevent data submissions
+  .shareabouts-readonly & {
+    .shareabouts-auth-container,
+    .shareabouts-add-button-container,
+    .reply-link,
+    .new_response {
+      display: none;
+    }
+    .support-region {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+      }
+      .btn {
+        background-color: #ccc;
+      }
+    }
+    #reply:after {
+      content: 'Comments are closed.';
+      color: #888;
+      display: block;
+      margin: 1.5em 0;
+    }
+  }
+
 }
 
 #main .shareabouts {
   @media screen and (min-width: 630px) {
     margin-bottom: -60px;
+  }
+}
+
+.shareabouts-close-button {
+  @media screen and (max-width: $med-screen) {
+    position: relative;
+    top: 0.25em;
+  }
+}
+@media screen and (max-width: $med-screen) {
+  .shareabouts-close-button:after {
+    content: 'CLOSE';
+    font-size: 0.5em;
+    margin-left: 0.375em;
+    position: relative;
+    top: -0.125em;
   }
 }

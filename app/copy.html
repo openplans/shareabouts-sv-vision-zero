@@ -41,20 +41,21 @@
             <a href="#" class="shareabouts-zoom-button shareabouts-zoom-out">&#8722;</a>
           </div>
           <div class="map-instruction"><strong>Zoom in and select an intersection.</strong></div>
+          <div class="shareabouts-map-search"><input id="shareabouts-map-search" placeholder="Search for a neighborhood&hellip;"></div>
         </div>
         <div class="shareabouts-legend">
-          <p>We're gathering feedback on these safety conditions:</p>
+          <p>To share an issue, please zoom in and select an intersection. <span class="nobreak">We're gathering</span> feedback on these safety conditions:</p>
           <ul class="place-type-list unstyled-list">
-            <li class="place-type-li"><img src="styles/images/icon-notime.png">&nbsp;<strong>Not enough time to cross</strong> <span class="place-type-description">Pedestrians don’t have enough time to cross the street during the “Walk” signal.</span></li>
-            <li class="place-type-li"><img src="styles/images/icon-doublepark.png">&nbsp;<strong>Double parking</strong> <span class="place-type-description">Many vehicles are parked in moving lanes.</span></li>
-            <li class="place-type-li"><img src="styles/images/icon-longwait.png">&nbsp;<strong>Long wait to cross</strong> <span class="place-type-description">Pedestrians need to wait too long to receive the “Walk” signal.</span></li>
-            <li class="place-type-li"><img src="styles/images/icon-redlight.png">&nbsp;<strong>Red light running</strong> <span class="place-type-description">Many drivers don’t stop at a red light or a stop sign.</span></li>
-            <li class="place-type-li"><img src="styles/images/icon-jaywalking.png">&nbsp;<strong>Jaywalking</strong> <span class="place-type-description">Many pedestrians cross the street against the signal or in the middle of the block.</span></li>
-            <li class="place-type-li"><img src="styles/images/icon-visibility.png">&nbsp;<strong>Poor visibility</strong> <span class="place-type-description">Drivers and pedestrians have difficulty seeing each other.</span></li>
-            <li class="place-type-li"><img src="styles/images/icon-speeding.png">&nbsp;<strong>Speeding</strong> <span class="place-type-description">Many drivers travel above the speed limit.</span></li>
-            <li class="place-type-li"><img src="styles/images/icon-longcross.png">&nbsp;<strong>Long distance to cross</strong> <span class="place-type-description">The road is too wide to cross comfortably and/or there aren’t safe areas where pedestrians can wait if the signal changes to “Don’t Walk”.</span></li>
-            <li class="place-type-li"><img src="styles/images/icon-yield.png">&nbsp;<strong>Failure to yield to pedestrians</strong> <span class="place-type-description">Drivers turning into the crosswalk don’t yield to crossing pedestrians.</span></li>
-            <li class="place-type-li"><img src="styles/images/icon-bike.png">&nbsp;<strong>Cyclist behavior</strong> <span class="place-type-description">Many cyclists do not yield to pedestrians, bike against the flow of traffic, ignore traffic signals or other issues.</span></li>
+            <li class="place-type-li" data-locationtype="notime"><img src="styles/images/icon-notime.png">&nbsp;<strong>Not enough time to cross</strong> <span class="place-type-description">Pedestrians don’t have enough time to cross the street during the "Walk" signal.</span></li>
+            <li class="place-type-li" data-locationtype="doublepark"><img src="styles/images/icon-doublepark.png">&nbsp;<strong>Double parking</strong> <span class="place-type-description">Many vehicles are parked in moving lanes.</span></li>
+            <li class="place-type-li" data-locationtype="longwait"><img src="styles/images/icon-longwait.png">&nbsp;<strong>Long wait to cross</strong> <span class="place-type-description">Pedestrians need to wait too long to receive the "Walk" signal.</span></li>
+            <li class="place-type-li" data-locationtype="redlight"><img src="styles/images/icon-redlight.png">&nbsp;<strong>Red light running</strong> <span class="place-type-description">Many drivers don’t stop at a red light or a stop sign.</span></li>
+            <li class="place-type-li" data-locationtype="jaywalking"><img src="styles/images/icon-jaywalking.png">&nbsp;<strong>Jaywalking</strong> <span class="place-type-description">Many pedestrians cross the street against the signal or in the middle of the block.</span></li>
+            <li class="place-type-li" data-locationtype="visibility"><img src="styles/images/icon-visibility.png">&nbsp;<strong>Poor visibility</strong> <span class="place-type-description">Drivers and pedestrians have difficulty seeing each other.</span></li>
+            <li class="place-type-li" data-locationtype="speeding"><img src="styles/images/icon-speeding.png">&nbsp;<strong>Speeding</strong> <span class="place-type-description">Many drivers travel above the speed limit.</span></li>
+            <li class="place-type-li" data-locationtype="longcross"><img src="styles/images/icon-longcross.png">&nbsp;<strong>Long distance to cross</strong> <span class="place-type-description">The road is too wide to cross comfortably and/or there aren’t safe areas where pedestrians can wait if the signal changes to "Don’t Walk".</span></li>
+            <li class="place-type-li" data-locationtype="yield"><img src="styles/images/icon-yield.png">&nbsp;<strong>Failure to yield to pedestrians</strong> <span class="place-type-description">Drivers turning into the crosswalk don’t yield to crossing pedestrians.</span></li>
+            <li class="place-type-li" data-locationtype="bike"><img src="styles/images/icon-bike.png">&nbsp;<strong>Cyclist behavior</strong> <span class="place-type-description">Many cyclists do not yield to pedestrians, bike against the flow of traffic, ignore traffic signals or other issues.</span></li>
           </ul>
           <hr>
           <ul class="map-layer-list unstyled-list">
@@ -70,11 +71,15 @@
         <button class="close-streetview-button btn"><small>Full Map</small></button>
         <div class="shareabouts-intersection-detail"></div>
       </div>
+
+      <button class="shareabouts-fullscreen-button"><img src="styles/images/fullscreen-btn-enter.gif" class="shareabouts-fullscreen-btn-enter"><img src="styles/images/fullscreen-btn-exit.gif" class="shareabouts-fullscreen-btn-exit"></button>
+
     </div>
 
     <!-- Required JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=geometry" type="text/javascript"></script>
 
+    <script src="scripts/readonly.js"></script>
     <!-- build:js scripts/visionzero.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
